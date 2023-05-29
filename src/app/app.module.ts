@@ -13,6 +13,7 @@ import { ResearchPageComponent } from './pages/research-page/research-page.compo
 import { EventsPageComponent } from './pages/events-page/events-page.component';
 import { SeminarsPageComponent } from './pages/seminars-page/seminars-page.component';
 import { CareersPageComponent } from './pages/careers-page/careers-page.component';
+import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CareersPageComponent } from './pages/careers-page/careers-page.componen
     ResearchPageComponent,
     EventsPageComponent,
     SeminarsPageComponent,
-    CareersPageComponent
+    CareersPageComponent,
+    ProjectsPageComponent
   ],
   imports: [
     BrowserModule,
