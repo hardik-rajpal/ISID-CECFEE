@@ -1,0 +1,9 @@
+<div class="main" [ngStyle]="{width:(width?width:'')}">
+    <div class="text">
+        <img  src="{{person.image}}" class="person-img">
+    </div>
+    <div class="body">
+        <div class="person-title" [innerHTML]="person.name"></div>
+        <app-paraspecbox [para]="{text:person.description}"></app-paraspecbox>
+    </div>
+</div>

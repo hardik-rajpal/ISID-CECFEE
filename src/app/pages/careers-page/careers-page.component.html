@@ -1,1 +1,7 @@
-<p>careers-page works!</p>
+<div class="main">
+    <p class="title">{{data.title}}</p>
+    <div *ngFor="let opening of data.openings">
+        <p class="heading">{{opening.title}}</p>
+        <app-paraspecbox *ngFor="let para of opening.paras" [para]="para"></app-paraspecbox>
+    </div>
+</div>

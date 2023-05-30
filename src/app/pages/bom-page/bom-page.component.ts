@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BomPageData, bomPageSpec } from 'src/data/bompage';
 
 @Component({
   selector: 'app-bom-page',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./bom-page.component.css']
 })
 export class BomPageComponent {
-
+  data:bomPageSpec = BomPageData;
 }

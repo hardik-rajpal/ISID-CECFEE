@@ -2,7 +2,8 @@
     <div class="desktop-navbar navbar">
         <div class="dropdown" *ngFor="let route of routes" (mouseover)="setactiveDesktop(route)">
             <div class="dropbtn">
-                <a *ngIf="(route.children===undefined)" [routerLink]="[route.route]">
+                <a *ngIf="(route.children===undefined&&route.route!.startsWith('https'))" href="{{route.route!}}">{{route.label}}</a>
+                <a *ngIf="(route.children===undefined&&(!route.route || !route.route!.startsWith('https')))" [routerLink]="[route.route]">
                     {{route.label}}
                 </a>
                 <a *ngIf="(route.children!==undefined)">
@@ -27,7 +28,8 @@
         <div class="dropdown" *ngFor="let route of routes">
             <div class="dropbtn">
                 <!-- <div> -->
-                    <a *ngIf="(route.children===undefined)" [routerLink]="[route.route]">
+                    <a *ngIf="(route.children===undefined&&route.route!.startsWith('https'))" href="{{route.route!}}">{{route.label}}</a>
+                    <a *ngIf="(route.children===undefined&&(!route.route || !route.route!.startsWith('https')))" [routerLink]="[route.route]">
                         {{route.label}}
                     </a>
                 <!-- </div> -->
