@@ -53,6 +53,9 @@ export function parseRouteSpec(routespec: routeSpec) {
                 }).filter((route)=>Object.keys(route).length!==0)
             };
         }
+        else if(routespec.route?.startsWith('https')){
+            return {}
+        }
     }
     return route;
 }

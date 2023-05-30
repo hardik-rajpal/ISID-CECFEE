@@ -43,7 +43,7 @@ export const NavBarRoutes: routeSpec[] = [
     },
     {
         label:'EPU',
-        route:'http://www.isid.ac.in/~epu/'
+        route:'https://www.isid.ac.in/~epu/'
     },
     {
         label:'Careers',

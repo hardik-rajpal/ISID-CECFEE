@@ -1,1 +1,7 @@
-<p>projects-page works!</p>
+<div>
+    <p class="title">{{data.title}}</p>
+    <div *ngFor="let project of data.projects">
+        <p class="heading">{{project.title}}</p>
+        <app-paraspecbox *ngFor="let para of project.paras" [para]="para"></app-paraspecbox>
+    </div>
+</div>
