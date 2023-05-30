@@ -14,9 +14,14 @@ import { EventsPageComponent } from './pages/events-page/events-page.component';
 import { SeminarsPageComponent } from './pages/seminars-page/seminars-page.component';
 import { CareersPageComponent } from './pages/careers-page/careers-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
+import { PersonboxComponent } from './comps/personbox/personbox.component';
+import { ParaspecboxComponent } from './comps/paraspecbox/paraspecbox.component';
+import { SafePipe } from './safe.pipe';
+import { StudentboxComponent } from './comps/studentbox/studentbox.component';
 
 @NgModule({
   declarations: [
+    SafePipe,
     AppComponent,
     SiteheaderComponent,
     SitefooterComponent,
@@ -28,7 +33,10 @@ import { ProjectsPageComponent } from './pages/projects-page/projects-page.compo
     EventsPageComponent,
     SeminarsPageComponent,
     CareersPageComponent,
-    ProjectsPageComponent
+    ProjectsPageComponent,
+    PersonboxComponent,
+    ParaspecboxComponent,
+    StudentboxComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavBarRoutes, parseRoutes } from 'src/data/navigation';
+import { NavBarRoutes, getAllRoutes } from 'src/data/navigation';
 
-const routes: Routes = parseRoutes(NavBarRoutes);
+const routes: Routes = getAllRoutes();
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

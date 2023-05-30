@@ -1,0 +1,5 @@
+<div class="main" [ngStyle]="{width:(width?width:'')}">
+    <img src="{{person.image}}" class="student-img">
+    <div class="student-title" [innerHTML]="person.name"></div>
+    <div class="body" [innerHTML]="person.description"></div>
+</div>
