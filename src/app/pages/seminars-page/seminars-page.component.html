@@ -1,1 +1,8 @@
-<p>seminars-page works!</p>
+<div class="main">
+    <p class="heading">{{data.upcomingTitle}}</p>
+    <app-seminarbox *ngFor="let seminar of data.upcomingSeminars" [seminar]="seminar">
+    </app-seminarbox>
+    <p class="heading">{{data.pastTitle}}</p>
+    <app-seminarbox *ngFor="let seminar of data.pastSeminars" [seminar]="seminar">
+    </app-seminarbox>
+</div>
