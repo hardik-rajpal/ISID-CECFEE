@@ -20,6 +20,7 @@ import { SafePipe } from './safe.pipe';
 import { StudentboxComponent } from './comps/studentbox/studentbox.component';
 import { SeminarboxComponent } from './comps/seminarbox/seminarbox.component';
 import { CollapsibleComponent } from './comps/collapsible/collapsible.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { CollapsibleComponent } from './comps/collapsible/collapsible.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

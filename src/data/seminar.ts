@@ -1,35 +1,35 @@
 import { paraSpec } from "./rtl.utils";
 
-export interface seminarSpec{
-    title:string;
-    speakers:string;
-    venue:string;
-    dateTime:string;
-    discussant?:string;
-    description?:string;
-    contact?:string;
-    abstract?:paraSpec;
+export interface seminarSpec {
+    title: string;
+    speakers: string;
+    venue: string;
+    dateTime: string;
+    discussant?: string;
+    description?: string;
+    contact?: string;
+    abstract?: paraSpec[];
 }
-export interface seminarPageSpec{
-    upcomingTitle:string;
-    upcomingSeminars:seminarSpec[];
-    pastTitle:string;
-    pastSeminars:seminarSpec[];
+export interface seminarPageSpec {
+    upcomingTitle: string;
+    upcomingSeminars: seminarSpec[];
+    pastTitle: string;
+    pastSeminars: seminarSpec[];
 }
 
-export const seminarsData:seminarPageSpec={
-    upcomingTitle:'Upcoming Seminars',
-    upcomingSeminars:[],
-    pastTitle:'Past Seminars',
-    pastSeminars:[
+export const seminarsData: seminarPageSpec = {
+    upcomingTitle: 'Upcoming Seminars',
+    upcomingSeminars: [],
+    pastTitle: 'Past Seminars',
+    pastSeminars: [
         {
-            title:'CECFEE Seminar: In-Kind Transfers as Insurance',
-            speakers:'Dr Sandip Sukhtankar, University of Virginia',
-            dateTime:'Friday, 09 December 2022, 11:30 AM',
-            venue:'Seminar Room',
-            contact:`Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
-            abstract:{
-                text:`In-kind transfers can provide insurance benefits when prices
+            title: 'CECFEE Seminar: In-Kind Transfers as Insurance',
+            speakers: 'Dr Sandip Sukhtankar, University of Virginia',
+            dateTime: 'Friday, 09 December 2022, 11:30 AM',
+            venue: 'Seminar Room',
+            contact: `Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
+            abstract: [{
+                text: `In-kind transfers can provide insurance benefits when prices
                 of consumption goods vary, as is common in developing countries. We
                 develop a model demonstrating that in-kind transfers are welfare 
                 improving to beneficiaries relative to cash if the covariance 
@@ -40,16 +40,16 @@ export const seminarsData:seminarPageSpec={
                 caloric intake but also reduce caloric sensitivity to prices. Our 
                 results contribute to ongoing debates about the optimal form of 
                 social protection programs.`
-            }
+            }]
         },
         {
-            title:`CECFEE Seminar: Women’s Inheritance Rights and Time Use in India`,
-            speakers:`Dr. Tanu Gupta , Indira Gandhi Institute of Development Research, Mumbai`,
-            dateTime:`Thursday, June 16, 2022 @ 11:00 AM`,
-            venue:`Webinar`,
-            contact:`Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
-            abstract:{
-                text:`This paper examines the impact of the Hindu Succession Act on 
+            title: `CECFEE Seminar: Women’s Inheritance Rights and Time Use in India`,
+            speakers: `Dr. Tanu Gupta , Indira Gandhi Institute of Development Research, Mumbai`,
+            dateTime: `Thursday, June 16, 2022 @ 11:00 AM`,
+            venue: `Webinar`,
+            contact: `Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
+            abstract: [{
+                text: `This paper examines the impact of the Hindu Succession Act on 
                 married women’s time use in India. The Hindu Succession Act was 
                 amended between 1976 and 2005 by giving equal inheritance rights to 
                 women for inheriting property. To estimate the effect of equal 
@@ -72,16 +72,16 @@ export const seminarsData:seminarPageSpec={
                 especially the male members. This suggests that inheritance reform 
                 could be a form of reversal of the devaluing of women’s domestic and 
                 reproductive labour.`
-            }
+            }]
         },
         {
-            title:`CECFEE Seminar: Structural Transformation and Environmental Externalities`,
-            speakers:`Dr. Teevrat Garg, University of California, San Diego`,
-            dateTime:`Friday, April 15, 2022 @ 9:00 AM`,
-            venue:`Webinar`,
-            contact:`Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
-            abstract:{
-                text:`Even as policymakers seek to encourage economic development by 
+            title: `CECFEE Seminar: Structural Transformation and Environmental Externalities`,
+            speakers: `Dr. Teevrat Garg, University of California, San Diego`,
+            dateTime: `Friday, April 15, 2022 @ 9:00 AM`,
+            venue: `Webinar`,
+            contact: `Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
+            abstract: [{
+                text: `Even as policymakers seek to encourage economic development by 
                 addressing misallocation due to frictions in labor markets, the 
                 associated production externalities — such as air pollution — remain 
                 unexplored. Using a regression discontinuity design, we show access 
@@ -93,16 +93,16 @@ export const seminarsData:seminarPageSpec={
                 residue or to make harvesting less labor-intensive. Overall, the 
                 adoption of fires due to rural roads increases infant mortality rate 
                 by roughly 5.5% in downwind locations.`
-            }
+            }]
         },
         {
-            title:`CECFEE Seminar: A data-driven approach to estimating the social cost of carbon`,
-            speakers:`Dr. Tamma Carleton, University of California, Santa Barbara`,
-            dateTime:`Friday, April 01, 2022 @ 8:00 AM`,
-            venue:`(Webinar)`,
-            contact:`Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
-            abstract:{
-                text:`The social cost of carbon (SCC) plays a central role in 
+            title: `CECFEE Seminar: A data-driven approach to estimating the social cost of carbon`,
+            speakers: `Dr. Tamma Carleton, University of California, Santa Barbara`,
+            dateTime: `Friday, April 01, 2022 @ 8:00 AM`,
+            venue: `(Webinar)`,
+            contact: `Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
+            abstract: [{
+                text: `The social cost of carbon (SCC) plays a central role in 
                 determining the nature and stringency of climate policy in many 
                 countries, but existing estimates rely on outdated scientific 
                 evidence. This talk will describe a data-driven approach to 
@@ -115,16 +115,16 @@ export const seminarsData:seminarPageSpec={
                 is shown that the SCC depends critically on the degree of expected 
                 future emissions mitigation as well as choices regarding how society 
                 values tail risks and the distributional impacts of climate change.`
-            }
+            }]
         },
         {
-            title:`CECFEE Seminar: Wildfires, Smoky Days, and Labor Supply`,
-            speakers:`Dr. Ron Chan, University of Manchester`,
-            dateTime:`Friday, November 26, 2021 @ 4:00 PM`,
-            venue:`Webinar`,
-            contact:`Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
-            abstract:{
-                text:`We study the impact of air pollution on labor supply in Chile. 
+            title: `CECFEE Seminar: Wildfires, Smoky Days, and Labor Supply`,
+            speakers: `Dr. Ron Chan, University of Manchester`,
+            dateTime: `Friday, November 26, 2021 @ 4:00 PM`,
+            venue: `Webinar`,
+            contact: `Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
+            abstract: [{
+                text: `We study the impact of air pollution on labor supply in Chile. 
                 We use the exogenous incidence of wildfires between 2010 and 2018 to 
                 identify the causal impact of air pollution on labor supply. We 
                 complement the literature that focuses on health or worker 
@@ -141,16 +141,16 @@ export const seminarsData:seminarPageSpec={
                 to 6.5 percent. These results compound on existing results on 
                 productivity, suggesting that air pollution may have a more 
                 important impact on production than previously thought.`
-            }
+            }]
         },
         {
-            title:` CECFEE Seminar: Does Traffic Congestion pose Health Hazards? Evidence from a Highly Congested and Polluted City`,
-            speakers:`Dr. Kanishka Kacker, Indian Statistical Institute, Delhi`,
-            dateTime:`Friday, July 02, 2021 @ 9:30 AM`,
-            venue:`Webinar`,
-            contact:`Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
-            abstract:{
-                text:`Will reducing traffic congestion bring health benefits? We 
+            title: ` CECFEE Seminar: Does Traffic Congestion pose Health Hazards? Evidence from a Highly Congested and Polluted City`,
+            speakers: `Dr. Kanishka Kacker, Indian Statistical Institute, Delhi`,
+            dateTime: `Friday, July 02, 2021 @ 9:30 AM`,
+            venue: `Webinar`,
+            contact: `Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
+            abstract: [{
+                text: `Will reducing traffic congestion bring health benefits? We 
                 study the city of Delhi, India which experiences extremely high 
                 levels of air pollution and traffic congestion. Our analysis relies 
                 on high frequency data from Uber which has information by time of 
@@ -167,16 +167,16 @@ export const seminarsData:seminarPageSpec={
                 existing levels of pollution. Further vehicular regulation in terms 
                 of easing congestion is unlikely to bring substantial improvements 
                 in air quality and health.`
-            }
+            }]
         },
         {
-            title:`CECFEE Seminar: The Social Costs of Keystone Species Collapse: Evidence From The Decline of Vultures in India`,
-            speakers:`Prof. Anant Sudarshan, University of Chicago`,
-            dateTime:`Friday, March 26, 2021 @ 9:00 AM`,
-            venue:`Webinar`,
-            contact:`Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
-            abstract:{
-                text:`Losses of keystone species that affect environmental quality 
+            title: `CECFEE Seminar: The Social Costs of Keystone Species Collapse: Evidence From The Decline of Vultures in India`,
+            speakers: `Prof. Anant Sudarshan, University of Chicago`,
+            dateTime: `Friday, March 26, 2021 @ 9:00 AM`,
+            venue: `Webinar`,
+            contact: `Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
+            abstract: [{
+                text: `Losses of keystone species that affect environmental quality 
                 through their ecosystem interactions can have large effects on 
                 social costs. However, crucial parameters for the management of 
                 their preservation are often not available. Determining an optimal 
@@ -194,38 +194,38 @@ export const seminarsData:seminarPageSpec={
                 populations. We estimate all-cause death rates increased, on 
                 average, by six percent in the highly-vulture-suitable districts 
                 after vultures nearly went extinct.`
-            }
+            }]
         },
         {
-            title:`CECFEE Seminar: Short- and Long-Run Consumption and Non-Payment Responses to Retail Electricity Prices in India`,
-            speakers:`Shefali Khanna, Harvard University`,
-            dateTime:`Friday, March 12, 2021 @ 9:00 AM`,
-            venue:`Webinar`,
-            contact:`Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
+            title: `CECFEE Seminar: Short- and Long-Run Consumption and Non-Payment Responses to Retail Electricity Prices in India`,
+            speakers: `Shefali Khanna, Harvard University`,
+            dateTime: `Friday, March 12, 2021 @ 9:00 AM`,
+            venue: `Webinar`,
+            contact: `Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
         },
         {
-            title:`CECFEE Seminar: October 16th`,
-            speakers:`Dr. Takahiko Kiso, University of Aberdeen`,
-            dateTime:`Friday, October 16, 2020`,
-            venue:`Webinar`,
-            contact:`Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
+            title: `CECFEE Seminar: October 16th`,
+            speakers: `Dr. Takahiko Kiso, University of Aberdeen`,
+            dateTime: `Friday, October 16, 2020`,
+            venue: `Webinar`,
+            contact: `Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
         },
 
         {
-            title:`CECFEE Seminar: The effect of climate policy on productivity and cost pass-through in the German manufacturing sector`,
-            speakers:`Prof. Beat Hintermann, University of Basel`,
-            dateTime:`Friday, November 20, 2020 @ 2:PM`,
-            venue:`Webinar`,
-            contact:`Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
+            title: `CECFEE Seminar: The effect of climate policy on productivity and cost pass-through in the German manufacturing sector`,
+            speakers: `Prof. Beat Hintermann, University of Basel`,
+            dateTime: `Friday, November 20, 2020 @ 2:PM`,
+            venue: `Webinar`,
+            contact: `Kaniskha Kacker (kkacker [at] ’isid’dot’ac’dot’in)`,
         },
         {
-            title:`CECFEE Seminar: Out-of-merit costs and blackouts: Evidence from the Indian electricity market.`,
-            speakers:`Dr. Louis Preonas, University of Chicago`,
-            dateTime:`Friday, February 15, 2019 @ 11:30 am – 1:00 pm`,
-            venue:`Seminar Hall 2, Indian Statistical Institute, New Delhi`,
-            contact:`Abhiroop Mukhopadhyay (abhiroop’at’isid’dot’ac’dot’in)`,
-            abstract:{
-                text:`In the United States, demand for electricity among utilities 
+            title: `CECFEE Seminar: Out-of-merit costs and blackouts: Evidence from the Indian electricity market.`,
+            speakers: `Dr. Louis Preonas, University of Chicago`,
+            dateTime: `Friday, February 15, 2019 @ 11:30 am – 1:00 pm`,
+            venue: `Seminar Hall 2, Indian Statistical Institute, New Delhi`,
+            contact: `Abhiroop Mukhopadhyay (abhiroop’at’isid’dot’ac’dot’in)`,
+            abstract: [{
+                text: `In the United States, demand for electricity among utilities 
                 in the wholesale spot market is assumed to be perfectly inelastic. 
                 Consumers therefore face power outages only as a result of 
                 infrastructure failure – never because a utility does not purchase 
@@ -240,16 +240,16 @@ export const seminarsData:seminarPageSpec={
                 generation, half of which can be explained by plant outages. These 
                 inefficiencies increase the wholesale price, and therefore 
                 contribute substantially to rampant blackouts.`
-            }
+            }]
         },
         {
-            title:`CECFEE Seminar: Integrated Assessment in a Multi-region World with Multiple Energy Sources and Endogenous Technical Change`,
-            speakers:`Prof. John Hassler, IIES, Stockholm University`,
-            dateTime:`Thursday, March 22, 2018 @ 11:30 am – 1:00 pm`,
-            venue:`Seminar Hall 2, Indian Statistical Institute, New Delhi`,
-            contact:`E. Somanathan (som’at’isid’dot’ac’dot’in)`,
-            abstract:{
-                text:`We construct an integrated assessment model with multiple 
+            title: `CECFEE Seminar: Integrated Assessment in a Multi-region World with Multiple Energy Sources and Endogenous Technical Change`,
+            speakers: `Prof. John Hassler, IIES, Stockholm University`,
+            dateTime: `Thursday, March 22, 2018 @ 11:30 am – 1:00 pm`,
+            venue: `Seminar Hall 2, Indian Statistical Institute, New Delhi`,
+            contact: `E. Somanathan (som’at’isid’dot’ac’dot’in)`,
+            abstract: [{
+                text: `We construct an integrated assessment model with multiple 
                 energy sources – including fossil fuels and “green energy” – and 
                 multiple world regions. The energy sources are imperfect substitutes 
                 and their production involve structures that are endogenous. In 
@@ -261,16 +261,16 @@ export const seminarsData:seminarPageSpec={
                 affect output and the climate with and without the endogeneity of 
                 technology. We emphasize the second-best nature of taxation when 
                 optimal world-wide technology subsidies are not implemented.`
-            }
+            }]
         },
         {
-            title:`CECFEE Seminar: If people pay for improved biomass stoves, do they use them more frequently?`,
-            speakers:`Prof. Randall Bluffstone, Portland State University`,
-            dateTime:`February 23, 2017 @ 11:30 am – 1:00 pm`,
-            venue:`Seminar 2, Indian Statistical Institute, New Delhi`,
-            contact:`E. Somanathan (som’at’isid’dot’ac’dot’in)`,
-            abstract:{
-                text:`This paper uses a field experiment and real-time electronic 
+            title: `CECFEE Seminar: If people pay for improved biomass stoves, do they use them more frequently?`,
+            speakers: `Prof. Randall Bluffstone, Portland State University`,
+            dateTime: `February 23, 2017 @ 11:30 am – 1:00 pm`,
+            venue: `Seminar 2, Indian Statistical Institute, New Delhi`,
+            contact: `E. Somanathan (som’at’isid’dot’ac’dot’in)`,
+            abstract: [{
+                text: `This paper uses a field experiment and real-time electronic 
                 stove use monitors to evaluate over a period of more than one year 
                 how different incentives affect usage intensity of one of the most 
                 important improved biomass-burning stoves promoted in rural 
@@ -282,18 +282,18 @@ export const seminarsData:seminarPageSpec={
                 free is the preferred policy for promoting long-run adoption and 
                 use. Requiring monetary payments is not found to promote regular use 
                 of the technology.`
-            }
+            }]
         },
         {
-            title:`Development Seminar @ Brookings India : Environmental Challenges in India`,
-            speakers:`Prof. E. Somanathan, Indian Statistical Institute, Delhi`,
-            dateTime:`January 20, 2017 @ 3:00 pm – 4:30 pm`,
-            venue:`Lecture Theatre, Brookings India, Second Floor, 6, Dr Jose P Rizal Marg, Chanakyapuri, New Delhi, Delhi 110021`,
-            contact:`Shamika Ravi (shamika.ravi’at’brookingsindia’dot’org)`,
-            discussant:`Dr. Ajay Mathur, Director General, The Energy and Resources Institute`,
-            description:`They will be followed by Shri Ajay Narayan Jha (Secretary, Ministry of Environment, Forest and Climate Change, Government of India) who will give a Keynote Address.`,
-            abstract:{
-                text:`Environmental problems including climate change, air pollution 
+            title: `Development Seminar @ Brookings India : Environmental Challenges in India`,
+            speakers: `Prof. E. Somanathan, Indian Statistical Institute, Delhi`,
+            dateTime: `January 20, 2017 @ 3:00 pm – 4:30 pm`,
+            venue: `Lecture Theatre, Brookings India, Second Floor, 6, Dr Jose P Rizal Marg, Chanakyapuri, New Delhi, Delhi 110021`,
+            contact: `Shamika Ravi (shamika.ravi’at’brookingsindia’dot’org)`,
+            discussant: `Dr. Ajay Mathur, Director General, The Energy and Resources Institute`,
+            description: `They will be followed by Shri Ajay Narayan Jha (Secretary, Ministry of Environment, Forest and Climate Change, Government of India) who will give a Keynote Address.`,
+            abstract: [{
+                text: `Environmental problems including climate change, air pollution 
                 and forest degradation have reduced incomes and worsened health in 
                 India. Prof. Somanathan will examine the evidence on some of these 
                 findings. The weaknesses in our institutions that permitted this to 
@@ -304,15 +304,15 @@ export const seminarsData:seminarPageSpec={
                 political and social reactions to these. Further, he will discuss 
                 the changes in the Indian institutions and policies that are 
                 required to address these challenges.`
-            }
+            }]
         },
         {
-            title:`The Dirty Business of Eliminating Open Defecation: Findings from Two Randomized Control Trials of Sanitation Programs in Odisha and Madhya Pradesh`,
-            speakers:`Sumeet Patil, The Colford Research Group, UC Berkeley and NEERMAN (Mumbai)`,
-            dateTime:`11:30 AM, Friday, 30th January, 2015`,
-            venue:`Seminar Room No. 2`,
-            abstract:{
-                text:`Poor sanitation is thought to be a major cause of enteric 
+            title: `The Dirty Business of Eliminating Open Defecation: Findings from Two Randomized Control Trials of Sanitation Programs in Odisha and Madhya Pradesh`,
+            speakers: `Sumeet Patil, The Colford Research Group, UC Berkeley and NEERMAN (Mumbai)`,
+            dateTime: `11:30 AM, Friday, 30th January, 2015`,
+            venue: `Seminar Room No. 2`,
+            abstract: [{
+                text: `Poor sanitation is thought to be a major cause of enteric 
                 infections and malnutrition among young children. However, can large 
                 scale sanitation programs indeed deliver the hypothesized health 
                 benefits? We answer this question in the context of India’s Total 
@@ -350,15 +350,15 @@ export const seminarsData:seminarPageSpec={
                 small-scale and short-term pilots across different regions of India 
                 before scaling up to the national level.
                 `
-            }
+            }]
         },
         {
-            title:`A New Policy to Reduce Land Conflict`,
-            speakers:`Gunnar Köhlin, University of Gothenburg`,
-            dateTime:`3:30 PM, Monday, 24th November, 2014`,
-            venue:`Seminar Room No. 2`,
-            abstract:{
-                text:`Land conflicts in developing countries are costly. An 
+            title: `A New Policy to Reduce Land Conflict`,
+            speakers: `Gunnar Köhlin, University of Gothenburg`,
+            dateTime: `3:30 PM, Monday, 24th November, 2014`,
+            venue: `Seminar Room No. 2`,
+            abstract: [{
+                text: `Land conflicts in developing countries are costly. An 
                 important policy goal is to create respect for borders. This often 
                 involves mandatory, expensive interventions. We propose a new policy 
                 design, which in theory promotes neighborly relations at low cost. A 
@@ -372,15 +372,15 @@ export const seminarsData:seminarPageSpec={
                 delimitation based on neighborly recognition of borders could 
                 deliver a desired low-conflict situation if accompanied by an 
                 optional higher cost demarcation process.`
-            }
+            }]
         },
         {
-            title:`Cooking up change in the Himalayas: Evidence from mixing quasi-experiments with an experiment on cookstove promotion.`,
-            speakers:`Subhrendu K Pattanayak, Duke University`,
-            dateTime:`3:30 PM, Thursday, 11th September, 2014`,
-            venue:`Seminar Room 2`,
-            abstract:{
-                text:`Household preferences and relationships with promoting 
+            title: `Cooking up change in the Himalayas: Evidence from mixing quasi-experiments with an experiment on cookstove promotion.`,
+            speakers: `Subhrendu K Pattanayak, Duke University`,
+            dateTime: `3:30 PM, Thursday, 11th September, 2014`,
+            venue: `Seminar Room 2`,
+            abstract: [{
+                text: `Household preferences and relationships with promoting 
                 institutions should influence adoption of environmental 
                 health‐improving technologies, but there has been limited empirical 
                 research to isolate their importance, perhaps due to challenges of 
@@ -411,7 +411,7 @@ export const seminarsData:seminarPageSpec={
                 common socioeconomic drivers of adoption and preference class. This 
                 suggests that long term environmental and health benefits may be 
                 closely related to institutional support.`
-            }
+            }]
         }
     ]
 }
