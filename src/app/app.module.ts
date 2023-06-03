@@ -18,6 +18,9 @@ import { PersonboxComponent } from './comps/personbox/personbox.component';
 import { ParaspecboxComponent } from './comps/paraspecbox/paraspecbox.component';
 import { SafePipe } from './safe.pipe';
 import { StudentboxComponent } from './comps/studentbox/studentbox.component';
+import { SeminarboxComponent } from './comps/seminarbox/seminarbox.component';
+import { CollapsibleComponent } from './comps/collapsible/collapsible.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,11 +39,14 @@ import { StudentboxComponent } from './comps/studentbox/studentbox.component';
     ProjectsPageComponent,
     PersonboxComponent,
     ParaspecboxComponent,
-    StudentboxComponent
+    StudentboxComponent,
+    SeminarboxComponent,
+    CollapsibleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

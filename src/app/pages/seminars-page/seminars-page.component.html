@@ -1,1 +1,32 @@
-<p>seminars-page works!</p>
+<div class="main">
+    <div class="titlebar">
+        <p class="heading">{{data.upcomingTitle}}</p>
+        <input [(ngModel)]="upcomingQuery" placeholder="🔍 Search for keywords..."/>
+    </div>
+    <div *ngIf="upcomingQuery.length===0">
+        <p *ngIf="(data.upcomingSeminars.length===0)">There are no upcoming seminars,  please check again later.</p>
+        <app-seminarbox *ngFor="let seminar of data.upcomingSeminars" [seminar]="seminar">
+        </app-seminarbox>
+    </div>
+    <div *ngIf="upcomingQuery.length>0">
+        <p *ngIf="getUpcomingQueryResults().length>0">Search results for '{{upcomingQuery}}':</p>
+        <p *ngIf="getUpcomingQueryResults().length===0">No results for '{{upcomingQuery}}'</p>
+        <app-seminarbox *ngFor="let seminar of getUpcomingQueryResults()" [seminar]="seminar">
+        </app-seminarbox>
+    </div>
+    <div class="titlebar">
+        <p class="heading">{{data.pastTitle}}</p>
+        <input [(ngModel)]="pastQuery" placeholder="🔍 Search for keywords..."/>
+    </div>
+    <div *ngIf="pastQuery.length===0">
+        <p *ngIf="(data.pastSeminars.length===0)">There are no upcoming seminars,  please check again later.</p>
+        <app-seminarbox *ngFor="let seminar of data.pastSeminars" [seminar]="seminar">
+        </app-seminarbox>
+    </div>
+    <div *ngIf="pastQuery.length>0">
+        <p *ngIf="getPastQueryResults().length>0">Search results for '{{pastQuery}}':</p>
+        <p *ngIf="getPastQueryResults().length===0">No results for '{{pastQuery}}'</p>
+        <app-seminarbox *ngFor="let seminar of getPastQueryResults()" [seminar]="seminar">
+        </app-seminarbox>
+    </div>
+</div>

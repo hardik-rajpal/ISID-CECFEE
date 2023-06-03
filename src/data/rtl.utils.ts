@@ -24,7 +24,19 @@ export interface VersatilePageSpec {
         paragraphs: paraSpec[];
     }[];
 }
-
+export function getParaSpecStr(para:paraSpec){
+    let str:string = '';
+    if(para.text){
+        str+=para.text;
+    }
+    if(para.list){
+        str+=para.list.join('')
+    }
+    if(para.internalLink){
+        str+=para.internalLink.label
+    }
+    return str
+}
 export function objectToVals<T>(object:{[key:string]:T}):T[]{
     return Object.keys(object).map((key)=>object[key]);
 }
