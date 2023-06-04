@@ -1,0 +1,11 @@
+import { Component,Input } from '@angular/core';
+import { personTileSpec } from 'src/data/people';
+
+@Component({
+  selector: 'app-persontile',
+  templateUrl: './persontile.component.html',
+  styleUrls: ['./persontile.component.css']
+})
+export class PersontileComponent {
+  @Input() person!:personTileSpec;
+}
