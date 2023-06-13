@@ -1,1 +1,25 @@
-<p>persontile works!</p>
+<div class="desktop">
+    <div class="main" *ngIf="!active">
+        <img class="person-img" [src]="person.image"/>
+        <div class="name" [innerHTML]="person.name"></div>
+        <div class="body" [innerHTML]="person.description"></div>
+    </div>
+    <div class="main active" *ngIf="active">
+        <img class="person-img" [src]="person.image"/>
+        <div [innerHTML]="person.name"></div>
+        <div [innerHTML]="person.description"></div>
+    </div>
+</div>
+
+<div  class="mobile">
+    <div class="main" *ngIf="!active">
+        <img class="person-img" [src]="person.image"/>
+        <div [innerHTML]="person.name"></div>
+        <div [innerHTML]="person.description"></div>
+    </div>
+    <div class="active" *ngIf="active">
+        <img class="person-img" [src]="person.image"/>
+        <div [innerHTML]="person.name"></div>
+        <div [innerHTML]="person.description"></div>
+    </div>    
+</div>

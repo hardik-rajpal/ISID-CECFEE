@@ -5,6 +5,7 @@ export interface personTileSpec{
     bio?:string;
     cvLink?:string;
 }
+
 export interface peoplePageSpec{
     title:string;
     people:personTileSpec[]
@@ -14,8 +15,8 @@ export const peopleData:peoplePageSpec = {
     people:[
         {
             name:`E. Somanathan`,
-            description:`Professor
-            <br>,
+            description:`Professor,
+            <br>
             Economics and Planning Unit, ISI`,
             image:`assets/people/Som-1-150x150.jpg`
         },
