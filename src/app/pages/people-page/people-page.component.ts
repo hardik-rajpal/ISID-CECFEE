@@ -20,10 +20,16 @@ export class PeoplePageComponent {
   }
   peopleBeforeActive():personTileSpec[]{
     if(this.activeIndex===-1){return this.data.people;}
+    if(this.activeIndex % 2==1){
+      return this.data.people.filter((person,index,[])=>(index<this.activeIndex && index!==(this.activeIndex-1)))
+    }
     return this.data.people.filter((person,index,[])=>(index<this.activeIndex))
   }
   peopleAfterActive(){
     if(this.activeIndex===-1){return [];}
+    if(this.activeIndex % 2==1){
+      return this.data.people.filter((person,index,[])=>(index>this.activeIndex || index===(this.activeIndex-1)))
+    }
     return this.data.people.filter((person,index,[])=>(index>this.activeIndex))
   }
   
