@@ -1,9 +1,11 @@
 .active>*{
     padding: 10px;
 }
+.centercol{
+    align-items: center;
+}
 .main{
     margin: 10px;
-    align-items: center;
     border: 3px solid var(--primary);
     /* width: 300px; */
 }
@@ -28,4 +30,16 @@ img{
     text-align: center;
     margin-top: 5px;
     border-top: 3px solid var(--primary);
+}
+.desktop.closebtn{
+    align-self: flex-end;
+}
+.closebtn{
+    background-color: rgb(184, 184, 184);
+    color: black;
+    padding: 5px;
+    margin-right: 10px;
+}
+.biolinks{
+    justify-content: space-around;
 }

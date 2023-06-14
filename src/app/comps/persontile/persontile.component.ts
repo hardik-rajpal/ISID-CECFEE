@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,EventEmitter,Input, Output } from '@angular/core';
 import { personTileSpec } from 'src/data/people';
 
 @Component({
@@ -8,5 +8,7 @@ import { personTileSpec } from 'src/data/people';
 })
 export class PersontileComponent {
   @Input() person!:personTileSpec;
-  @Input() active!:boolean
+  @Input() active!:boolean;
+  @Output() inactive = new EventEmitter<any>();
+  
 }
