@@ -1,13 +1,21 @@
 <div class="desktop">
-    <div class="main" *ngIf="!active">
+    <div class="main col" *ngIf="!active">
         <img class="person-img" [src]="person.image"/>
         <div class="name" [innerHTML]="person.name"></div>
         <div class="body" [innerHTML]="person.description"></div>
     </div>
-    <div class="main active" *ngIf="active">
-        <img class="person-img" [src]="person.image"/>
-        <div [innerHTML]="person.name"></div>
-        <div [innerHTML]="person.description"></div>
+    <div class="main active row" *ngIf="active">
+        <div class="col">
+            <img class="person-img" [src]="person.image"/>
+            <div class="name" [innerHTML]="person.name"></div>
+            <div class="body" [innerHTML]="person.description"></div>
+        </div>
+        <div class="col">
+            <div *ngIf="person.bio" [innerHTML]="person.bio"></div>
+            <div *ngIf="person.links" class="row">
+                <a *ngFor="let link of person.links" href="{{link.target}}">{{link.label}}</a>
+            </div>
+        </div>
     </div>
 </div>
 

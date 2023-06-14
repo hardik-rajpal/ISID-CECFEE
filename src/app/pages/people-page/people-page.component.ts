@@ -7,34 +7,24 @@ import { peopleData, peoplePageSpec, personTileSpec } from 'src/data/people';
   styleUrls: ['./people-page.component.css']
 })
 export class PeoplePageComponent {
-  data:peoplePageDisplaySpec = toDisplaySpec(peopleData);
-  toggleActive(person:personTileDisplay){
-    let personIndex = this.data.people.findIndex((p)=>p.person===person.person)
-    for(let person of this.data.people){
-      if(this.data.people.indexOf(person)!==personIndex){
-          person.active = false;
-      }
+  data:peoplePageSpec = peopleData;
+  activeIndex:number = -1;
+  toggleActive(person:personTileSpec){
+    let personIndex = this.data.people.findIndex((p)=>p===person)
+    if(this.activeIndex!==personIndex){
+      this.activeIndex = personIndex
     }
-    if(personIndex!==-1){
-      this.data.people[personIndex].active = !this.data.people[personIndex].active
+    else{
+        this.activeIndex = -1
     }
   }
-}
-export interface peoplePageDisplaySpec{
-    title:string;
-    people:personTileDisplay[]
-}
-export class personTileDisplay{
-  person!:personTileSpec;
-  active:boolean = false;
-  constructor(person:personTileSpec){
-    this.person = person;
+  peopleBeforeActive():personTileSpec[]{
+    if(this.activeIndex===-1){return this.data.people;}
+    return this.data.people.filter((person,index,[])=>(index<this.activeIndex))
   }
-}
-function toDisplaySpec(data:peoplePageSpec):peoplePageDisplaySpec{
-  let res:peoplePageDisplaySpec={
-    title:data.title,
-    people:data.people.map((person)=>(new personTileDisplay(person)))
-  };
-  return res;
+  peopleAfterActive(){
+    if(this.activeIndex===-1){return [];}
+    return this.data.people.filter((person,index,[])=>(index>this.activeIndex))
+  }
+  
 }

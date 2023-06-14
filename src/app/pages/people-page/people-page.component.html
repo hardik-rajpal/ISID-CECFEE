@@ -1,6 +1,12 @@
 <div class="main">
     <p class="title">{{data.title}}</p>
     <div class="grid">
-        <app-persontile *ngFor="let person of data.people" [person]="person.person" [active]="person.active" (click)="toggleActive(person)"></app-persontile>
+        <app-persontile *ngFor="let person of peopleBeforeActive()" [person]="person" [active]="false" (click)="toggleActive(person)"></app-persontile>
+    </div>
+    <div class="activediv">
+        <app-persontile *ngIf="activeIndex!==-1" [person]="data.people[activeIndex]" [active]="true" (click)="toggleActive(data.people[activeIndex])"></app-persontile>
+    </div>
+    <div class="grid">
+        <app-persontile *ngFor="let person of peopleAfterActive()" [person]="person" [active]="false" (click)="toggleActive(person)"></app-persontile>
     </div>
 </div>
