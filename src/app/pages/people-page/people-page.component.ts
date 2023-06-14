@@ -9,7 +9,7 @@ import { peopleData, peoplePageSpec, personTileSpec } from 'src/data/people';
 export class PeoplePageComponent {
   @ViewChild('maindiv') maindiv!:ElementRef<HTMLDivElement>;
   data:peoplePageSpec = peopleData;
-  activeIndex:number = 16;
+  activeIndex:number = -1;
   
   toggleActive(person:personTileSpec){
     let personIndex = this.data.people.findIndex((p)=>p===person)
