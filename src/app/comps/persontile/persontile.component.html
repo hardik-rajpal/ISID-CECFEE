@@ -1,0 +1,44 @@
+<div class="desktop">
+    <div class="main col centercol pointable" *ngIf="!active">
+        <img class="person-img" [src]="person.image"/>
+        <div class="name" [innerHTML]="person.name"></div>
+        <div class="body" [innerHTML]="person.description"></div>
+    </div>
+    <div class="main active row" *ngIf="active">
+        <div class="col centercol">
+            <img class="person-img" [src]="person.image"/>
+            <div class="name" [innerHTML]="person.name"></div>
+            <div class="body" [innerHTML]="person.description"></div>
+        </div>
+        <div class="col centercol biolinks">
+            <div class="closebtn pointable" (click)="this.inactive.emit()">
+                Close <i class="fa fa-times"></i>
+            </div>
+            <div *ngIf="person.bio" [innerHTML]="person.bio"></div>
+            <br>
+            <div *ngIf="person.links" class="row">
+                <a *ngFor="let link of person.links" href="{{link.target}}">{{link.label}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div  class="mobile">
+    <div class="main col centercol pointable" *ngIf="!active">
+        <img class="person-img" [src]="person.image"/>
+        <div class="name" [innerHTML]="person.name"></div>
+        <div class="body" [innerHTML]="person.description"></div>
+    </div>
+    <div class="main active col centercol" *ngIf="active">
+            <img class="person-img" [src]="person.image"/>
+            <div class="name" [innerHTML]="person.name"></div>
+            <div class="body" [innerHTML]="person.description"></div>
+            <div class="closebtn pointable" (click)="this.inactive.emit()">
+                Close <i class="fa fa-times"></i>
+            </div>
+            <div *ngIf="person.bio" [innerHTML]="person.bio"></div>
+            <div *ngIf="person.links" class="row centerrow">
+                <a *ngFor="let link of person.links" href="{{link.target}}">{{link.label}}</a>
+            </div>
+    </div>
+</div>

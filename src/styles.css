@@ -39,6 +39,12 @@ a.button{
     display: flex;
     flex-direction: column;
 }
+.centercol{
+    align-items: center;
+}
+.centerrow{
+    justify-content: center;
+}
 .row{
     display: flex;
     flex-direction: row;
@@ -71,6 +77,9 @@ hr.thick{
     height: 5px;
 }
 
+.pointable{
+    cursor: pointer;
+}
 .desktop{
     display: none;
 }

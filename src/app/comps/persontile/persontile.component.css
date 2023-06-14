@@ -1,0 +1,45 @@
+.active>*{
+    padding: 10px;
+}
+.centercol{
+    align-items: center;
+}
+.main{
+    margin: 10px;
+    border: 3px solid var(--primary);
+    /* width: 300px; */
+}
+.name{
+    padding: 5px;
+    font-size: larger;
+    color: white;
+    text-align: center;
+    background-color: var(--primary);
+    z-index: 1;
+    max-width: 90%;
+}
+
+img{
+    padding: 3px;
+    float: right;
+    background-color: white;
+    z-index: 1;
+}
+
+.body{
+    text-align: center;
+    margin-top: 5px;
+    border-top: 3px solid var(--primary);
+}
+.desktop.closebtn{
+    align-self: flex-end;
+}
+.closebtn{
+    background-color: rgb(184, 184, 184);
+    color: black;
+    padding: 5px;
+    margin-right: 10px;
+}
+.biolinks{
+    justify-content: space-around;
+}

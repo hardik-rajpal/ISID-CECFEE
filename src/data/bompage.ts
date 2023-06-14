@@ -17,31 +17,31 @@ export const BomPageData:bomPageSpec = {
         {
             name:'Professor K. Vijay Raghavan',
             description:'Principal Scientific Adviser, Government of India',
-            image:'assets/people/vijayr.jpg',
+            image:'assets/bom/vijayr.jpg',
             position:'Chairman'
         },
         {
             name:'Professor Sanghamitra Bandhyopadhyay',
             description:'Director, Indian Statistical Institute',
-            image:'assets/people/sanghamitra.jpg'
+            image:'assets/bom/sanghamitra.jpg'
         },
         {
             name:'Professor Samir K Neogy',
             description:'Head, Indian Statistical Institute, Delhi',
-            image:'assets/people/samirk.png'
+            image:'assets/bom/samirk.png'
         },
         {
             name:'Mr. Neelkanth Mishra',
             description:`Co-head APAC Strategy and India Strategist <br>
                         Credit Suisse Securities, Mumbai`,
-            image:'assets/people/neelkanthm.jpg',
+            image:'assets/bom/neelkanthm.jpg',
             position:'External Member'
         },
         {
             name:'Professor E. Somanathan',
             description:`Head, CECFEE<br>
                         Professor, Economics and Planning Unit`,
-            image:'assets/people/somanathane.jpg',
+            image:'assets/bom/somanathane.jpg',
             position:'Convener'
         }
     ]
