@@ -1,1 +1,5 @@
-<p>research-page works!</p>
+<div class="main">
+    <p class="title">{{data.title}}</p>
+    <!-- search bar and tag filter. -->
+    <app-publication-box *ngFor="let paper of data.papers" [paper]="paper"></app-publication-box>
+</div>

@@ -22,6 +22,7 @@ import { SeminarboxComponent } from './comps/seminarbox/seminarbox.component';
 import { CollapsibleComponent } from './comps/collapsible/collapsible.component';
 import { FormsModule } from '@angular/forms';
 import { PersontileComponent } from './comps/persontile/persontile.component';
+import { PublicationBoxComponent } from './comps/publication-box/publication-box.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { PersontileComponent } from './comps/persontile/persontile.component';
     StudentboxComponent,
     SeminarboxComponent,
     CollapsibleComponent,
-    PersontileComponent
+    PersontileComponent,
+    PublicationBoxComponent
   ],
   imports: [
     BrowserModule,
