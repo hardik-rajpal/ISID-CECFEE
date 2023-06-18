@@ -14,7 +14,11 @@
         </span> 
         {{getAuthorText(paper)}}
     </p>
-    <p *ngIf="paper.description">Publication details: {{paper.description}}</p>
+    <p *ngIf="paper.description">
+        <i class="fa fa-book">
+        </i>
+        Publication details: {{paper.description}}
+    </p>
     <app-collapsible *ngIf="paper.summary" [title]="'Summary'">
         <app-paraspecbox [para]="{text:paper.summary}"></app-paraspecbox>
     </app-collapsible>

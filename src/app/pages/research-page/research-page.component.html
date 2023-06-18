@@ -1,5 +1,22 @@
 <div class="main">
-    <p class="title">{{data.title}}</p>
-    <!-- search bar and tag filter. -->
-    <app-publication-box *ngFor="let paper of data.papers" [paper]="paper"></app-publication-box>
+    <div class="titlebar">
+        <p class="title">{{data.title}}</p>
+        <input [(ngModel)]="query" placeholder="🔍 Search for keywords..."/>
+    </div>
+    <div>
+        <p class="heading">
+            Category
+        </p>
+        <!-- category tags -->
+    </div>
+    <div>
+        <p class="heading">
+            Authors
+        </p>
+        <!-- author tags -->
+    </div>
+    <div class="paper-group" *ngFor="let category of categories">
+        <p class="heading">Publications about {{category}}</p>
+        <app-publication-box *ngFor="let paper of getPapersByCategory(category)" [paper]="paper"></app-publication-box>
+    </div>
 </div>
