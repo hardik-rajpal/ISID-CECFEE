@@ -9,7 +9,10 @@ import { ResearchData, publication, researchPage } from 'src/data/research';
 export class ResearchPageComponent implements OnInit{
   data:researchPage = ResearchData;
   categories:string[] = [];
+  authors:string[] = [];
   query:string=``;
+  selectedCategories:string[]=[]
+  selectedAuthors:string[]=[]
   getQueryResults(): publication[] {
     const lowerCaseQuery = this.query.toLowerCase();
     return this.data.papers.filter((paper)=>this.paperQueryMatch(paper,lowerCaseQuery))
