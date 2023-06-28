@@ -268,28 +268,63 @@ export const EventsData:eventsPageSpec = {
             ],
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`4th Annual CECFEE Research & Policy Workshop`,
+            dateTime:`November 16-17, 2018`,
+            venue:`Goa`,
+            description:[
+                {
+                    text:`The Center for research on the Economics of Climate, Food, Energy and Environment (CECFEE) of the Indian Statistical Institute, New Delhi, organised the 4th Annual CECFEE Research and Policy Workshop in collaboration with the Environment for Development (EfD) Initiative of University of Gothenburg  and Centre for Policy Research (CPR), New Delhi on 16th and 17th November 2018 in Goa. The workshop saw participation and presentations from academics, researchers and policy representatives discussing important and urgent Environmental concerns. A summary of the presentations made at the workshop can be accessed
+                    <a href="http://www.isid.ac.in/~cecfee/wp-content/uploads/2017/01/4th-Annual-CECFEE-Workshop_Writeup-ES-2.pdf">
+                    here
+                    </a>.
+                    <br>
+                    The workshop agenda can be found
+                    <a href="http://www.isid.ac.in/~cecfee/wp-content/uploads/2017/01/AgendaFinal.pdf" target="_blank">
+                    here
+                    </a>`
+                },
+                // TODO photo gallery.
+                {
+                    image:`assets/events/goa2018-35-min.jpg`
+                }
+            ],
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`EfD Annual meeting 2018`,
+            dateTime:`November 2 – 5, 2018`,
+            venue:`Hanoi, Vietnam`,
+            description:[
+                {
+                    text:`<a href="http://www.efdinitiative.org/news/events/efd-annual-meeting-2018">
+                    More Information on EfD Annual meeting 2018
+                    </a>`
+                }
+            ],
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`WCERE 2018 – 6th World Congress of Environmental and Resources Economists`,
+            dateTime:`June 25 – 29, 2018`,
+            venue:`University of Gothenburg, Sweden`,
+            description:[
+                {
+                    text:`<a href="http://www.efdinitiative.org/news/events/wcere-2018-6th-world-congress-environmental-and-resources-economists">
+                    More Information on WCERE 2018
+                    </a>`
+                }
+            ],
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`Public Economics Workshop`,
+            dateTime:`March 20 – 21, 2018`,
+            venue:`DSE, Delhi`,
+            description:[
+                {
+                    text:`Delhi School of Economics jointly organized the Public Economics Workshop on March 20-21st, 2018 with The Center for research on the economics of Climate, Food, Energy and Environment (CECFEE), ISI Delhi and University of Gothenburg, Sweden.
+                    The schedule can be found
+                    <a href="https://drive.google.com/open?id=1ORmugPKs8H3pD3ks7h-CiyFbN1M3dGZ3">
+                    here.</a>`
+                }
+            ],
         },
         {
             title:``,
