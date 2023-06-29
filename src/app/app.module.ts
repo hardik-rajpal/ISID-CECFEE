@@ -23,6 +23,7 @@ import { CollapsibleComponent } from './comps/collapsible/collapsible.component'
 import { FormsModule } from '@angular/forms';
 import { PersontileComponent } from './comps/persontile/persontile.component';
 import { PublicationBoxComponent } from './comps/publication-box/publication-box.component';
+import { ImageDumpComponent } from './comps/image-dump/image-dump.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { PublicationBoxComponent } from './comps/publication-box/publication-box
     SeminarboxComponent,
     CollapsibleComponent,
     PersontileComponent,
-    PublicationBoxComponent
+    PublicationBoxComponent,
+    ImageDumpComponent
   ],
   imports: [
     BrowserModule,
