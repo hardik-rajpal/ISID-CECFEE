@@ -1,5 +1,9 @@
 import { Route } from "@angular/router";
-
+export interface fileStructureSpec{
+    folder:string;
+    files:any[];
+    subfolders:fileStructureSpec[];
+}
 export interface routeSpec{
     label:string;
     route?:string;
