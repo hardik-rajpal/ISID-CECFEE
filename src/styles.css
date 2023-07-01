@@ -85,7 +85,12 @@ hr.thick{
     background-color:var(--secondary);
     height: 5px;
 }
-
+.titlebar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 .pointable{
     cursor: pointer;
 }
