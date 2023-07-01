@@ -10,12 +10,18 @@ export interface routeSpec{
     component?:any;
     children?:routeSpec[]
 }
+export interface tableDataSpec{
+    heading?:string[];
+    cells:paraSpec[][];
+  }
 export interface paraSpec {
     text?: string;
     list?: string[];
+    orderedList?:string[];
     internalLink?:routeSpec;
     image?: string;
     reverse?: boolean;
+    tableData?:tableDataSpec;
 }
 export interface textPageSpec {
     title: string;

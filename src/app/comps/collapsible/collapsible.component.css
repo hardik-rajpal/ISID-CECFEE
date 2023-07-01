@@ -16,7 +16,7 @@ background-color: var(--darkgray);
 }
   
 .content {
-    padding: 0 18px;
+    padding: 0px 18px;
     overflow: hidden;
     background-color: #f1f1f1;
     max-height: 0;

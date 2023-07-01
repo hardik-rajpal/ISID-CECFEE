@@ -26,6 +26,7 @@ import { PublicationBoxComponent } from './comps/publication-box/publication-box
 import { ImageDumpComponent } from './comps/image-dump/image-dump.component';
 import { CarouselComponent } from './comps/carousel/carousel.component';
 import { EventboxComponent } from './comps/eventbox/eventbox.component';
+import { DivtableComponent } from './comps/divtable/divtable.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { EventboxComponent } from './comps/eventbox/eventbox.component';
     PublicationBoxComponent,
     ImageDumpComponent,
     CarouselComponent,
-    EventboxComponent
+    EventboxComponent,
+    DivtableComponent
   ],
   imports: [
     BrowserModule,
