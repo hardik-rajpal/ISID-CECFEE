@@ -16,7 +16,7 @@ export class ImageDumpComponent implements OnInit{
     }
     let currentFolder:any = staticfs;
     for(let key of folderKeys){
-      currentFolder = currentFolder.subfolders.find((folder:any)=>folder.folder==='')
+      currentFolder = currentFolder.subfolders.find((folder:any)=>folder.folder===key)
       if(currentFolder===undefined){
         throw `Path provided "${this.folderPath}" does not exist`
       }

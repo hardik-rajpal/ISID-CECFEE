@@ -1,0 +1,16 @@
+<div class="col">
+    <div class="row main" style="height: '{{height}}';">
+        <div>
+            <i class="fa fa-toggle-left" (click)="backward()"></i>
+        </div>
+        <div *ngFor="let image of images">
+            <img [src]="image" [ngStyle]="imgStyle" #img>
+        </div>
+        <div>
+            <i class="fa fa-toggle-right" (click)="forward()"></i>
+        </div>
+    </div>
+    <div class="subscript">
+        {{activeImage+1}} of {{images.length}}
+    </div>
+</div>

@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
 import { PersontileComponent } from './comps/persontile/persontile.component';
 import { PublicationBoxComponent } from './comps/publication-box/publication-box.component';
 import { ImageDumpComponent } from './comps/image-dump/image-dump.component';
+import { CarouselComponent } from './comps/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ImageDumpComponent } from './comps/image-dump/image-dump.component';
     CollapsibleComponent,
     PersontileComponent,
     PublicationBoxComponent,
-    ImageDumpComponent
+    ImageDumpComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

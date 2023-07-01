@@ -68,6 +68,10 @@ input{
     width: 200px;
     height: 200px;
 }
+.preview-img{
+    width: 30px;
+    height: 30px;
+}
 hr.thick{
     border: 0;
     clear:both;

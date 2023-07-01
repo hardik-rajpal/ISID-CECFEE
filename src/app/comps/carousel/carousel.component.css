@@ -1,0 +1,12 @@
+.main{
+    align-items: center;
+}
+.main>*{
+    padding: 5px;
+}
+i{
+    font-size: 30px;
+}
+.col{
+    align-items: center;
+}
