@@ -25,6 +25,7 @@ import { PersontileComponent } from './comps/persontile/persontile.component';
 import { PublicationBoxComponent } from './comps/publication-box/publication-box.component';
 import { ImageDumpComponent } from './comps/image-dump/image-dump.component';
 import { CarouselComponent } from './comps/carousel/carousel.component';
+import { EventboxComponent } from './comps/eventbox/eventbox.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { CarouselComponent } from './comps/carousel/carousel.component';
     PersontileComponent,
     PublicationBoxComponent,
     ImageDumpComponent,
-    CarouselComponent
+    CarouselComponent,
+    EventboxComponent
   ],
   imports: [
     BrowserModule,

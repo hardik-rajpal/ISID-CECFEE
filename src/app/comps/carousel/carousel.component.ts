@@ -49,7 +49,7 @@ export class CarouselComponent implements OnInit{
     if(this.height){
       this.imgStyle['max-height'] = this.height;
     }
-    this.imgStyle['transition'] = 'max-width 0.2s ease-in-out'
+    this.imgStyle['transition'] = 'max-width 0.0s ease-in-out'
   }
   ngAfterViewInit(){
     for(let i=0;i<this.imageElements.length;i++){

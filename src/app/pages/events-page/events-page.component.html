@@ -1,1 +1,13 @@
-<p>events-page works!</p>
+<div class="main">
+    <p class="title">{{data.forthcomingEventsTitle}}</p>
+    <p *ngIf="data.forthcomingEvents.length===0">
+        There are no events planned for now. Please check back later.
+    </p>
+    <div class="events">
+        <app-eventbox *ngFor="let event of data.forthcomingEvents" [event]="event"></app-eventbox>
+    </div>
+    <p class="title">{{data.pastEventsTitle}}</p>
+    <div class="events">
+        <app-eventbox *ngFor="let event of data.pastEvents" [event]="event"></app-eventbox>
+    </div>
+</div>

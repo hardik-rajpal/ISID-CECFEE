@@ -8,6 +8,7 @@ export interface EventSpec{
     description:paraSpec[];
     contact?:string;
     photoFolder?:string;
+    moreDetails?:paraSpec[];
 }
 export interface eventsPageSpec{
     title:string;
@@ -201,7 +202,7 @@ export const EventsData:eventsPageSpec = {
                     </a>`
                 }
             ],
-            photoFolder:`<TODO: put a folder here and write collapsible gallery component>`
+            photoFolder:`assets/events/gallery5`
         },
         {
             title:`EPU Seminar by Kanishka Kacker (Indian Statistical Institute – Delhi)`,
@@ -283,11 +284,11 @@ export const EventsData:eventsPageSpec = {
                     here
                     </a>`
                 },
-                // TODO photo gallery.
                 {
                     image:`assets/events/goa2018-35-min.jpg`
                 }
             ],
+            photoFolder:`assets/events/gallery4`
         },
         {
             title:`EfD Annual meeting 2018`,
@@ -327,58 +328,144 @@ export const EventsData:eventsPageSpec = {
             ],
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`Seminar`,
+            dateTime:`February 23, 2018`,
+            venue:`ISI, Delhi`,
+            description:[
+                {
+                    text:`Professor Randall A. Bluffstone, Director of the 
+                    Institute for Economics and Environment, Portland State 
+                    University was the speaker at the CECFEE seminar held on 23rd 
+                    February’2018 at ISI, Delhi. His talk was on improved biomass 
+                    cook stove research in Ethiopia.`
+                }
+            ],
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`3rd Annual CECFEE Workshop`,
+            dateTime:`November 17 – 18, 2017`,
+            venue:`Udaipur`,
+            description:[
+                {
+                    text:`The Centre for research on the Economics of Climate, Food, Energy and Environment (CECFEE) of the Indian Statistical Institute organized the 3rd annual CECFEE on 17-18th of November, 2017. The workshop was in collaboration with EfD, the Environment for Development Initiative of University of Gothenburg. There were presentations from academics, researchers and policy representatives spread over two days along with two Policy Panels on urban issues and air pollution and restoration of degraded lands. A field visit was organized in collaboration with Seva Mandir to explore various efforts towards reviving degraded lands. The workshop brought together representatives from all segments of the society to foster an informed dialogue among them concerning the heated issues impacting the environment.
+                    <br>
+                    The workshop agenda can be found
+                    <a href="https://drive.google.com/open?id=1Xuto4u727jX2n-qc5xJ2Ig4jA4AeWhm6">
+                    here.
+                    </a>`
+                },
+                {
+                    image:`assets/events/cecfee-udaipur-3rd-aw.jpg`
+                },
+            ],
+            photoFolder:`assets/events/gallery3`
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`Expert review workshop on the issue of Crop Residue Management and Air Pollution`,
+            dateTime:`November 7 -8, 2017`,
+            venue:`Jaipur`,
+            description:[
+                {
+                    text:`The Nature Conservancy, the International Maize and Wheat Improvement Center (CIMMYT), the Borlaug Institute for South Asia (BISA), and the Council on Energy, Environment & Water (CEEW) organized the workshop that focused on the challenges of adopting and scaling up the use of the Happy Seeder technology, to reduce crop residue burning. The goal of this workshop was to recommend the ideal mix of financial tools to incentivize farmers towards transitioning to soil incorporation/no till practices. Based on the results and discoveries from this workshop and the stakeholder meetings held in Delhi and Punjab, the host organizations hope to launch a set of activities to strengthen the use of the Happy Seeder technology in India. 
+                    <br>
+                    CECFEE members participated in the stakeholders meeting and are involved in finalizing the workshop report.
+                    `
+                }
+            ],
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`Environment for Development (EfD) 11th Annual Meeting & PIC Workshop`,
+            dateTime:`October 27 – 30, 2017`,
+            venue:`Ethiopia`,
+            description:[
+                {
+                    text:`The EfD annual meeting was held in Addis Ababa, Ethiopia. It was hosted by the Environment and Climate Research Center (EfD – Ethiopia) and the EfD Secretariat. The EfD annual meeting brought together researchers from all EfD centers and their collaborators. The PIC workshop dedicated to policy interaction and communication was held on October 24-25. Click
+                    <a href="http://www.efdinitiative.org/news/archive/efd-invests-more-policy-interaction-and-communication">
+                    here
+                    </a> for more information.`
+                }
+            ],
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`Environmental Challenges in India`,
+            dateTime:`January 20, 2017 @ 3:00 pm – 4:30 pm`,
+            venue:`Lecture Theatre, Brookings India, Second Floor
+            6, Dr Jose P Rizal Marg, Chanakyapuri, New Delhi, Delhi 110021, India`,
+            description:[
+                {
+                    text:`The speaker for this Development Seminar @ Brookings India is Prof. E. Somanathan (Indian Statistical Institute, Delhi). The discussant is Dr. Ajay Mathur (Director General, The Energy and Resources Institute). They will be followed by Shri Ajay Narayan Jha (Secretary, Ministry of Environment, Forest and Climate Change, Government of India) who will give a Keynote Address.`
+                }
+            ],
+            contact:`Shamika Ravi (shamika.ravi’at’brookingsindia’dot’org)`,
+            moreDetails:[
+                {
+                    text:`Environmental problems including climate change, air pollution and forest degradation have reduced incomes and worsened health in India. Prof. Somanathan will examine the evidence on some of these findings. The weaknesses in our institutions that permitted this to happen will be highlighted. Some of these challenges, climate change in particular, are going to become more severe over time. The speaker will analyse some likely future technological, economic and climate scenarios that can emerge from this, and will examine the political and social reactions to these. Further, he will discuss the changes in the Indian institutions and policies that are required to address these challenges.`
+                }
+            ]
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`2nd Annual CECFEE Workshop`,
+            dateTime:`October 15 – 16, 2016`,
+            venue:`Ranthambhore`,
+            description:[
+                {
+                    text:`2nd annual CECFEE workshop was organized by the center along with the EfD of the University of Gothenburg on 15-16th of October, 2016. There were presentations from academics, researchers and policy representatives spread over two days along with a Policy Panel which discussed the importance of environmental research and its impact on policy. Fledgling issues of Climate Change and environmental concerns were discussed. The workshop aims at becoming an annual event which will bring together representatives from all segments of the society to foster an informed dialogue among them concerning the heated issues impacting the environment.
+                    <br>
+                    CECFEE workshop is an annual event, organized to by the Center to promote relevant research being done in the field.`
+                },
+                {
+                    image:`assets/events/aw-2.jpg`
+                }
+            ],
+            moreDetails:[
+                {
+                    image:`assets/events/aw2-agenda1.png`
+                },
+                {
+                    image:`assets/events/aw2-agenda2.png`
+                }
+            ],
+            photoFolder:`assets/events/gallery2`
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`Conference on Gender-Just Food and Nutrition Security in India`,
+            dateTime:`29th August, 2016`,
+            venue:`IFPRI, Delhi`,
+            description:[
+                {
+                    text:`The slides can be found
+                    <a href="http://www.slideshare.net/southasia-ifpri/ifprigender-and-nregafarzana-afridi">
+                    here.
+                    </a>`
+                }
+            ],
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`1st CECFEE-Gothenburg Policy Workshop`,
+            dateTime:`November 2-3, 2015`,
+            venue:`Gothenburg`,
+            description:[
+                {
+                    image:`assets/events/Workshop1.jpg`
+                },
+
+            ],
+            //TODO program agenda
         },
         {
-            title:``,
-            dateTime:``,
-            venue:``,
-            description:[],
+            title:`IFPRI-POSHAN conference on "Maximizing the nutrition impact of social protection programs in India:
+            What will it take?"`,
+            dateTime:`October 2015`,
+            venue:`New Delhi`,
+            description:[
+                {
+                    text:`A video recording of the talk about the mid-may
+                    meal scheme and nutrition in India can be found
+                    <a href="https://www.youtube.com/watch?v=l-PXeESms4U">
+                    here.
+                    </a>`
+                }
+            ],
         }
     ]
 }

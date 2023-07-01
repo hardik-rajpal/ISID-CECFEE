@@ -35,6 +35,11 @@ a.button{
     font-size: larger;
     font-weight: bold;
 }
+.heading-colored{
+    font-size: larger;
+    font-weight: bold;
+    color: var(--accent);
+}
 .col{
     display: flex;
     flex-direction: column;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EventsData, eventsPageSpec } from 'src/data/events';
 
 @Component({
   selector: 'app-events-page',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./events-page.component.css']
 })
 export class EventsPageComponent {
-
+  data:eventsPageSpec = EventsData;
 }

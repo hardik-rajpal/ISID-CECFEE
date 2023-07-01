@@ -22,10 +22,42 @@
       "folder": "events",
       "files": [
         "5th-Cecfee-Conf.jpg",
+        "aw-2.jpg",
+        "aw2-agenda1.png",
+        "aw2-agenda2.png",
+        "cecfee-udaipur-3rd-aw.jpg",
         "goa2018-35-min.jpg",
-        "poster.jpeg"
+        "poster.jpeg",
+        "Workshop1.jpg"
       ],
       "subfolders": [
+        {
+          "folder": "gallery2",
+          "files": [
+            "btezpur_(11).jpg",
+            "btezpur_(7).jpg",
+            "wtezpur_(5).jpeg"
+          ],
+          "subfolders": []
+        },
+        {
+          "folder": "gallery3",
+          "files": [
+            "btezpur_(11).jpg",
+            "btezpur_(7).jpg",
+            "wtezpur_(5).jpeg"
+          ],
+          "subfolders": []
+        },
+        {
+          "folder": "gallery4",
+          "files": [
+            "btezpur_(11).jpg",
+            "btezpur_(7).jpg",
+            "wtezpur_(5).jpeg"
+          ],
+          "subfolders": []
+        },
         {
           "folder": "gallery5",
           "files": [
