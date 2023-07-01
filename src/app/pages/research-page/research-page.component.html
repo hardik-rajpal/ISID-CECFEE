@@ -3,20 +3,43 @@
         <p class="title">{{data.title}}</p>
         <input [(ngModel)]="query" placeholder="🔍 Search for keywords..."/>
     </div>
-    <!-- <div>
+    <div class="row">
         <p class="heading">
-            Category
+            Category:
         </p>
-        category tags
+        <div class="row">
+            <div *ngFor="let cat of categories">
+                <span class="catbox pointable" *ngIf="!selectedCategories.includes(cat)" (click)="selectedCategories.push(cat)">
+                    {{cat}}
+                </span>
+                <span class="catbox activebox" *ngIf="selectedCategories.includes(cat)" (click)="selectedCategories.splice(selectedCategories.indexOf(cat),1)">
+                    <span>
+                        {{cat}}
+                    </span>
+                    <i class="fa fa-times pointable"></i>
+                </span>
+                
+            </div>
+        </div>
     </div>
-    <div>
-        <p class="heading">
-            Authors
-        </p>
-        author tags
-    </div> -->
-    <div class="paper-group" *ngFor="let category of categories">
-        <p class="heading">Publications about {{category}}</p>
-        <app-publication-box *ngFor="let paper of getPapersByCategory(category)" [paper]="paper"></app-publication-box>
+    <div *ngIf="selectedCategories.length===0&&query.length===0">
+        <div class="paper-group" *ngFor="let category of categories">
+            <p class="heading">Publications about {{category}}</p>
+            <app-publication-box *ngFor="let paper of getPapersByCategory(category)" [paper]="paper"></app-publication-box>
+        </div>
+    </div>
+    <div *ngIf="!(selectedCategories.length===0&&query.length===0)">
+        <div *ngIf="selectedCategories.length===0">
+            <div class="paper-group" *ngFor="let category of categories">
+                <p class="heading">Publications about {{category}}</p>
+                <app-publication-box *ngFor="let paper of getPapersByCategory(category)" [paper]="paper"></app-publication-box>
+            </div>
+        </div>
+        <div *ngIf="selectedCategories.length>0">
+            <div class="paper-group" *ngFor="let category of selectedCategories">
+                <p class="heading">Publications about {{category}}</p>
+                <app-publication-box *ngFor="let paper of getPapersByCategory(category)" [paper]="paper"></app-publication-box>
+            </div>
+        </div>
     </div>
 </div>

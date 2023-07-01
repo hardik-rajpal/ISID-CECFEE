@@ -10,3 +10,22 @@ app-publication-box{
 input{
     width: 50%;
 }
+.catbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--lightgray);
+    padding: 10px;
+    font-size: 20px;
+    margin: 5px;
+}
+.activebox{
+    background-color: var(--darkgray);
+}
+.catbox>*{
+    padding: 2px;
+}
+.row{
+    align-items: center;
+}

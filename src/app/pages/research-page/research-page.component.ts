@@ -28,7 +28,10 @@ export class ResearchPageComponent implements OnInit{
     }
   }
   getPapersByCategory(category:string):publication[]{
-    return this.data.papers.filter(paper=>(paper.categories.includes(category)))
+    if(this.query.length===0){
+      return this.data.papers.filter(paper=>(paper.categories.includes(category)))
+    }
+    return this.getQueryResults().filter(paper=>(paper.categories.includes(category)))
   }
   paperQueryMatch(paper:publication,lowerCaseQuery:string):boolean{
     if(
