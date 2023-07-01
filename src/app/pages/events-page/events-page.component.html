@@ -1,6 +1,6 @@
 <div class="main">
     <div class="titlebar">
-        <p class="title">Events</p>
+        <p class="title">{{data.title}}</p>
         <input [(ngModel)]="query" placeholder="🔍 Search for keywords..."/>
     </div>
     <div *ngIf="query.length===0">
