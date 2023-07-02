@@ -16,4 +16,7 @@
     <div *ngIf="section.infotiles">
         <app-infotile *ngFor="let tile of section.infotiles" [infotile]="tile"></app-infotile>
     </div>
+    <div *ngIf="section.videos" class="articlesgrid">
+        <app-videobox *ngFor="let video of section.videos" [video]="video"></app-videobox>
+    </div>
 </div>

@@ -156,13 +156,10 @@ export const homepageData:homepageSpec = {
                 link:`https://youtu.be/sObYo2t0Tz4?t=13016`   
             },
             {
-                description:`Professor E. Somanathan was invited to speak at
-                <a href="https://fsr.eui.eu/event/covid-19-global-climate-policy-and-carbon-markets/">
-                a virtual event organized by FSR-Climate and the European Association of Environmental and Resource Economists (EAERE)
-                </a>
-                to discuss the expected impacts of the COVID-19 pandemic on global climate policy and carbon markets.`,
-                link:`https://youtu.be/0hQo7Yl7rps`
+                description:`Following the issues raised in the review of contemporary research on sustainable economic development by renowned economist Sir Partha Dasgupta, CECFEE Head, Prof E Somanathan speaks with him on a variety of issues – including the origins of his interest in environmental economics and how his thinking on the issue has evolved over the years. This conversation was a part of the fourth edition of I4I podcast series. Find the entire conversation <a href="https://www.ideasforindia.in/topics/environment/economics-and-the-environment.html">here</a>.`,
+                link:`https://youtu.be/B3u82SaSlvQ`
             },
+
             {
                 description:`Professor E. Somanathan was a panelist in a Times Now discussion on India’s post COVID-19 action plans to revive the economy.`,
                 link:`https://www.timesnownews.com/videos/times-now/india-upfront/video-indias-post-covid-action-plan-how-will-we-revive-economy-india-upfront-with-rahul-shivshankar/59528`
@@ -176,9 +173,13 @@ export const homepageData:homepageSpec = {
                 link:`https://www.youtube.com/watch?v=ZVQrOcpro98`
             },
             {
-                description:`Following the issues raised in the review of contemporary research on sustainable economic development by renowned economist Sir Partha Dasgupta, CECFEE Head, Prof E Somanathan speaks with him on a variety of issues – including the origins of his interest in environmental economics and how his thinking on the issue has evolved over the years. This conversation was a part of the fourth edition of I4I podcast series. Find the entire conversation <a href="https://www.ideasforindia.in/topics/environment/economics-and-the-environment.html">here</a>.`,
-                link:`https://youtu.be/B3u82SaSlvQ`
-            }
+                description:`Professor E. Somanathan was invited to speak at
+                <a href="https://fsr.eui.eu/event/covid-19-global-climate-policy-and-carbon-markets/">
+                a virtual event organized by FSR-Climate and the European Association of Environmental and Resource Economists (EAERE)
+                </a>
+                to discuss the expected impacts of the COVID-19 pandemic on global climate policy and carbon markets.`,
+                link:`https://youtu.be/0hQo7Yl7rps`
+            },
             ]
     },
     events:

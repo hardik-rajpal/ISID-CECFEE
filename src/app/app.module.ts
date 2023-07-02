@@ -32,6 +32,7 @@ import { SectionboxComponent } from './comps/sectionbox/sectionbox.component';
 import { ArticleboxComponent } from './comps/articlebox/articlebox.component';
 import { AllArticlesPageComponent } from './comps/all-articles-page/all-articles-page.component';
 import { InfotileComponent } from './comps/infotile/infotile.component';
+import { VideoboxComponent } from './comps/videobox/videobox.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { InfotileComponent } from './comps/infotile/infotile.component';
     SectionboxComponent,
     ArticleboxComponent,
     AllArticlesPageComponent,
-    InfotileComponent
+    InfotileComponent,
+    VideoboxComponent
   ],
   imports: [
     BrowserModule,

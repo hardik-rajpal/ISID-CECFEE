@@ -1,0 +1,16 @@
+div.row>*{
+    padding: 5px;
+}
+div.row{
+    align-items: center;
+}
+.main{
+    width: 275px;
+    margin: 10px;
+    padding: 5px;
+    border: var(--primary) 2px solid;
+    align-items: center;
+}
+div.watch{
+    border: black 2px solid;
+}
