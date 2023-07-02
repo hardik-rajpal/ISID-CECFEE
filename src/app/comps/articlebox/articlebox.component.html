@@ -1,0 +1,17 @@
+<div class="col main">
+    <div class="imagediv">
+        <img *ngIf="article.image" [src]="article.image" class="article-img">
+    </div>
+    <a [href]="article.link">
+        <i class="fa fa-external-link"></i>
+        {{article.description}}
+    </a>
+    <div class="row">
+        <i class="fa fa-newspaper"></i>
+        {{article.journal}}
+    </div>
+    <div class="row">
+        <i class="fa fa-group"></i>
+        {{getAuthorString()}}
+    </div>
+</div>

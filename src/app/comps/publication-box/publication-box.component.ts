@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { publication } from 'src/data/research';
+import { angloJoinWords } from 'src/data/rtl.utils';
 
 @Component({
   selector: 'app-publication-box',
@@ -9,13 +10,6 @@ import { publication } from 'src/data/research';
 export class PublicationBoxComponent {
   @Input() paper!:publication;
   getAuthorText(paper:publication){
-    let lastAuthor:string = paper.authors[paper.authors.length-1];
-    if(paper.authors.length===1){
-      return lastAuthor
-    }
-    if(lastAuthor==='et al.'){
-      return paper.authors.join(', ')
-    }
-    return paper.authors.slice(0,-1).join(', ')+' and '+ lastAuthor;
+    return angloJoinWords(paper.authors);
   }
 }

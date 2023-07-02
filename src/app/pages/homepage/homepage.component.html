@@ -1,0 +1,34 @@
+<div>
+    <p class="title">{{data.title}}</p>
+
+    <app-sectionbox [section]="data.aboutus"></app-sectionbox>
+    <app-sectionbox [section]="data.articles"></app-sectionbox>
+    <a [routerLink]="['home/allarticles']" target="_blank">
+        See all articles...
+    </a>
+    <app-sectionbox [section]="data.publications"></app-sectionbox>
+    <a [routerLink]="['research']" target="_blank">
+        See all publications...
+    </a>
+    <app-sectionbox [section]="data.news" [linesBetweenParas]="true">
+    </app-sectionbox>
+    <app-sectionbox [section]="data.events">
+    </app-sectionbox>
+    <div>
+        <p class="heading">Contact</p>
+        <span [innerHTML]="data.contact.title"></span><br>
+        <span class="contact">
+            <i class="fa fa-phone"></i>
+            {{data.contact.phone}}
+        </span><br>
+        <span class="contact">
+            <i class="fa fa-fax"></i>
+            {{data.contact.fax}}
+        </span><br>
+        <span class="contact">
+            <i class="fa fa-envelope"></i>
+            {{data.contact.email}}
+        </span><br>
+        <app-linkbox *ngFor="let link of data.contact.links" [link]="link"></app-linkbox>
+    </div>
+</div>

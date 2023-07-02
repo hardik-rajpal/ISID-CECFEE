@@ -108,3 +108,29 @@ hr.thick{
         display: none;
     }
 }
+
+
+.titlebar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+input{
+    width: 50%;
+}
+.articlesgrid{
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+}
+@media (min-width:750px) {
+    .articlesgrid{
+        grid-template-columns: 50% 50%;
+    }
+}
+@media (min-width:1200px){
+    .articlesgrid{
+        grid-template-columns: 33% 33% 33%;
+    }
+}

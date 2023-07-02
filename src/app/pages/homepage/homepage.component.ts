@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { homepageData, homepageSpec } from 'src/data/homepage';
 import { tableDataSpec } from 'src/data/rtl.utils';
 
 @Component({
@@ -7,7 +8,5 @@ import { tableDataSpec } from 'src/data/rtl.utils';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
-  data:tableDataSpec = {
-    cells:[]
-  }
+  data:homepageSpec = homepageData;
 }

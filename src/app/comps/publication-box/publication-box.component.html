@@ -17,7 +17,7 @@
     <p *ngIf="paper.description">
         <i class="fa fa-book">
         </i>
-        Publication details: {{paper.description}}
+        Publication details: <span [innerHTML]="paper.description"></span>
     </p>
     <app-collapsible *ngIf="paper.summary" [title]="'Summary'">
         <app-paraspecbox [para]="{text:paper.summary}"></app-paraspecbox>

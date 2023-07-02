@@ -28,6 +28,10 @@ import { CarouselComponent } from './comps/carousel/carousel.component';
 import { EventboxComponent } from './comps/eventbox/eventbox.component';
 import { DivtableComponent } from './comps/divtable/divtable.component';
 import { LinkboxComponent } from './comps/linkbox/linkbox.component';
+import { SectionboxComponent } from './comps/sectionbox/sectionbox.component';
+import { ArticleboxComponent } from './comps/articlebox/articlebox.component';
+import { AllArticlesPageComponent } from './comps/all-articles-page/all-articles-page.component';
+import { InfotileComponent } from './comps/infotile/infotile.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +59,11 @@ import { LinkboxComponent } from './comps/linkbox/linkbox.component';
     CarouselComponent,
     EventboxComponent,
     DivtableComponent,
-    LinkboxComponent
+    LinkboxComponent,
+    SectionboxComponent,
+    ArticleboxComponent,
+    AllArticlesPageComponent,
+    InfotileComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,10 @@ export interface fileStructureSpec{
     files:any[];
     subfolders:fileStructureSpec[];
 }
+export interface infoTileSpec{
+    text:string;
+    image?:string;
+}
 export interface routeSpec{
     label:string;
     route?:string;
@@ -49,6 +53,16 @@ export function getParaSpecStr(para:paraSpec){
 }
 export function objectToVals<T>(object:{[key:string]:T}):T[]{
     return Object.keys(object).map((key)=>object[key]);
+}
+export function angloJoinWords(words:string[]):string{
+    let lastWord:string = words[words.length-1];
+    if(words.length===1){
+      return lastWord
+    }
+    if(lastWord==='et al.'){
+      return words.join(', ')
+    }
+    return words.slice(0,-1).join(', ')+' and '+ lastWord;
 }
 export function parseRouteSpec(routespec: routeSpec) {
     let route: Route = {};

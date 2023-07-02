@@ -1,0 +1,19 @@
+<div>
+    <p class="heading">{{section.title}}</p>
+    <div *ngIf="section.paras">
+        <div *ngFor="let para of section.paras">
+            <app-paraspecbox [para]="para"></app-paraspecbox>
+            <hr *ngIf="linesBetweenParas" class="thin">
+        </div>
+    </div>
+    <div *ngIf="section.articles" class="articlesgrid">
+        <app-articlebox *ngFor="let article of section.articles" [article]="article"></app-articlebox>
+    </div>
+    <div *ngIf="section.publications">
+        <app-publication-box *ngFor="let paper of section.publications" [paper]="paper">
+        </app-publication-box>
+    </div>
+    <div *ngIf="section.infotiles">
+        <app-infotile *ngFor="let tile of section.infotiles" [infotile]="tile"></app-infotile>
+    </div>
+</div>
