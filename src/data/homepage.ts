@@ -156,8 +156,12 @@ export const homepageData:homepageSpec = {
                 link:`https://youtu.be/sObYo2t0Tz4?t=13016`   
             },
             {
-                description:`Professor E. Somanathan was invited to speak at a virtual event organized by FSR-Climate and the European Association of Environmental and Resource Economists (EAERE) to discuss the expected impacts of the COVID-19 pandemic on global climate policy and carbon markets.`,
-                link:`https://fsr.eui.eu/event/covid-19-global-climate-policy-and-carbon-markets/`
+                description:`Professor E. Somanathan was invited to speak at
+                <a href="https://fsr.eui.eu/event/covid-19-global-climate-policy-and-carbon-markets/">
+                a virtual event organized by FSR-Climate and the European Association of Environmental and Resource Economists (EAERE)
+                </a>
+                to discuss the expected impacts of the COVID-19 pandemic on global climate policy and carbon markets.`,
+                link:`https://youtu.be/0hQo7Yl7rps`
             },
             {
                 description:`Professor E. Somanathan was a panelist in a Times Now discussion on India’s post COVID-19 action plans to revive the economy.`,
@@ -165,7 +169,7 @@ export const homepageData:homepageSpec = {
             },
             {
                 description:`Dr. Farzana Afridi addresses the UN General Assembly in a special event discussing the double bind of income and time poverty and why it matters for sustainable development.`,
-                link:`http://webtv.un.org/w/watch/second-committee-the-double-bind-of-income-poverty-and-time-poverty-why-it-matters-for-sustainable-development-1st-special-event-general-assembly-74th-session/6095711272001/?term=?term&amp;lan=spanish`
+                link:`https://media.un.org/en/asset/k1c/k1cdis5x8z`
             },
             {
                 description:`Professor E.Somanathan, Sunita Narain and Anna Issac discuss the extreme climatic instances in India on ET Now’s “India Development Debate”.`,

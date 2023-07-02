@@ -27,7 +27,7 @@ export function getHomepageArticles(){
 export const allArticles:article[] = [
     {
         authors:[`Professor E. Somanathan`],
-        description:`Professor E Somanathan discusses how to escape the economic dangers of COVID-19.`,
+        description:`Professor E. Somathan discusses the Indian lockdown's economic depression, stressing the importance of avoiding future lockdowns. He proposes a strategy to control the disease without causing economic collapse, emphasizing testing, financial support, and accurate information for effective prevention.`,
         link:`https://www.financialexpress.com/opinion/escaping-the-economic-dangers-of-covid-19/1958191/`,
         journal:`Financial Express`,
     },
