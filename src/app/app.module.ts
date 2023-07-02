@@ -27,6 +27,7 @@ import { ImageDumpComponent } from './comps/image-dump/image-dump.component';
 import { CarouselComponent } from './comps/carousel/carousel.component';
 import { EventboxComponent } from './comps/eventbox/eventbox.component';
 import { DivtableComponent } from './comps/divtable/divtable.component';
+import { LinkboxComponent } from './comps/linkbox/linkbox.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { DivtableComponent } from './comps/divtable/divtable.component';
     ImageDumpComponent,
     CarouselComponent,
     EventboxComponent,
-    DivtableComponent
+    DivtableComponent,
+    LinkboxComponent
   ],
   imports: [
     BrowserModule,
