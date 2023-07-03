@@ -13,7 +13,7 @@
         <app-publication-box *ngFor="let paper of section.publications" [paper]="paper">
         </app-publication-box>
     </div>
-    <div *ngIf="section.infotiles">
+    <div *ngIf="section.infotiles" class="mentionsgrid">
         <app-infotile *ngFor="let tile of section.infotiles" [infotile]="tile"></app-infotile>
     </div>
     <div *ngIf="section.videos" class="articlesgrid">

@@ -1,9 +1,9 @@
-<div class="main col">
-    <span [innerHTML]="video.description"></span>
+<div class="main col shadow">
     <div class="row watch">
-        <a [href]="video.link">
-        <i class="fa-brands fa-youtube"></i>
-        Watch here
+        <a [href]="video.link" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+            Watch here
         </a>
     </div>
+    <span [innerHTML]="video.description"></span>
 </div>

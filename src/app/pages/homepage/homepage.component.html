@@ -7,6 +7,9 @@
         See all articles...
     </a>
     <app-sectionbox [section]="data.videos"></app-sectionbox>
+    <a [routerLink]="['home/allvideos']" target="_blank">
+        See all videos...
+    </a>
     <app-sectionbox [section]="data.publications"></app-sectionbox>
     <a [routerLink]="['research']" target="_blank">
         See all publications...
@@ -15,6 +18,9 @@
     </app-sectionbox>
     <app-sectionbox [section]="data.events">
     </app-sectionbox>
+    <a [routerLink]="['home/mentions']" target="_blank">
+        See all mentions...
+    </a>
     <app-sectionbox [section]="data.others" [linesBetweenParas]="true"></app-sectionbox>
     <div>
         <p class="heading">Contact</p>

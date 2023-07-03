@@ -12,7 +12,14 @@ div.row{
     align-items: center;
 }
 div.watch{
-    border: black 2px solid;
     border-radius: 5px;
     margin: 5px;
+    background-color: var(--primary);
+    color: var(--light);
+}
+div.watch>a{
+    color: white;
+}
+div.watch>a:hover{
+    color: var(--light);
 }

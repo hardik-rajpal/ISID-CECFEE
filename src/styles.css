@@ -109,7 +109,9 @@ hr.thick{
     }
 }
 
-
+.shadow{
+    box-shadow: 3px 3px 5px 5px grey;
+}
 .titlebar{
     display: flex;
     flex-direction: row;
@@ -132,5 +134,15 @@ input{
 @media (min-width:1200px){
     .articlesgrid{
         grid-template-columns: 33% 33% 33%;
+    }
+}
+.mentionsgrid{
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+}
+@media (min-width:1200px){
+    .mentionsgrid{
+        grid-template-columns: 50% 50%;
     }
 }
