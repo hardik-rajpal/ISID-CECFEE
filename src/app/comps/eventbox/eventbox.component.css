@@ -1,0 +1,25 @@
+i.fa{
+    padding: 5px;
+}
+i.fa.fa-map-marker{
+    padding-right: 11px;
+}
+i.fa.fa-microphone{
+    padding-right: 10px;
+}
+.collapsible{
+    margin-top: 10px;
+}
+.pointer{
+    align-items: center;
+}
+
+.subtitle{
+    font-weight: bold;
+}
+.info{
+    margin: 5px;
+}
+app-collapsible{
+    margin: 5px;
+}

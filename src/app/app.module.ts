@@ -22,6 +22,17 @@ import { SeminarboxComponent } from './comps/seminarbox/seminarbox.component';
 import { CollapsibleComponent } from './comps/collapsible/collapsible.component';
 import { FormsModule } from '@angular/forms';
 import { PersontileComponent } from './comps/persontile/persontile.component';
+import { PublicationBoxComponent } from './comps/publication-box/publication-box.component';
+import { ImageDumpComponent } from './comps/image-dump/image-dump.component';
+import { CarouselComponent } from './comps/carousel/carousel.component';
+import { EventboxComponent } from './comps/eventbox/eventbox.component';
+import { DivtableComponent } from './comps/divtable/divtable.component';
+import { LinkboxComponent } from './comps/linkbox/linkbox.component';
+import { SectionboxComponent } from './comps/sectionbox/sectionbox.component';
+import { ArticleboxComponent } from './comps/articlebox/articlebox.component';
+import { AllArticlesPageComponent } from './comps/all-articles-page/all-articles-page.component';
+import { InfotileComponent } from './comps/infotile/infotile.component';
+import { VideoboxComponent } from './comps/videobox/videobox.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +54,18 @@ import { PersontileComponent } from './comps/persontile/persontile.component';
     StudentboxComponent,
     SeminarboxComponent,
     CollapsibleComponent,
-    PersontileComponent
+    PersontileComponent,
+    PublicationBoxComponent,
+    ImageDumpComponent,
+    CarouselComponent,
+    EventboxComponent,
+    DivtableComponent,
+    LinkboxComponent,
+    SectionboxComponent,
+    ArticleboxComponent,
+    AllArticlesPageComponent,
+    InfotileComponent,
+    VideoboxComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+<table>
+    <tbody>
+        <tr *ngIf="data.heading">
+            <th *ngFor="let headerCell of data.heading">
+                {{headerCell}}
+            </th>
+        </tr>
+        <tr *ngFor="let row of data.cells">
+            <td *ngFor="let cell of row">
+                <app-paraspecbox [para]="cell"></app-paraspecbox>
+            </td>
+        </tr>
+    </tbody>
+</table>

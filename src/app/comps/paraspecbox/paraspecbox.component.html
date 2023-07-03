@@ -22,11 +22,15 @@
         </div>
         <div class="mobile col">
             <img class="mobile standalone-img" *ngIf="para!.image" src="{{para!.image}}"/>
-
         </div>
     </div>
+    
     <a *ngIf="para!.internalLink" class="button" [routerLink]="[(para!.internalLink.route!.startsWith('misc')?'/'+para!.internalLink.route:para!.internalLink.route)]" [innerHTML]="para!.internalLink.label"></a>
     <ul *ngIf="para!.list">
         <li *ngFor="let item of para!.list" [innerHTML]="item"></li>
     </ul>
+    <ol *ngIf="para!.orderedList">
+        <li *ngFor="let item of para!.orderedList" [innerHTML]="item"></li>
+    </ol>
+    <app-divtable *ngIf="para!.tableData" [data]="para!.tableData"></app-divtable>
 </div>

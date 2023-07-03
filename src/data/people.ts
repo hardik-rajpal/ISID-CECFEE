@@ -1,6 +1,7 @@
 export interface linkSpec{
     target:string;
     label:string;
+    type?:'facebook'|'twitter'|'email'|'webpage'|'resume';
 }
 export interface personTileSpec{
     image:string;

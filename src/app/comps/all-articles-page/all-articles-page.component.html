@@ -1,0 +1,9 @@
+<div class="main">
+    <div class="titlebar">
+        <p class="title">All Articles</p>
+        <input [(ngModel)]="query" placeholder="🔍 Search for keywords..."/>
+    </div>
+    <div class="articlesgrid">
+        <app-articlebox *ngFor="let article of getQueryResults()" [article]="article"></app-articlebox>
+    </div>
+</div>

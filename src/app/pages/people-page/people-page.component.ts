@@ -12,10 +12,7 @@ export class PeoplePageComponent {
   activeIndex:number = -1;
   
   toggleActive(person:personTileSpec){
-    let personIndex = this.data.people.findIndex((p)=>p===person)
-    if(this.activeIndex!==personIndex){
-      this.activeIndex = personIndex
-    }
+    this.activeIndex = this.data.people.findIndex((p)=>p===person)
   }
   closeAndBehind(index:number,activeIndex:number,divisor:number):boolean{
     let remainder = index%divisor;
@@ -42,7 +39,6 @@ export class PeoplePageComponent {
         divisor = 3;
       }
     }
-    console.log(divisor)
     if(this.activeIndex===-1){return [];}
     if((this.activeIndex % divisor)!==0){
       return this.data.people.filter((person,index,[])=>(index>this.activeIndex || this.closeAndBehind(index,this.activeIndex,divisor)))

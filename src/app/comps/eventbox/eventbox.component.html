@@ -1,0 +1,28 @@
+<div class="main">
+    <p class="heading-colored">{{event.title}}</p>
+    <p *ngIf="event.subtitle" class="subtitle" [innerHtml]="event.subtitle"></p>    
+    <div class="mobile col">
+        <div class="row pointer">
+            <i class="fa fa-calendar"></i>
+            {{event.dateTime}}
+        </div>
+        <div class="row pointer">
+            <i class="fa fa-map-marker"></i>
+            {{event.venue}}
+        </div>
+        <div *ngIf="event.contact" class="row pointer">
+            <i class="fa fa-address-book"></i>
+            Contact: {{event.contact}}
+        </div>        
+    </div>
+    <div class="description info">
+        <app-paraspecbox *ngFor="let para of event.description" [para]="para"></app-paraspecbox>
+    </div>
+    <app-collapsible [title]="'More Details'" *ngIf="event.moreDetails">
+        <app-paraspecbox *ngFor="let para of event.moreDetails" [para]="para"></app-paraspecbox>
+    </app-collapsible>
+    <app-collapsible *ngIf="event.photoFolder" [title]="'More Photos'">
+        <app-image-dump [folderPath]="event.photoFolder"></app-image-dump>
+    </app-collapsible>
+    <hr class="thin">
+</div>
