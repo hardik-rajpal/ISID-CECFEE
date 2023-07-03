@@ -33,6 +33,8 @@ import { ArticleboxComponent } from './comps/articlebox/articlebox.component';
 import { AllArticlesPageComponent } from './comps/all-articles-page/all-articles-page.component';
 import { InfotileComponent } from './comps/infotile/infotile.component';
 import { VideoboxComponent } from './comps/videobox/videobox.component';
+import { AllVideosPageComponent } from './comps/all-videos-page/all-videos-page.component';
+import { AllMentionsPageComponent } from './comps/all-mentions-page/all-mentions-page.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,9 @@ import { VideoboxComponent } from './comps/videobox/videobox.component';
     ArticleboxComponent,
     AllArticlesPageComponent,
     InfotileComponent,
-    VideoboxComponent
+    VideoboxComponent,
+    AllVideosPageComponent,
+    AllMentionsPageComponent
   ],
   imports: [
     BrowserModule,

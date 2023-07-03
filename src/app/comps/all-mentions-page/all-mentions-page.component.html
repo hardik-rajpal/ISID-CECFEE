@@ -1,0 +1,9 @@
+<div class="main">
+    <div class="titlebar">
+        <p class="title">All Mentions</p>
+        <input [(ngModel)]="query" placeholder="🔍 Search for keywords..."/>
+    </div>
+    <div class="mentionsgrid">
+        <app-infotile *ngFor="let mention of getQueryResults()" [infotile]="mention"></app-infotile>
+    </div>
+</div>

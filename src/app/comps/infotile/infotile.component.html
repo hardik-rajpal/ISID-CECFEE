@@ -1,3 +1,7 @@
-<div>
-    
+<div class="main shadow">
+    <p *ngIf="!(infotile.image)" [innerHTML]="infotile.text|safe:'html'"></p>
+    <div *ngIf="infotile.image" class="holder col">
+        <img class="article-img-mobile" *ngIf="infotile.image" src="{{infotile.image}}" />
+        <p [innerHTML]="infotile.text|safe:'html'"></p>
+    </div>
 </div>

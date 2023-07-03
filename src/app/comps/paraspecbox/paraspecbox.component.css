@@ -18,11 +18,14 @@
 .article-img-desktop{
     padding: 10px;
     /* width: 400px; */
+    max-height: 70vh;
+
     max-width: 50%;
 }
 .article-img-mobile{
     padding: 10px;
     /* width: 400px; */
+    max-height: 70vh;
     max-width: 90%;
 }
 
