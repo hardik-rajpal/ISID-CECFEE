@@ -1,0 +1,113 @@
+{
+  "folder": "assets",
+  "files": [
+    ".gitkeep",
+    "banner.jpg",
+    "isilogo.jpg",
+    "staticfs.json"
+  ],
+  "subfolders": [
+    {
+      "folder": "bom",
+      "files": [
+        "neelkanthm.jpg",
+        "samirk.png",
+        "sanghamitra.jpg",
+        "somanathane.jpg",
+        "vijayr.jpg"
+      ],
+      "subfolders": []
+    },
+    {
+      "folder": "events",
+      "files": [
+        "5th-Cecfee-Conf.jpg",
+        "aw-2.jpg",
+        "aw2-agenda1.png",
+        "aw2-agenda2.png",
+        "cecfee-udaipur-3rd-aw.jpg",
+        "goa2018-35-min.jpg",
+        "poster.jpeg",
+        "Workshop1.jpg"
+      ],
+      "subfolders": [
+        {
+          "folder": "gallery2",
+          "files": [
+            "btezpur_(11).jpg",
+            "btezpur_(7).jpg",
+            "wtezpur_(5).jpeg"
+          ],
+          "subfolders": []
+        },
+        {
+          "folder": "gallery3",
+          "files": [
+            "btezpur_(11).jpg",
+            "btezpur_(7).jpg",
+            "wtezpur_(5).jpeg"
+          ],
+          "subfolders": []
+        },
+        {
+          "folder": "gallery4",
+          "files": [
+            "btezpur_(11).jpg",
+            "btezpur_(7).jpg",
+            "wtezpur_(5).jpeg"
+          ],
+          "subfolders": []
+        },
+        {
+          "folder": "gallery5",
+          "files": [
+            "btezpur_(11).jpg",
+            "btezpur_(7).jpg",
+            "wtezpur_(5).jpeg"
+          ],
+          "subfolders": []
+        }
+      ]
+    },
+    {
+      "folder": "people",
+      "files": [
+        "6062377_orig-150x150.jpg",
+        "Abhiroop-150x150.jpg",
+        "aparajita_pic-150x150.jpg",
+        "Bharat-150x150.jpg",
+        "digvijay_singh-150x150.jpg",
+        "EfD-pic_Ishita_6-150x150.jpg",
+        "Farzana-120x150.jpg",
+        "Gaurav_Dhamija-150x150.jpg",
+        "hg-150x150.jpg",
+        "IMG-20180319-WA0012-150x150.jpg",
+        "IMG20191025170134-150x150.jpg",
+        "IMG_2320-150x150.jpg",
+        "ISI_Front_Lawnx.jpg",
+        "Kanika-148x150.jpg",
+        "Kanishka-Kacker-150x150.jpg",
+        "mbishnu-150x150.jpg",
+        "mkapoor-150x150.jpg",
+        "Parikshit-150x150.jpg",
+        "prachi.jpg",
+        "praveen-150x150.jpg",
+        "Profile-Picture_Nikita-150x150.jpg",
+        "rashmi_photo-150x150.jpg",
+        "Ridhima-150x150.png",
+        "Rohini-150x150.jpg",
+        "Sabya-150x150.jpg",
+        "Saudamini-150x150.jpg",
+        "Shoibal-147x150.jpg",
+        "Som-1-150x150.jpg",
+        "Somroop-Mukherjee-150x150.jpg",
+        "Soubhagya-Sahoo-1-150x150.jpg",
+        "SujayaSircar-150x150.jpg",
+        "Tanu-Profile-photo-150x150.jpg",
+        "tridip-150x150.jpg",
+        "Wadhera-150x150.jpg"
+      ],
+      "subfolders": []
+    }
+  ]
+}
