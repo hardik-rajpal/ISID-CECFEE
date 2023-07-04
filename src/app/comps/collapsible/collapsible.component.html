@@ -1,6 +1,5 @@
 <div class="main">
-    
-    <button type="button" [class]="(active?'active ':'')+'collapsible'" (click)="toggleContent()">
+    <button type="button" [class]="(active?'active ':'')+'collapsible fs-large'" (click)="toggleContent()">
         {{title}}
         <i *ngIf="!active" class="fa fa-sort-down"></i>
         <i *ngIf="active" class="fa fa-sort-up"></i>

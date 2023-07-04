@@ -17,7 +17,6 @@ input{
     justify-content: space-between;
     background-color: var(--lightgray);
     padding: 10px;
-    font-size: 20px;
     margin: 5px;
 }
 .activebox{
