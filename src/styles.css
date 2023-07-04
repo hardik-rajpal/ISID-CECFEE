@@ -6,9 +6,11 @@
     --lightgray:#eee;
     --darkgray:#ccc;
     --mgvwidth:600px;
+    letter-spacing: 0.5px;
+    font-size: 19.5px;
     /* font-family: Arial, Helvetica, sans-serif; */
-    font-family: "Source Sans Pro";
-    /* font-family: "Red Hat Display"; */
+    /* font-family: "Source Sans Pro"; */
+    font-family: "Red Hat Display";
     /* font-family: 'Manrope',sans-serif; */
 }
 html,body{
@@ -26,19 +28,19 @@ a:hover{
 a.button{
     border: 3px solid var(--secondary);
     padding: 5px;
-    font-size: large;
+    font-size: 1.33rem;
     border-radius: 5px;
 }
 .title{
-    font-size: x-large;
+    font-size: 1.66rem;
     text-align: center;
 }
 .heading{
-    font-size: larger;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 .heading-colored{
-    font-size: larger;
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--accent);
 }
@@ -92,6 +94,21 @@ hr.thick{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.fs-large{
+    font-size: 1.33rem;
+}
+.fs-x-large{
+    font-size: 1.66rem;
+}
+.fs-medium{
+    font-size: 1rem;
+}
+.fs-larger{
+    font-size: 1.5rem;
+}
+.fs-xx-large{
+    font-size: 2rem;
 }
 .pointable{
     cursor: pointer;

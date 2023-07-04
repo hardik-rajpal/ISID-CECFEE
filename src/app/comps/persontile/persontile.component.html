@@ -1,13 +1,13 @@
 <div class="desktop">
     <div class="main col centercol pointable" *ngIf="!active">
         <img class="person-img" [src]="person.image"/>
-        <div class="name" [innerHTML]="person.name"></div>
+        <div class="name fs-larger" [innerHTML]="person.name"></div>
         <div class="body" [innerHTML]="person.description"></div>
     </div>
     <div class="main active row" *ngIf="active">
         <div class="col centercol">
             <img class="person-img" [src]="person.image"/>
-            <div class="name" [innerHTML]="person.name"></div>
+            <div class="name fs-larger" [innerHTML]="person.name"></div>
             <div class="body" [innerHTML]="person.description"></div>
         </div>
         <div class="col centercol biolinks">
@@ -26,12 +26,12 @@
 <div  class="mobile">
     <div class="main col centercol pointable" *ngIf="!active">
         <img class="person-img" [src]="person.image"/>
-        <div class="name" [innerHTML]="person.name"></div>
+        <div class="name fs-larger" [innerHTML]="person.name"></div>
         <div class="body" [innerHTML]="person.description"></div>
     </div>
     <div class="main active col centercol" *ngIf="active">
             <img class="person-img" [src]="person.image"/>
-            <div class="name" [innerHTML]="person.name"></div>
+            <div class="name fs-larger" [innerHTML]="person.name"></div>
             <div class="body" [innerHTML]="person.description"></div>
             <div class="closebtn pointable" (click)="this.inactive.emit()">
                 Close <i class="fa fa-times"></i>

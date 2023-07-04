@@ -9,10 +9,10 @@
         </p>
         <div class="row">
             <div *ngFor="let cat of categories">
-                <span class="catbox pointable" *ngIf="!selectedCategories.includes(cat)" (click)="selectedCategories.push(cat)">
+                <span class="catbox fs-larger pointable" *ngIf="!selectedCategories.includes(cat)" (click)="selectedCategories.push(cat)">
                     {{cat}}
                 </span>
-                <span class="catbox activebox" *ngIf="selectedCategories.includes(cat)" (click)="selectedCategories.splice(selectedCategories.indexOf(cat),1)">
+                <span class="catbox fs-larger activebox" *ngIf="selectedCategories.includes(cat)" (click)="selectedCategories.splice(selectedCategories.indexOf(cat),1)">
                     <span>
                         {{cat}}
                     </span>
