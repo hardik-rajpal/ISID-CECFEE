@@ -2,13 +2,10 @@
     <p class="title">{{data.title}}</p>
 
     <app-sectionbox [section]="data.aboutus"></app-sectionbox>
-    <app-sectionbox [section]="data.articles"></app-sectionbox>
+    <p class="heading">{{data.articles.title}}</p>
+    <app-flash-cycle [articles]="data.articles.articles"></app-flash-cycle>
     <a [routerLink]="['home/allarticles']" target="_blank">
         See all articles...
-    </a>
-    <app-sectionbox [section]="data.videos"></app-sectionbox>
-    <a [routerLink]="['home/allvideos']" target="_blank">
-        See all videos...
     </a>
     <app-sectionbox [section]="data.publications"></app-sectionbox>
     <a [routerLink]="['research']" target="_blank">

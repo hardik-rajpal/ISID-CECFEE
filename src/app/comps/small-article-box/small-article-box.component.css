@@ -1,0 +1,14 @@
+.main{
+    /* border: var(--primary) 2px solid; */
+    padding: 10px;
+}
+.article-title{
+    font-weight: bold;
+    font-size: 1.33rem;
+}
+.row{
+    align-items: center;
+}
+.row>*{
+    padding: 5px;
+}

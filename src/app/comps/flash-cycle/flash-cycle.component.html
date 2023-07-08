@@ -1,0 +1,40 @@
+<div class="desktop">
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <app-small-article-box [article]="getNextArticle()"></app-small-article-box>
+                </td>
+                <td [rowSpan]="otherArticles().length+1">
+                    <app-large-article-box [article]="articles[activeIndex]"></app-large-article-box>
+                </td>
+            </tr>
+            <tr *ngFor="let article of otherArticles()">
+                <td>
+                    <app-small-article-box [article]="article"></app-small-article-box>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="mobile">
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <app-large-article-box [article]="articles[activeIndex]"></app-large-article-box>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <app-small-article-box [article]="getNextArticle()"></app-small-article-box>
+                </td>
+            </tr>
+            <tr *ngFor="let article of otherArticles()">
+                <td>
+                    <app-small-article-box [article]="article"></app-small-article-box>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

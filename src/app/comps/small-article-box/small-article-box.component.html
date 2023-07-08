@@ -1,0 +1,11 @@
+<div class="main" #mainDiv>
+    <a class="article-title" [href]="article.link">{{article.title}}</a>
+    <div class="row">
+        <i class="fa fa-newspaper"></i>
+        {{article.journal}}
+    </div>
+    <div class="row">
+        <i class="fa fa-group"></i>
+        {{getAuthorString()}}
+    </div>
+</div>

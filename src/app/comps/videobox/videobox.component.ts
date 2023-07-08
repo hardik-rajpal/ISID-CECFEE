@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { video } from 'src/data/videos';
 
 @Component({
   selector: 'app-videobox',
@@ -7,5 +6,5 @@ import { video } from 'src/data/videos';
   styleUrls: ['./videobox.component.css']
 })
 export class VideoboxComponent {
-  @Input() video!:video;
+  @Input() video!:any;
 }

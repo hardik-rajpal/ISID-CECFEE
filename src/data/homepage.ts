@@ -3,8 +3,6 @@ import { article, getHomepageArticles } from "./articles";
 import { linkSpec } from "./people";
 import { publication } from "./research";
 import { infoTileSpec, paraSpec, routeSpec } from "./rtl.utils";
-import { getHomepageVideos, video } from "./videos";
-import { AllVideosPageComponent } from "src/app/comps/all-videos-page/all-videos-page.component";
 import { AllMentionsPageComponent } from "src/app/comps/all-mentions-page/all-mentions-page.component";
 import { getHomepageMentions } from "./events/mentions";
 
@@ -12,7 +10,6 @@ export interface sectionSpec {
     title: string;
     paras?: paraSpec[];
     articles?: article[];
-    videos?: video[];
     publications?: publication[];
     infotiles?: infoTileSpec[];
 }
@@ -26,10 +23,6 @@ export interface homepageSpec{
     articles:{
         title:string;
         articles:article[];
-    };
-    videos:{
-        title:string;
-        videos:video[];
     };
     publications:{
         title:string;
@@ -61,11 +54,6 @@ export const HomePageRoutes:routeSpec[] = [
         label:'All articles',
         component:AllArticlesPageComponent,
         route:'home/allarticles'
-    },
-    {
-        label:'All videos',
-        component:AllVideosPageComponent,
-        route:'home/allvideos'
     },
     {
         label:'All Mentions',
@@ -156,10 +144,6 @@ export const homepageData:homepageSpec = {
             </a>. Their work is titled "The Impact of Temperature on Productivity and Labor Supply: Evidence from Indian Manufacturing."`
         },
         ]
-    },
-    videos:{
-            title:`Videos`,
-            videos:getHomepageVideos()
     },
     events:
         {

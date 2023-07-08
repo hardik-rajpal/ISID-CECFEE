@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { allMentions } from 'src/data/events/mentions';
+import { sectionSpec } from 'src/data/homepage';
 import { infoTileSpec } from 'src/data/rtl.utils';
 
 @Component({

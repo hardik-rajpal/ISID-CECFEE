@@ -1,0 +1,17 @@
+div>*{
+    color: white;
+    background-color: var(--primary);
+}
+.col{
+    justify-content: space-around;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 5px;
+}
+td,th{
+    border: 3px solid var(--light);
+    text-align: left;
+    padding: 8px;
+}

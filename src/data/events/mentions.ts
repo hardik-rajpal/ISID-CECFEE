@@ -1,6 +1,7 @@
+import { sectionSpec } from "../homepage";
 import { infoTileSpec } from "../rtl.utils";
 export function getHomepageMentions():infoTileSpec[]{
-    return allMentions.filter((mention)=>(mention.image!==undefined))
+    return allMentions.filter((mention)=>(mention.image!==undefined)).slice(0,2)
 }
 export const allMentions:infoTileSpec[] = [
     {
@@ -8,7 +9,7 @@ export const allMentions:infoTileSpec[] = [
         image:`assets/home/esom-prebudget.jpg`
     },
     {
-        text:`Dr. Farzana Afridi, ISI Delhi (sitting, second to the left of the PM in the photograph), was one of the economists to meet the PM as a part of a pre-budget meeting held at NITI AAYOG in New Delhi on 9 January 2020. Among other things she mentioned the effect of the Ujjwala Yojana on women’s work based on her research in rural Indore in Madhya Pradesh. Women with gas spent less time on fuel collection and cooking than comparable women without gas. Richer women tended to use the extra time in leisure and poorer women tended to use the extra time to work and increase their earnings. Read the press release
+        text:`Dr. Farzana Afridi, ISI Delhi (sitting second to the left of the PM in the photograph), was one of the economists to meet the PM as a part of a pre-budget meeting held at NITI AAYOG in New Delhi on 9 January 2020. Among other things she mentioned the effect of the Ujjwala Yojana on women’s work based on her research in rural Indore in Madhya Pradesh. Read the press release
         <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=1598925">
         here
         </a>.`,
@@ -64,5 +65,38 @@ export const allMentions:infoTileSpec[] = [
     },
     {
         text:`The Indian Statistical Institute held its 13th Annual Conference on Economic Growth and Development from 18th to 20th December in Delhi. Environmental themes were very well represented in the program. CECFEE was honoured to have Prof. Thomas Sterner from the University of Gothenburg who gave a keynote on climate economics. He also spoke at a panel discussion the same day on reforming the teaching of Introductory Economics. <a href="https://www.facebook.com/thomas.sterner.73/posts/10215090128434929">Click here</a> for more information.`
-    }
-    ]
+    },
+    {
+        text:`“Since the general public is not in a panic about climate change and fossil fuels owners still have deep pockets, government cannot do much with respect to climate policy. However, it is feasible and important to have policies that induce technical progress, especially at early stage R&D” says Prof E Somanathan at WCERE 2018, Gothenburg – 6th World Congress of Environmental and Resource Economists. `,
+        videoLink:`https://www.youtube.com/watch?time_continue=1697&v=cbJvQoDZSWQ`
+    },
+    {
+        text:`A panel discussion on “Climate Neutrality and Social Sustainability” with Professor E. Somanathan, Ms Beatriz Yordi, Director, DG Climate Action in the European Commission, and Nobel Economics Laureate Professor Michael Spence of New York University, moderated by Professor Simone Borghesi of the European University Institute at the EUI’s State of the Union conference 2022`,
+        videoLink:`https://youtu.be/sObYo2t0Tz4?t=13016`   
+    },
+    {
+        text:`Following the issues raised in the review of contemporary research on sustainable economic development by renowned economist Sir Partha Dasgupta, CECFEE Head, Prof E Somanathan speaks with him on a variety of issues – including the origins of his interest in environmental economics and how his thinking on the issue has evolved over the years. This conversation was a part of the fourth edition of I4I podcast series. Find the entire conversation <a href="https://www.ideasforindia.in/topics/environment/economics-and-the-environment.html">here</a>.`,
+        videoLink:`https://youtu.be/B3u82SaSlvQ`
+    },
+    {
+        text:`Professor E. Somanathan was a panelist in a Times Now discussion on India’s post COVID-19 action plans to revive the economy.`,
+        videoLink:`https://www.timesnownews.com/videos/times-now/india-upfront/video-indias-post-covid-action-plan-how-will-we-revive-economy-india-upfront-with-rahul-shivshankar/59528`
+    },
+    {
+        text:`Dr. Farzana Afridi addresses the UN General Assembly in a special event discussing the double bind of income and time poverty and why it matters for sustainable development.`,
+        videoLink:`https://media.un.org/en/asset/k1c/k1cdis5x8z`
+    },
+    {
+        text:`Professor E.Somanathan, Sunita Narain and Anna Issac discuss the extreme climatic instances in India on ET Now’s “India Development Debate”.`,
+        videoLink:`https://www.youtube.com/watch?v=ZVQrOcpro98`
+    },
+    {
+        text:`Professor E. Somanathan was invited to speak at
+        <a href="https://fsr.eui.eu/event/covid-19-global-climate-policy-and-carbon-markets/">
+        a virtual event organized by FSR-Climate and the European Association of Environmental and Resource Economists (EAERE)
+        </a>
+        to discuss the expected impacts of the COVID-19 pandemic on global climate policy and carbon markets.`,
+        videoLink:`https://youtu.be/0hQo7Yl7rps`
+    },
+
+]

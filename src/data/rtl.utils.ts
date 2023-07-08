@@ -7,6 +7,7 @@ export interface fileStructureSpec{
 export interface infoTileSpec{
     text:string;
     image?:string;
+    videoLink?:string;
 }
 export interface routeSpec{
     label:string;

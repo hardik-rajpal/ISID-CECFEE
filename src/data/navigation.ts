@@ -85,6 +85,11 @@ export const NavBarRoutes: routeSpec[] = [
                 component:EventListPageComponent
             },
             {
+                label:`Mentions`,
+                route:`events/mentions`,
+                component:AllMentionsPageComponent
+            },
+            {
                 label:'Others',
                 route:`events/others`,
                 component:EventListPageComponent

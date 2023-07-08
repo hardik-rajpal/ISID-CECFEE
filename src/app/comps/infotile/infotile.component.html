@@ -4,4 +4,10 @@
         <img class="article-img-mobile" *ngIf="infotile.image" src="{{infotile.image}}" />
         <p [innerHTML]="infotile.text|safe:'html'"></p>
     </div>
+    <div *ngIf="infotile.videoLink!==undefined" class="row watch">
+        <a [href]="infotile.videoLink" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+            Watch here
+        </a>
+    </div>
 </div>

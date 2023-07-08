@@ -1,9 +1,0 @@
-<div class="main">
-    <div class="titlebar">
-        <p class="title">All Videos</p>
-        <input [(ngModel)]="query" placeholder="🔍 Search for keywords..."/>
-    </div>
-    <div class="articlesgrid">
-        <app-videobox *ngFor="let video of getQueryResults()" [video]="video"></app-videobox>
-    </div>
-</div>
