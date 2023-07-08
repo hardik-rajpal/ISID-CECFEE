@@ -23,3 +23,6 @@ i.fa.fa-microphone{
 .collapsible{
     margin-top: 10px;
 }
+.details{
+    overflow: scroll;
+}

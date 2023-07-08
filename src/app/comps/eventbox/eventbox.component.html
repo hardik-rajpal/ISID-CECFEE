@@ -1,7 +1,7 @@
 <div class="main">
     <p class="heading-colored">{{event.title}}</p>
     <p *ngIf="event.subtitle" class="subtitle" [innerHtml]="event.subtitle"></p>    
-    <div class="mobile col">
+    <div class="col details">
         <div class="row pointer">
             <i class="fa fa-calendar"></i>
             {{event.dateTime}}

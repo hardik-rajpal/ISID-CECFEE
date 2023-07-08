@@ -1,0 +1,8 @@
+<div>
+    <div class="titlebar">
+        <p class="heading">{{data.title}}</p>
+        <input [(ngModel)]="query" placeholder="🔍 Search for keywords..."/>
+    </div>
+    <app-eventbox *ngFor="let event of getQueryResults()" [event]="event"></app-eventbox>
+    <div *ngIf="data.noEventsMessage&&(data.events.length===0)" [innerHTML]="data.noEventsMessage"></div>
+</div>

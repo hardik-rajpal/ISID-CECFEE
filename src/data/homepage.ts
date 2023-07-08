@@ -6,7 +6,7 @@ import { infoTileSpec, paraSpec, routeSpec } from "./rtl.utils";
 import { getHomepageVideos, video } from "./videos";
 import { AllVideosPageComponent } from "src/app/comps/all-videos-page/all-videos-page.component";
 import { AllMentionsPageComponent } from "src/app/comps/all-mentions-page/all-mentions-page.component";
-import { getHomepageMentions } from "./mentions";
+import { getHomepageMentions } from "./events/mentions";
 
 export interface sectionSpec {
     title: string;
@@ -163,7 +163,7 @@ export const homepageData:homepageSpec = {
     },
     events:
         {
-            title:`Events`,
+            title:`Mentions`,
             infotiles:getHomepageMentions()
         },
     others:{

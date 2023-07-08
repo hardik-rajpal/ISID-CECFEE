@@ -1,3 +1,4 @@
+import { upcomingSeminarsData } from "./events/upcoming";
 import { paraSpec } from "./rtl.utils";
 
 export interface seminarSpec {
@@ -11,17 +12,14 @@ export interface seminarSpec {
     abstract?: paraSpec[];
 }
 export interface seminarPageSpec {
-    upcomingTitle: string;
-    upcomingSeminars: seminarSpec[];
-    pastTitle: string;
-    pastSeminars: seminarSpec[];
+    title: string;
+    seminars: seminarSpec[];
+    noSeminarsMessage?:string;
 }
 
-export const seminarsData: seminarPageSpec = {
-    upcomingTitle: 'Upcoming Seminars',
-    upcomingSeminars: [],
-    pastTitle: 'Past Seminars',
-    pastSeminars: [
+export const pastSeminarsData: seminarPageSpec = {
+    title: 'Past Seminars',
+    seminars: [
         {
             title: 'CECFEE Seminar: In-Kind Transfers as Insurance',
             speakers: 'Dr Sandip Sukhtankar, University of Virginia',
@@ -414,4 +412,9 @@ export const seminarsData: seminarPageSpec = {
             }]
         }
     ]
+}
+
+export const seminarsData : {[key:string]:seminarPageSpec} = {
+    'upcoming':upcomingSeminarsData,
+    'seminars':pastSeminarsData
 }

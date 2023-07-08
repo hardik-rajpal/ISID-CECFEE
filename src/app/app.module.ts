@@ -10,7 +10,6 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { PeoplePageComponent } from './pages/people-page/people-page.component';
 import { BomPageComponent } from './pages/bom-page/bom-page.component';
 import { ResearchPageComponent } from './pages/research-page/research-page.component';
-import { EventsPageComponent } from './pages/events-page/events-page.component';
 import { SeminarsPageComponent } from './pages/seminars-page/seminars-page.component';
 import { CareersPageComponent } from './pages/careers-page/careers-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
@@ -35,6 +34,11 @@ import { InfotileComponent } from './comps/infotile/infotile.component';
 import { VideoboxComponent } from './comps/videobox/videobox.component';
 import { AllVideosPageComponent } from './comps/all-videos-page/all-videos-page.component';
 import { AllMentionsPageComponent } from './comps/all-mentions-page/all-mentions-page.component';
+import { PlaceholderPageComponent } from './comps/placeholder-page/placeholder-page.component';
+import { ForthcomingEventsPageComponent } from './comps/forthcoming-events-page/forthcoming-events-page.component';
+import { OtherEventsPageComponent } from './comps/other-events-page/other-events-page.component';
+import { WorkshopsPageComponent } from './comps/workshops-page/workshops-page.component';
+import { EventListPageComponent } from './comps/event-list-page/event-list-page.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,6 @@ import { AllMentionsPageComponent } from './comps/all-mentions-page/all-mentions
     PeoplePageComponent,
     BomPageComponent,
     ResearchPageComponent,
-    EventsPageComponent,
     SeminarsPageComponent,
     CareersPageComponent,
     ProjectsPageComponent,
@@ -69,7 +72,12 @@ import { AllMentionsPageComponent } from './comps/all-mentions-page/all-mentions
     InfotileComponent,
     VideoboxComponent,
     AllVideosPageComponent,
-    AllMentionsPageComponent
+    AllMentionsPageComponent,
+    PlaceholderPageComponent,
+    ForthcomingEventsPageComponent,
+    OtherEventsPageComponent,
+    WorkshopsPageComponent,
+    EventListPageComponent
   ],
   imports: [
     BrowserModule,

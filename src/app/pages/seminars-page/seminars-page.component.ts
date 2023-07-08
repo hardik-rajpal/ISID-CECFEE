@@ -1,23 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { getParaSpecStr } from 'src/data/rtl.utils';
-import { seminarPageSpec, seminarSpec, seminarsData } from 'src/data/seminar';
+import { seminarPageSpec, seminarSpec, pastSeminarsData, seminarsData } from 'src/data/seminar';
 
 @Component({
   selector: 'app-seminars-page',
   templateUrl: './seminars-page.component.html',
   styleUrls: ['./seminars-page.component.css']
 })
-export class SeminarsPageComponent {
-  data: seminarPageSpec = seminarsData;
-  upcomingQuery: string = '';
-  pastQuery: string = '';
-  getPastQueryResults(): seminarSpec[] {
-    const lowerCaseQuery = this.pastQuery.toLowerCase();
-    return this.data.pastSeminars.filter((seminar)=>this.seminarQueryMatch(seminar,lowerCaseQuery))
-  }
-  getUpcomingQueryResults():seminarSpec[]{
-    const lowerCaseQuery = this.upcomingQuery.toLowerCase();
-    return this.data.upcomingSeminars.filter((seminar)=>this.seminarQueryMatch(seminar,lowerCaseQuery))
+export class SeminarsPageComponent implements OnInit{
+  data: seminarPageSpec = {
+     title:``,
+     seminars:[]
+  };
+  Query: string = '';
+  getQueryResults():seminarSpec[]{
+    const lowerCaseQuery = this.Query.toLowerCase();
+    return this.data.seminars.filter((seminar)=>this.seminarQueryMatch(seminar,lowerCaseQuery))
   }
   private seminarQueryMatch(seminar: seminarSpec, lowerCaseQuery: string) {
     let match = false;
@@ -51,5 +49,11 @@ export class SeminarsPageComponent {
       }
     }
     return match;
+  }
+
+  ngOnInit(): void {
+    let parts = (window.location.href).split('/')
+    let key = parts[parts.length-1]
+    this.data = seminarsData[key]
   }
 }

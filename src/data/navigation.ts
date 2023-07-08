@@ -1,7 +1,6 @@
 import { Routes,Route } from "@angular/router";
 import { BomPageComponent } from "src/app/pages/bom-page/bom-page.component";
 import { CareersPageComponent } from "src/app/pages/careers-page/careers-page.component";
-import { EventsPageComponent } from "src/app/pages/events-page/events-page.component";
 // import { otherRoutes } from "./otherspage";
 import { HomepageComponent } from "src/app/pages/homepage/homepage.component";
 import { PeoplePageComponent } from "src/app/pages/people-page/people-page.component";
@@ -10,6 +9,11 @@ import { ResearchPageComponent } from "src/app/pages/research-page/research-page
 import { SeminarsPageComponent } from "src/app/pages/seminars-page/seminars-page.component";
 import { parseRouteSpec, routeSpec } from "./rtl.utils";
 import { HomePageRoutes } from "./homepage";
+import { PlaceholderPageComponent } from "src/app/comps/placeholder-page/placeholder-page.component";
+import { AllMentionsPageComponent } from "src/app/comps/all-mentions-page/all-mentions-page.component";
+import { EventListPageComponent } from "src/app/comps/event-list-page/event-list-page.component";
+import { ForthcomingEventsPageComponent } from "src/app/comps/forthcoming-events-page/forthcoming-events-page.component";
+import { AllArticlesPageComponent } from "src/app/comps/all-articles-page/all-articles-page.component";
 
 export const NavBarRoutes: routeSpec[] = [
     {
@@ -23,24 +27,69 @@ export const NavBarRoutes: routeSpec[] = [
         component:PeoplePageComponent
     },
     {
-        label:`Board of Management`,
-        route:'bom',
-        component:BomPageComponent
+        label:`Research`,
+        children:[
+            {
+                label:'Publications',
+                route:'research/publications',
+                component:ResearchPageComponent
+            },
+            {
+                label:'Projects',
+                route:'research/projects',
+                component:ProjectsPageComponent
+            },
+            {
+                label:'Articles',
+                route:'research/articles',
+                component:AllArticlesPageComponent
+            }
+        ]
     },
     {
-        label:`Research`,
-        route:'research',
-        component:ResearchPageComponent
+        label:`Collaborations`,
+        children:[
+            {
+                label:'EfD',
+                route:'collaborations/efd',
+                component:PlaceholderPageComponent
+            },
+            {
+                label:'Digital Labour',
+                route:'collaborations/digitallabour',
+                component:PlaceholderPageComponent
+            },
+            {
+                label:'EMC',
+                route:'collaborations/emc',
+                component:PlaceholderPageComponent
+            }
+        ]
     },
     {
         label:`Events`,
-        route:'events',
-        component:EventsPageComponent
-    },
-    {
-        label:`Seminars`,
-        route:'seminars',
-        component:SeminarsPageComponent
+        children:[
+            {
+                label:'Upcoming',
+                route:'events/upcoming',
+                component:ForthcomingEventsPageComponent
+            },
+            {
+                label:'Seminars',
+                route:'events/seminars',
+                component:SeminarsPageComponent
+            },
+            {
+                label:'Workshops',
+                route:'events/workshops',
+                component:EventListPageComponent
+            },
+            {
+                label:'Others',
+                route:`events/others`,
+                component:EventListPageComponent
+            }
+        ]
     },
     {
         label:'EPU',
@@ -50,11 +99,6 @@ export const NavBarRoutes: routeSpec[] = [
         label:'Careers',
         route:'careers',
         component:CareersPageComponent
-    },
-    {
-        label:'Projects',
-        route:'projects',
-        component:ProjectsPageComponent
     }
 ]
 

@@ -1,4 +1,4 @@
-import { infoTileSpec } from "./rtl.utils";
+import { infoTileSpec } from "../rtl.utils";
 export function getHomepageMentions():infoTileSpec[]{
     return allMentions.filter((mention)=>(mention.image!==undefined))
 }

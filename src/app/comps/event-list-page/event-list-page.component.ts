@@ -1,22 +1,37 @@
-import { Component } from '@angular/core';
-import { EventSpec, EventsData, eventsPageSpec } from 'src/data/events';
+import { Component, OnInit } from '@angular/core';
+import { EventSpec, EventsData } from 'src/data/events/events';
+import { eventListPageSpec } from 'src/data/events/workshops';
 import { getParaSpecStr } from 'src/data/rtl.utils';
 
 @Component({
-  selector: 'app-events-page',
-  templateUrl: './events-page.component.html',
-  styleUrls: ['./events-page.component.css']
+  selector: 'app-event-list-page',
+  templateUrl: './event-list-page.component.html',
+  styleUrls: ['./event-list-page.component.css']
 })
-export class EventsPageComponent {
-  data:eventsPageSpec = EventsData;
+export class EventListPageComponent implements OnInit{
   query:string = '';
-  getQueryResults(): EventSpec[] {
-    const lowerCaseQuery = this.query.toLowerCase();
-    return [
-      ...this.data.forthcomingEvents.filter((seminar)=>this.eventQueryMatch(seminar,lowerCaseQuery)),
-      ...this.data.pastEvents.filter((event)=>this.eventQueryMatch(event,lowerCaseQuery))
-    ]
+  data:eventListPageSpec={
+    title:``,
+    events:[]
   }
+  ngOnInit(): void {
+    let parts = (window.location.href).split('/')
+    let key = parts[parts.length-1]
+    if(Object.keys(EventsData).includes(key)){
+      this.data = EventsData[key]
+    }
+    else{
+      window.alert('Wrong page routed to Event List Page. Check navigation.ts')
+    }
+  }
+  getQueryResults(){
+    if(this.query.length===0){
+      return this.data.events;
+    }
+    const lowerCaseQuery = this.query.toLowerCase();
+    return this.data.events.filter((event)=>this.eventQueryMatch(event,lowerCaseQuery))
+  }
+
   eventQueryMatch(event: EventSpec, lowerCaseQuery: string): boolean {
     if(
       event.title.toLowerCase().includes(lowerCaseQuery)

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { EventSpec } from 'src/data/events';
+import { EventSpec } from 'src/data/events/events';
 
 @Component({
   selector: 'app-eventbox',
