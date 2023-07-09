@@ -15,3 +15,12 @@ td,th{
     text-align: left;
     padding: 8px;
 }
+
+/* .rowgrid{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+.colgrid{
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+} */

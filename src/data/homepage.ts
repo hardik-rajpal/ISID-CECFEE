@@ -120,7 +120,7 @@ export const homepageData:homepageSpec = {
         ]
     },
     news:{
-        title:`News`,
+        title:`Updates`,
         paras:[
         {
             text:`Professor E. Somanathan in conversation with the Editorial Board, Department of Economics, Miranda House College on Environment, Policy, and Future as part of their educational initiative. Read the interview <a href="https://ecotalker.wordpress.com/2020/01/16/in-conversation-with-dr-e-somanathan-environment-policy-and-future/">here</a>.`
