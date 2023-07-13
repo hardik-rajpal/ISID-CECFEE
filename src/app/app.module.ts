@@ -31,7 +31,6 @@ import { SectionboxComponent } from './comps/sectionbox/sectionbox.component';
 import { ArticleboxComponent } from './comps/articlebox/articlebox.component';
 import { AllArticlesPageComponent } from './comps/all-articles-page/all-articles-page.component';
 import { InfotileComponent } from './comps/infotile/infotile.component';
-import { AllMentionsPageComponent } from './comps/all-mentions-page/all-mentions-page.component';
 import { PlaceholderPageComponent } from './comps/placeholder-page/placeholder-page.component';
 import { ForthcomingEventsPageComponent } from './comps/forthcoming-events-page/forthcoming-events-page.component';
 import { OtherEventsPageComponent } from './comps/other-events-page/other-events-page.component';
@@ -40,6 +39,7 @@ import { EventListPageComponent } from './comps/event-list-page/event-list-page.
 import { FlashCycleComponent } from './comps/flash-cycle/flash-cycle.component';
 import { SmallArticleBoxComponent } from './comps/small-article-box/small-article-box.component';
 import { LargeArticleBoxComponent } from './comps/large-article-box/large-article-box.component';
+import { AllNewsPageComponent } from './comps/all-news-page/all-news-page.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +71,6 @@ import { LargeArticleBoxComponent } from './comps/large-article-box/large-articl
     ArticleboxComponent,
     AllArticlesPageComponent,
     InfotileComponent,
-    AllMentionsPageComponent,
     PlaceholderPageComponent,
     ForthcomingEventsPageComponent,
     OtherEventsPageComponent,
@@ -79,7 +78,8 @@ import { LargeArticleBoxComponent } from './comps/large-article-box/large-articl
     EventListPageComponent,
     FlashCycleComponent,
     SmallArticleBoxComponent,
-    LargeArticleBoxComponent
+    LargeArticleBoxComponent,
+    AllNewsPageComponent
   ],
   imports: [
     BrowserModule,

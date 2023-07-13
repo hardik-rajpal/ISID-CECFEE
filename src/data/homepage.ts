@@ -3,8 +3,8 @@ import { article, getHomepageArticles } from "./articles";
 import { linkSpec } from "./people";
 import { publication } from "./research";
 import { infoTileSpec, paraSpec, routeSpec } from "./rtl.utils";
-import { AllMentionsPageComponent } from "src/app/comps/all-mentions-page/all-mentions-page.component";
-import { getHomepageMentions } from "./events/mentions";
+import { getHomepageNews } from "./events/news";
+import { AllNewsPageComponent } from "src/app/comps/all-news-page/all-news-page.component";
 
 export interface sectionSpec {
     title: string;
@@ -56,9 +56,9 @@ export const HomePageRoutes:routeSpec[] = [
         route:'home/allarticles'
     },
     {
-        label:'All Mentions',
-        component:AllMentionsPageComponent,
-        route:'home/mentions'
+        label:'All News Stories',
+        component:AllNewsPageComponent,
+        route:'home/news'
     }
 ]
 export const homepageData:homepageSpec = {
@@ -147,8 +147,8 @@ export const homepageData:homepageSpec = {
     },
     events:
         {
-            title:`Mentions`,
-            infotiles:getHomepageMentions()
+            title:`News`,
+            infotiles:getHomepageNews()
         },
     others:{
             title:`Others`,

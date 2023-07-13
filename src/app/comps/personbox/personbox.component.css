@@ -3,13 +3,32 @@
     display: flex;
     flex-direction: row;
 }
-
+.text{
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.imgdiv{
+    border: 3px solid var(--primary);
+    align-items: center;
+    background-color: white;
+}
 .person-title{
     padding: 5px;
-    margin-top: 10px;
     color: white;
+    display: block;
     background-color: var(--primary);
     z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+a.personLink{
+    color: white;
+}
+.person-title:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 .body{
     margin-left: -10px;
@@ -24,7 +43,6 @@
 }
 
 img{
-    border: 3px solid var(--primary);
     padding: 3px;
     float: right;
     background-color: white;
