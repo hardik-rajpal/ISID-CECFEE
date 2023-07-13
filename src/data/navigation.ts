@@ -10,10 +10,10 @@ import { SeminarsPageComponent } from "src/app/pages/seminars-page/seminars-page
 import { parseRouteSpec, routeSpec } from "./rtl.utils";
 import { HomePageRoutes } from "./homepage";
 import { PlaceholderPageComponent } from "src/app/comps/placeholder-page/placeholder-page.component";
-import { AllMentionsPageComponent } from "src/app/comps/all-mentions-page/all-mentions-page.component";
 import { EventListPageComponent } from "src/app/comps/event-list-page/event-list-page.component";
 import { ForthcomingEventsPageComponent } from "src/app/comps/forthcoming-events-page/forthcoming-events-page.component";
 import { AllArticlesPageComponent } from "src/app/comps/all-articles-page/all-articles-page.component";
+import { AllNewsPageComponent } from "src/app/comps/all-news-page/all-news-page.component";
 
 export const NavBarRoutes: routeSpec[] = [
     {
@@ -85,9 +85,9 @@ export const NavBarRoutes: routeSpec[] = [
                 component:EventListPageComponent
             },
             {
-                label:`Mentions`,
-                route:`events/mentions`,
-                component:AllMentionsPageComponent
+                label:`News`,
+                route:`events/news`,
+                component:AllNewsPageComponent
             },
             {
                 label:'Others',
@@ -95,10 +95,6 @@ export const NavBarRoutes: routeSpec[] = [
                 component:EventListPageComponent
             }
         ]
-    },
-    {
-        label:'EPU',
-        route:'https://www.isid.ac.in/~epu/'
     },
     {
         label:'Careers',

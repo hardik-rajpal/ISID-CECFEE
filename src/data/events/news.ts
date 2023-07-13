@@ -1,9 +1,9 @@
 import { sectionSpec } from "../homepage";
 import { infoTileSpec } from "../rtl.utils";
-export function getHomepageMentions():infoTileSpec[]{
-    return allMentions.filter((mention)=>(mention.image!==undefined)).slice(0,2)
+export function getHomepageNews():infoTileSpec[]{
+    return allNews.filter((mention)=>(mention.image!==undefined)).slice(0,2)
 }
-export const allMentions:infoTileSpec[] = [
+export const allNews:infoTileSpec[] = [
     {
         text:`Professor E. Somanathan was invited to the Pre-Budget consultation meeting with the Union Minister for Finance and Corporate Affairs in New Delhi on Friday, 14 June, 2019. Read the Press release <a href=" http://pib.nic.in/newsite/PrintRelease.aspx?relid=190468">here</a>. (Image from ANI.)`,
         image:`assets/home/esom-prebudget.jpg`

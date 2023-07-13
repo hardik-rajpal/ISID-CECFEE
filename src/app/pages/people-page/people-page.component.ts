@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { peopleData, peoplePageSpec, personTileSpec } from 'src/data/people';
 
 @Component({
@@ -6,11 +6,13 @@ import { peopleData, peoplePageSpec, personTileSpec } from 'src/data/people';
   templateUrl: './people-page.component.html',
   styleUrls: ['./people-page.component.css']
 })
-export class PeoplePageComponent {
+export class PeoplePageComponent implements OnInit{
   @ViewChild('maindiv') maindiv!:ElementRef<HTMLDivElement>;
   data:peoplePageSpec = peopleData;
   activeIndex:number = -1;
-  
+  ngOnInit(): void {
+    peopleData.people = peopleData.people.sort((p1,p2)=>(p1.name.localeCompare(p2.name)))
+  }
   toggleActive(person:personTileSpec){
     this.activeIndex = this.data.people.findIndex((p)=>p===person)
   }
