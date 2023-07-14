@@ -22,6 +22,9 @@ a{
     text-decoration: none;
     color: var(--accent);
 }
+img.logo{
+    max-height: 100px;
+}
 a:hover{
     color: var(--light);
 }
