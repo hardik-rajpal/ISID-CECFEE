@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { footerData } from 'src/data/headerfooter';
 
 @Component({
   selector: 'app-sitefooter',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./sitefooter.component.css']
 })
 export class SitefooterComponent {
-
+  data = footerData;
 }
