@@ -24,7 +24,8 @@ div.logo{
     border-right: 2px solid var(--secondary);
 }
 .eputitle{
-    max-width: 625px;
+    text-align: justify;
+    max-width: 570px;
     border-left: 2px solid var(--primary);
     padding-left: 10px;
 }
@@ -37,7 +38,7 @@ hr
     border: 0;
     clear:both;
     display:block;
-    width: 100%;               
+    /* width: 100%;                */
     background-color:var(--secondary);
     height: 5px;
 }

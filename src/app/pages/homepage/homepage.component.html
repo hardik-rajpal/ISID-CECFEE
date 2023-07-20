@@ -21,22 +21,5 @@
     <a [routerLink]="['home/mentions']" target="_blank">
         See all news stories...
     </a>
-    <app-sectionbox [section]="data.others" [linesBetweenParas]="true"></app-sectionbox>
-    <div>
-        <p class="heading">Contact</p>
-        <span [innerHTML]="data.contact.title"></span><br>
-        <span class="contact">
-            <i class="fa fa-phone"></i>
-            {{data.contact.phone}}
-        </span><br>
-        <span class="contact">
-            <i class="fa fa-fax"></i>
-            {{data.contact.fax}}
-        </span><br>
-        <span class="contact">
-            <i class="fa fa-envelope"></i>
-            {{data.contact.email}}
-        </span><br>
-        <app-linkbox *ngFor="let link of data.contact.links" [link]="link"></app-linkbox>
-    </div>
+    <!-- <app-sectionbox [section]="data.others" [linesBetweenParas]="true"></app-sectionbox> -->
 </div>

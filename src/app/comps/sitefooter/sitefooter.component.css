@@ -1,4 +1,12 @@
-div{
-    height: 90px;
-    text-align: center;
+div.main{
+    /* height: 300px; */
+    /* text-align: center; */
+    padding: 10px;
+    padding-bottom: 30px;
+}
+span.contact>*{
+    padding: 5px;
+}
+.contactlinks{
+    justify-content: space-between;
 }

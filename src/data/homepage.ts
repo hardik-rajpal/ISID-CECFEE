@@ -36,18 +36,10 @@ export interface homepageSpec{
         title:string;
         infotiles:infoTileSpec[];
     }
-    others:{
-        title:string;
-        paras:paraSpec[];
-    }
-    contact:{
-        title:string;
-        phone:string;
-        fax:string;
-        address:string;
-        email:string;
-        links:linkSpec[];
-    }
+    // others:{
+    //     title:string;
+    //     paras:paraSpec[];
+    // }
 }
 export const HomePageRoutes:routeSpec[] = [
     {
@@ -150,40 +142,19 @@ export const homepageData:homepageSpec = {
             title:`News`,
             infotiles:getHomepageNews()
         },
-    others:{
-            title:`Others`,
-            paras:[
-            {
-                text:`Professor E. Somanathan writes a report on 
-                <a href="https://uchicago.app.box.com/s/a1x3pz3483gbyid07154kh0boj2ak68i">
-                Environment Brief
-                </a>`
-            },
-            {
-                text:`Professor E. Somanathan (along with many others) write a report on <a href="https://uchicago.box.com/s/f47rz9hwbw9z7lu41f7hnunwxsj58xhp">An Economic Strategy for India</a>
-                `
-            }
+    // others:{
+    //         title:`Others`,
+    //         paras:[
+    //         {
+    //             text:`Professor E. Somanathan writes a report on 
+    //             <a href="https://uchicago.app.box.com/s/a1x3pz3483gbyid07154kh0boj2ak68i">
+    //             Environment Brief
+    //             </a>`
+    //         },
+    //         {
+    //             text:`Professor E. Somanathan (along with many others) write a report on <a href="https://uchicago.box.com/s/f47rz9hwbw9z7lu41f7hnunwxsj58xhp">An Economic Strategy for India</a>
+    //             `
+    //         }
             
-            ]},
-    contact:{
-        title:`Centre for research on the Economics of Climate, Food, Energy and Environment (CECFEE)
-        <br>
-        Economics and Planning Unit, Indian Statistical Institute`,
-        phone:`+91-11-4149 3942`,
-        fax:`+91-11-4149 3981`,
-        address:`7, S. J. S. Sansanwal Marg, New Delhi 110 016, India`,
-        email:`cecfee [at] isid.ac.in`,
-        links:[
-            {
-                label:'Facebook',
-                target:`https://www.facebook.com/cecfee/`,
-                type:'facebook'
-            },
-            {
-                label:`Twitter`,
-                target:`https://twitter.com/cecfee`,
-                type:'twitter'
-            }
-        ]
-    }
+    //         ]},
 }

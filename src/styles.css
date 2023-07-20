@@ -12,6 +12,7 @@
     /* font-family: "Source Sans Pro"; */
     font-family: "Red Hat Display";
     /* font-family: 'Manrope',sans-serif; */
+    text-align: justify;
 }
 html,body{
     margin: 0;
@@ -85,12 +86,20 @@ input{
     height: 30px;
 }
 hr.thick{
-    border: 0;
-    clear:both;
+    border: 3px solid var(--secondary);
+    /* clear:both; */
     display:block;
     width: 100%;               
     background-color:var(--secondary);
-    height: 5px;
+    /* height: 5px; */
+}
+hr.thin{
+    border: 1px solid gray;
+    /* clear:both; */
+    display:block;
+    width: 100%;               
+    background-color:var(--secondary);
+    /* height: 5px; */
 }
 .titlebar{
     display: flex;

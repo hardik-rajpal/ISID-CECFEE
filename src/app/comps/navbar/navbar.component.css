@@ -17,6 +17,7 @@
   }
   .largewidth-navbar{
     flex-direction: row;
+    justify-content: center;
   }
   .smallwidth-navbar{
     flex-direction: column;
