@@ -25,7 +25,7 @@
     <p *ngIf="seminar.description">{{seminar.description}}</p>
     <div class="collapsible">
         <app-collapsible *ngIf="seminar.abstract" [title]="'Abstract'">
-            <app-paraspecbox *ngFor="let para of seminar.abstract" [para]="para"></app-paraspecbox>
+            <app-paraspecbox *ngFor="let para of seminar.abstract" [para]="para" class="abstract"></app-paraspecbox>
         </app-collapsible>
     </div>
     <hr>
