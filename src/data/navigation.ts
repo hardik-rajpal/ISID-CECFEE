@@ -70,11 +70,6 @@ export const NavBarRoutes: routeSpec[] = [
         label:`Events`,
         children:[
             {
-                label:'Upcoming',
-                route:'events/upcoming',
-                component:ForthcomingEventsPageComponent
-            },
-            {
                 label:'Seminars',
                 route:'events/seminars',
                 component:SeminarsPageComponent
@@ -83,11 +78,6 @@ export const NavBarRoutes: routeSpec[] = [
                 label:'Workshops',
                 route:'events/workshops',
                 component:EventListPageComponent
-            },
-            {
-                label:`News`,
-                route:`events/news`,
-                component:AllNewsPageComponent
             },
             {
                 label:'Others',
