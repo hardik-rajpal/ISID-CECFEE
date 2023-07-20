@@ -1,15 +1,13 @@
 .main{
-    width: 275px;
     margin: 10px;
     padding: 5px;
-    border: var(--primary) 2px solid;
-    align-items: center;
 }
 .main>*{
     padding: 5px;
 }
-.row{
-    align-items: center;
+.col.details{
+    justify-content: space-between;
+    width: 80%;
 }
 .row>*{
     padding: 5px;
@@ -18,9 +16,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 250px;
+    width: 250px;
     overflow: hidden;
 }
 .article-img{
-    max-height: 200px;
+    /* width: 150px; */
+    height: 150px;
 }
