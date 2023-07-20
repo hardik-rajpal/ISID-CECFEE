@@ -10,3 +10,6 @@ span.contact>*{
 .contactlinks{
     justify-content: space-between;
 }
+div.contact{
+    max-width: 70%;
+}

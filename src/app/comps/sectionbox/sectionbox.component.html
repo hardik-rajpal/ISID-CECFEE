@@ -1,5 +1,6 @@
 <div>
-    <p class="heading">{{section.title}}</p>
+    <p *ngIf="titleLink.length===0" class="heading">{{section.title}}</p>
+    <a *ngIf="titleLink.length!==0" class="heading" [href]="titleLink">{{section.title}}</a>
     <div *ngIf="section.paras">
         <div *ngFor="let para of section.paras">
             <app-paraspecbox [para]="para"></app-paraspecbox>

@@ -176,3 +176,6 @@ input{
         grid-template-columns: 50% 50%;
     }
 }
+.twitter-tweet.twitter-tweet-rendered{
+    margin: 10px;
+}

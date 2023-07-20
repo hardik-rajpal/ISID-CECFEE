@@ -42,6 +42,7 @@ import { LargeArticleBoxComponent } from './comps/large-article-box/large-articl
 import { AllNewsPageComponent } from './comps/all-news-page/all-news-page.component';
 import { PersontagComponent } from './comps/persontag/persontag.component';
 import { ModalboxComponent } from './comps/modalbox/modalbox.component';
+import { MediaPageComponent } from './comps/media-page/media-page.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { ModalboxComponent } from './comps/modalbox/modalbox.component';
     LargeArticleBoxComponent,
     AllNewsPageComponent,
     PersontagComponent,
-    ModalboxComponent
+    ModalboxComponent,
+    MediaPageComponent
   ],
   imports: [
     BrowserModule,

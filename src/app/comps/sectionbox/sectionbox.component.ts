@@ -9,4 +9,5 @@ import { sectionSpec } from 'src/data/homepage';
 export class SectionboxComponent {
   @Input() section!:sectionSpec;
   @Input() linesBetweenParas:boolean = false;
+  @Input() titleLink:string = '';
 }

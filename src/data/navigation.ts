@@ -14,6 +14,7 @@ import { EventListPageComponent } from "src/app/comps/event-list-page/event-list
 import { ForthcomingEventsPageComponent } from "src/app/comps/forthcoming-events-page/forthcoming-events-page.component";
 import { AllArticlesPageComponent } from "src/app/comps/all-articles-page/all-articles-page.component";
 import { AllNewsPageComponent } from "src/app/comps/all-news-page/all-news-page.component";
+import { MediaPageComponent } from "src/app/comps/media-page/media-page.component";
 
 export const NavBarRoutes: routeSpec[] = [
     {
@@ -85,6 +86,11 @@ export const NavBarRoutes: routeSpec[] = [
                 component:EventListPageComponent
             }
         ]
+    },
+    {
+        label:`Media`,
+        route:`media`,
+        component:MediaPageComponent
     },
     {
         label:'Careers',
