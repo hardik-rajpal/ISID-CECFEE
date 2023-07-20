@@ -16,7 +16,7 @@ export interface peoplePageSpec{
     people:personTileSpec[]
 }
 export const peopleData:peoplePageSpec = {
-    title:'People',
+    title:'Team',
     people:[
         {
             name:`E. Somanathan`,

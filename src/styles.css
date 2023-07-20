@@ -26,6 +26,11 @@ a{
 img.logo{
     max-height: 100px;
 }
+img.persontag{
+    height: 125px;
+    width: 125px;
+
+}
 a:hover{
     color: var(--light);
 }
