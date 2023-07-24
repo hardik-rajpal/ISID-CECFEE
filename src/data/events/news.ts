@@ -1,7 +1,10 @@
 import { sectionSpec } from "../homepage";
 import { infoTileSpec } from "../rtl.utils";
 export function getHomepageNews():infoTileSpec[]{
-    return allNews.filter((mention)=>(mention.image!==undefined)).slice(0,2)
+    return [
+        ...allNews.filter((mention)=>(mention.image!==undefined)).slice(0,2),
+        ...allNews.filter((mention)=>(mention.videoLink!==undefined)).slice(0,2)
+    ]
 }
 export const allNews:infoTileSpec[] = [
     {

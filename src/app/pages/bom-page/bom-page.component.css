@@ -10,7 +10,7 @@ app-personbox{
     }
 }
 
-@media (min-width:900px){
+@media (min-width:1260px){
     .grid{
         grid-template-columns: 33% 33% 33%;
     }
