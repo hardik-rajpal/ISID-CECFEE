@@ -8,7 +8,7 @@ img.persontag{
     z-index: 1;
 }
 div.text{
-    background-color: var(--lightgray);
+    background-color: var(--light2);
     padding: 10px;
     width: 80%;
     padding-left: 70px;
