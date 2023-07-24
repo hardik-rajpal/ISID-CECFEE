@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2, RendererStyleFlags2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-modalbox',
@@ -8,13 +8,16 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class ModalboxComponent {
   @ViewChild('biomodal') modalDiv!:ElementRef<HTMLDivElement>;
   //use renderer to effect animation.
-  closeModal(){
-    this.modalDiv.nativeElement.style.display = 'none'
+  constructor(private renderer:Renderer2){}
+  setModalDivStyle(property:string,value:string){
+    this.renderer.setStyle(this.modalDiv.nativeElement,property,value)
   }
+  closeModal(){
+    this.setModalDivStyle('height','0')
+    this.setModalDivStyle('opacity','0')  }
   openModal(){
-
-    this.modalDiv.nativeElement.style.display = 'flex'
-    this.modalDiv.nativeElement.style.flexDirection = 'row'
+    this.setModalDivStyle('height','100%')
+    this.setModalDivStyle('opacity','1')
   }
   ngOnInit(){
     

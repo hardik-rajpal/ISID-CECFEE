@@ -11,7 +11,7 @@ export class PeoplePageComponent implements OnInit{
   // @ViewChild('maindiv') maindiv!:ElementRef<HTMLDivElement>;
   @ViewChild('biomodal') modalDiv!:ModalboxComponent;
   data:peoplePageSpec = peopleData;
-  activeIndex:number = 0;
+  activeIndex:number = -1;
   ngOnInit(): void {
     peopleData.people = peopleData.people.sort((p1,p2)=>(p1.name.localeCompare(p2.name)))
   }
