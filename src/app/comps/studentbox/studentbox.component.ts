@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { memberSpec } from 'src/data/bompage';
+import { memberSpec } from 'src/data/people';
 
 @Component({
   selector: 'app-studentbox',
