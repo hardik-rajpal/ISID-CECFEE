@@ -1,10 +1,10 @@
 app-publication-box{
     margin-left: 10px;
 }
-.titlebar-rp.col{
+.titlebar-rp.mycol{
     align-items: flex-start;
 }
-.titlebar-rp.row{
+.titlebar-rp.myrow{
     justify-content: space-between;
     align-items: center;
 }
@@ -27,6 +27,6 @@ input{
 .catbox>*{
     padding: 2px;
 }
-.row{
+.myrow{
     align-items: center;
 }

@@ -6,7 +6,7 @@ import { getParaSpecStr } from 'src/data/rtl.utils';
 @Component({
   selector: 'app-event-list-page',
   templateUrl: './event-list-page.component.html',
-  styleUrls: ['./event-list-page.component.css']
+  styleUrls: ['./event-list-page.component.scss']
 })
 export class EventListPageComponent implements OnInit{
   query:string = '';

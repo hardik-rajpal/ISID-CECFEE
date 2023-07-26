@@ -1,22 +1,22 @@
 <div class="desktop">
-    <div class="main col centercol pointable" *ngIf="!active">
+    <div class="main col centermycol pointable" *ngIf="!active">
         <img class="person-img" [src]="person.image"/>
         <div class="name fs-larger" [innerHTML]="person.name"></div>
         <div class="body" [innerHTML]="person.description"></div>
     </div>
-    <div class="main active row" *ngIf="active">
-        <div class="col centercol">
+    <div class="main active myrow" *ngIf="active">
+        <div class="col centermycol">
             <img class="person-img" [src]="person.image"/>
             <div class="name fs-larger" [innerHTML]="person.name"></div>
             <div class="body" [innerHTML]="person.description"></div>
         </div>
-        <div class="col centercol biolinks">
+        <div class="col centermycol biolinks">
             <div class="closebtn pointable" (click)="this.inactive.emit()">
                 Close <i class="fa fa-times"></i>
             </div>
             <div *ngIf="person.bio" [innerHTML]="person.bio"></div>
             <br>
-            <div *ngIf="person.links" class="row">
+            <div *ngIf="person.links" class="myrow">
                 <a *ngFor="let link of person.links" href="{{link.target}}">{{link.label}}</a>
             </div>
         </div>
@@ -24,12 +24,12 @@
 </div>
 
 <div  class="mobile">
-    <div class="main col centercol pointable" *ngIf="!active">
+    <div class="main col centermycol pointable" *ngIf="!active">
         <img class="person-img" [src]="person.image"/>
         <div class="name fs-larger" [innerHTML]="person.name"></div>
         <div class="body" [innerHTML]="person.description"></div>
     </div>
-    <div class="main active col centercol" *ngIf="active">
+    <div class="main active col centermycol" *ngIf="active">
             <img class="person-img" [src]="person.image"/>
             <div class="name fs-larger" [innerHTML]="person.name"></div>
             <div class="body" [innerHTML]="person.description"></div>
@@ -37,7 +37,7 @@
                 Close <i class="fa fa-times"></i>
             </div>
             <div *ngIf="person.bio" [innerHTML]="person.bio"></div>
-            <div *ngIf="person.links" class="row centerrow">
+            <div *ngIf="person.links" class="row centermyrow">
                 <a *ngFor="let link of person.links" href="{{link.target}}">{{link.label}}</a>
             </div>
     </div>

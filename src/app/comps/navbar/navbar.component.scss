@@ -1,3 +1,4 @@
+
 .largewidth{
   display: none;
 }
@@ -11,20 +12,20 @@
   }
 }
 
-.navbar {
+.mynavbar {
     overflow: hidden;
     display: flex;
   }
-  .largewidth-navbar{
+  .largewidth-mynavbar{
     flex-direction: row;
     justify-content: center;
   }
-  .smallwidth-navbar{
+  .smallwidth-mynavbar{
     flex-direction: column;
     border-top: 3px var(--secondary) solid;
   }
   
-  .navbar a {
+  .mynavbar a {
     color: black;
     text-align: left;
     padding: 14px 16px;
@@ -52,7 +53,7 @@
     background-color: white;
   }
   
-  .navbar a:hover, .dropdown:hover .dropbtn {
+  .mynavbar a:hover, .dropdown:hover .dropbtn {
     background-color: #ddd;
     cursor: pointer;
   }
@@ -85,7 +86,7 @@
     color: var(--primary);
   }
   
-  .largewidth-navbar>.dropdown:hover .dropdown-content {
+  .largewidth-mynavbar>.dropdown:hover .dropdown-content {
     display: block;
   }
   

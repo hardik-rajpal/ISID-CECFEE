@@ -3,7 +3,7 @@ import staticfs from '../../../assets/staticfs.json'
 @Component({
   selector: 'app-image-dump',
   templateUrl: './image-dump.component.html',
-  styleUrls: ['./image-dump.component.css']
+  styleUrls: ['./image-dump.component.scss']
 })
 export class ImageDumpComponent implements OnInit{
   @Input() folderPath!:string;

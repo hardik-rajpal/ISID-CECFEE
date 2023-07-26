@@ -5,7 +5,7 @@ import { tableDataSpec } from 'src/data/rtl.utils';
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent {
   data:homepageSpec = homepageData;

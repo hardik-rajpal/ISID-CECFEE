@@ -1,7 +1,7 @@
-<div class="col main">
+<div class="mycol main">
     <hr class="thick">
-    <div class="contactlinks row">
-        <div class="col contact">
+    <div class="contactlinks myrow">
+        <div class="mycol contact">
             <p class="heading">Contact</p>
             <span [innerHTML]="data.contact.title"></span>
             <span class="contact">
@@ -17,7 +17,7 @@
                 {{data.contact.email}}
             </span>
         </div>
-        <div class="col">
+        <div class="mycol">
             <p class="heading">Quick links</p>
             <app-linkbox *ngFor="let link of data.contact.links" [link]="link"></app-linkbox>
         </div>

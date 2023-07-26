@@ -3,7 +3,7 @@ import { Component, ElementRef, Input, Renderer2, RendererStyleFlags2, ViewChild
 @Component({
   selector: 'app-modalbox',
   templateUrl: './modalbox.component.html',
-  styleUrls: ['./modalbox.component.css']
+  styleUrls: ['./modalbox.component.scss']
 })
 export class ModalboxComponent {
   @ViewChild('biomodal') modalDiv!:ElementRef<HTMLDivElement>;

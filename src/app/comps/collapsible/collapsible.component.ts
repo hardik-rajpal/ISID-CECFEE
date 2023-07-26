@@ -3,7 +3,7 @@ import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/cor
 @Component({
   selector: 'app-collapsible',
   templateUrl: './collapsible.component.html',
-  styleUrls: ['./collapsible.component.css']
+  styleUrls: ['./collapsible.component.scss']
 })
 export class CollapsibleComponent {
   @Input() title!:string;

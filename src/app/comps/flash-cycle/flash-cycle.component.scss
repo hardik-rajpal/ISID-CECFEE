@@ -2,7 +2,7 @@ div>*{
     color: white;
     background-color: var(--primary);
 }
-.col{
+.mycol{
     justify-content: space-around;
 }
 table {
@@ -16,11 +16,11 @@ td,th{
     padding: 8px;
 }
 
-/* .rowgrid{
+/* .myrowgrid{
     display: grid;
     grid-template-columns: 25% 75%;
 }
-.colgrid{
+.mycolgrid{
     display: grid;
     grid-template-rows: 33% 33% 33%;
 } */

@@ -1,15 +1,15 @@
 
-.col{
+.mycol{
     align-items: center;
     justify-content: center;
 }
-.row{
+.myrow{
     align-items: center;
 }
 .rrow{
     align-items: center;
 }
-.desktop.col{
+.desktop.mycol{
     display: flex;
     flex-direction: column;
     align-items: center;

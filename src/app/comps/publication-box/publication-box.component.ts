@@ -5,7 +5,7 @@ import { angloJoinWords } from 'src/data/rtl.utils';
 @Component({
   selector: 'app-publication-box',
   templateUrl: './publication-box.component.html',
-  styleUrls: ['./publication-box.component.css']
+  styleUrls: ['./publication-box.component.scss']
 })
 export class PublicationBoxComponent {
   @Input() paper!:publication;

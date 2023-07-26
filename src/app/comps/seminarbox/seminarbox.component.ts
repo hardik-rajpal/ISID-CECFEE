@@ -4,7 +4,7 @@ import { seminarSpec } from 'src/data/seminar';
 @Component({
   selector: 'app-seminarbox',
   templateUrl: './seminarbox.component.html',
-  styleUrls: ['./seminarbox.component.css']
+  styleUrls: ['./seminarbox.component.scss']
 })
 export class SeminarboxComponent {
   @Input() seminar!:seminarSpec;

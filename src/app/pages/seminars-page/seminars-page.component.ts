@@ -5,7 +5,7 @@ import { seminarPageSpec, seminarSpec, pastSeminarsData, seminarsData } from 'sr
 @Component({
   selector: 'app-seminars-page',
   templateUrl: './seminars-page.component.html',
-  styleUrls: ['./seminars-page.component.css']
+  styleUrls: ['./seminars-page.component.scss']
 })
 export class SeminarsPageComponent implements OnInit{
   data: seminarPageSpec = {

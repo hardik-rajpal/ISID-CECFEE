@@ -1,18 +1,18 @@
-<div class="row main shadow">
+<div class="myrow main shadow">
     <div class="imagediv">
         <img *ngIf="article.image" [src]="article.image" class="article-img">
     </div>
-    <div class="col details">
+    <div class="mycol details">
         <a [href]="article.link">
             <i class="fa fa-external-link"></i>
             {{article.title}}
         </a>
-        <div class="col">
-            <div class="row">
+        <div class="mycol">
+            <div class="myrow">
                 <i class="fa fa-newspaper"></i>
                 {{article.journal}}
             </div>
-            <div class="row">
+            <div class="myrow">
                 <i class="fa fa-group"></i>
                 {{getAuthorString()}}
             </div>

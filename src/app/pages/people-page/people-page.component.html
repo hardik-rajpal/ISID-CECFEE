@@ -7,7 +7,7 @@
     </div>
 </div>
 <app-modalbox #biomodal>
-    <div class="mainmodal active col centercol" *ngIf="activeIndex!==-1">
+    <div class="mainmodal active col centermycol" *ngIf="activeIndex!==-1">
         <img class="person-img" [src]="data.people[activeIndex].image" />
         <div *ngIf="!hasWebpage(data.people[activeIndex])" class="name fs-larger"
             [innerHTML]="data.people[activeIndex].name"></div>
@@ -17,7 +17,7 @@
             </a>
         </div>
         <div class="body" [innerHTML]="data.people[activeIndex].description"></div>
-        <div *ngIf="data.people[activeIndex].links" class="row centerrow">
+        <div *ngIf="data.people[activeIndex].links" class="row centermyrow">
             <a *ngFor="let link of data.people[activeIndex].links" href="{{link.target}}">{{link.label}}</a>
         </div>
         <div *ngIf="data.people[activeIndex].bio" [innerHTML]="data.people[activeIndex].bio"></div>

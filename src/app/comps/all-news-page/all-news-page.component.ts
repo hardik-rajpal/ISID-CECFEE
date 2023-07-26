@@ -5,7 +5,7 @@ import { infoTileSpec } from 'src/data/rtl.utils';
 @Component({
   selector: 'app-all-news-page',
   templateUrl: './all-news-page.component.html',
-  styleUrls: ['./all-news-page.component.css']
+  styleUrls: ['./all-news-page.component.scss']
 })
 export class AllNewsPageComponent {
   news:infoTileSpec[] = allNews;

@@ -1,29 +1,29 @@
 <div class="main">
     <p>Title: <span class="seminar-title">{{seminar.title}}</span></p>
-    <div class="col details">
-        <div class="row">
+    <div class="mycol details">
+        <div class="myrow">
             <i class="fa fa-microphone"></i>
             Speaker(s): <span class="speakers">{{seminar.speakers}}</span>
         </div>
-        <div *ngIf="seminar.discussant" class="row">
+        <div *ngIf="seminar.discussant" class="myrow">
             <i class="fa fa-comments"></i>
             Discussant: <span class="speakers">{{seminar.discussant}}</span>
         </div>
-        <div class="row">
+        <div class="myrow">
             <i class="fa fa-calendar"></i>
             {{seminar.dateTime}}
         </div>
-        <div class="row">
+        <div class="myrow">
             <i class="fa fa-map-marker"></i>
             {{seminar.venue}}
         </div>
-        <div *ngIf="seminar.contact" class="row">
+        <div *ngIf="seminar.contact" class="myrow">
             <i class="fa fa-address-book"></i>
             Contact: {{seminar.contact}}
         </div>
     </div>
     <p *ngIf="seminar.description">{{seminar.description}}</p>
-    <div class="collapsible">
+    <div class="mycollapsible">
         <app-collapsible *ngIf="seminar.abstract" [title]="'Abstract'">
             <app-paraspecbox *ngFor="let para of seminar.abstract" [para]="para" class="abstract"></app-paraspecbox>
         </app-collapsible>

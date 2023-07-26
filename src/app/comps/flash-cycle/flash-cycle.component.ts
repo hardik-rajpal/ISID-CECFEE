@@ -4,7 +4,7 @@ import { article, journalLogos } from 'src/data/articles';
 @Component({
   selector: 'app-flash-cycle',
   templateUrl: './flash-cycle.component.html',
-  styleUrls: ['./flash-cycle.component.css']
+  styleUrls: ['./flash-cycle.component.scss']
 })
 export class FlashCycleComponent implements OnInit{
   @Input() articles!:article[];

@@ -5,7 +5,7 @@ import { linkSpec, peopleData, peoplePageSpec, personTileSpec } from 'src/data/p
 @Component({
   selector: 'app-people-page',
   templateUrl: './people-page.component.html',
-  styleUrls: ['./people-page.component.css']
+  styleUrls: ['./people-page.component.scss']
 })
 export class PeoplePageComponent implements OnInit{
   // @ViewChild('maindiv') maindiv!:ElementRef<HTMLDivElement>;

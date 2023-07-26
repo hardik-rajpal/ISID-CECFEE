@@ -1,4 +1,4 @@
-.collapsible {
+.mycollapsible {
 background-color: var(--lightgray);
 color: #444;
 cursor: pointer;
@@ -10,7 +10,7 @@ flex-direction: row;
 justify-content: space-between;
 outline: none;
 }
-.active, .collapsible:hover {
+.active, .mycollapsible:hover {
 background-color: var(--darkgray);
 }
   

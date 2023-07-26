@@ -4,7 +4,7 @@ import { memberSpec } from 'src/data/people';
 @Component({
   selector: 'app-studentbox',
   templateUrl: './studentbox.component.html',
-  styleUrls: ['./studentbox.component.css']
+  styleUrls: ['./studentbox.component.scss']
 })
 export class StudentboxComponent {
   @Input() person!:memberSpec;

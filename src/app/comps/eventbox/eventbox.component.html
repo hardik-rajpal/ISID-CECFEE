@@ -1,16 +1,16 @@
 <div class="main">
-    <p class="heading-colored">{{event.title}}</p>
+    <p class="heading-mycolored">{{event.title}}</p>
     <p *ngIf="event.subtitle" class="subtitle" [innerHtml]="event.subtitle"></p>    
-    <div class="col details">
-        <div class="row pointer">
+    <div class="mycol details">
+        <div class="myrow pointer">
             <i class="fa fa-calendar"></i>
             {{event.dateTime}}
         </div>
-        <div class="row pointer">
+        <div class="myrow pointer">
             <i class="fa fa-map-marker"></i>
             {{event.venue}}
         </div>
-        <div *ngIf="event.contact" class="row pointer">
+        <div *ngIf="event.contact" class="myrow pointer">
             <i class="fa fa-address-book"></i>
             Contact: {{event.contact}}
         </div>        

@@ -1,21 +1,21 @@
 <div class="main">
     <div class="desktop">
-        <div class="titlebar-rp row">
+        <div class="titlebar-rp myrow">
             <p class="title">{{data.title}}</p>
             <input [(ngModel)]="query" placeholder="🔍 Search for keywords..."/>
         </div>
     </div>
     <div class="mobile">
-        <div class="titlebar-rp col">
+        <div class="titlebar-rp mycol">
             <p class="title">{{data.title}}</p>
             <input [(ngModel)]="query" placeholder="🔍 Search for keywords..."/>
         </div>
     </div>
-    <div class="desktop row">
+    <div class="desktop myrow">
         <p class="heading">
             Category:
         </p>
-        <div class="row">
+        <div class="myrow">
             <div *ngFor="let cat of categories">
                 <span class="catbox fs-larger pointable" *ngIf="!selectedCategories.includes(cat)" (click)="selectedCategories.push(cat)">
                     {{cat}}
@@ -30,11 +30,11 @@
             </div>
         </div>
     </div>
-    <div class="mobile col">
+    <div class="mobile mycol">
         <p class="heading">
             Category:
         </p>
-        <div class="col">
+        <div class="mycol">
             <div *ngFor="let cat of categories">
                 <span class="catbox fs-larger pointable" *ngIf="!selectedCategories.includes(cat)" (click)="selectedCategories.push(cat)">
                     {{cat}}
