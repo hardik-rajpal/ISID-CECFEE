@@ -1,5 +1,5 @@
 <div class="largewidth">
-    <div class="largewidth-navbar navbar">
+    <div class="largewidth-mynavbar mynavbar">
         <div class="dropdown" *ngFor="let route of routes" (mouseover)="setactiveDesktop(route)">
             <div class="dropbtn">
                 <a *ngIf="(route.children===undefined&&route.route!.startsWith('https'))" href="{{route.route!}}">{{route.label}}</a>
@@ -24,7 +24,7 @@
     </div>
 </div>
 <div class="smallwidth">
-    <div class="smallwidth-navbar navbar">
+    <div class="smallwidth-mynavbar mynavbar">
         <div class="dropdown" *ngFor="let route of routes">
             <div class="dropbtn">
                 <!-- <div> -->

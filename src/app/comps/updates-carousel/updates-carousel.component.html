@@ -1,0 +1,9 @@
+<div class="main">
+  <mdb-carousel [interval]="3500" [wrap]="true" [animation]="'slide'">
+    <mdb-carousel-item *ngFor="let update of updates">
+      <div class="infotilewrapper">
+        <app-infotile [infotile]="update"></app-infotile>
+      </div>
+  </mdb-carousel-item>
+  </mdb-carousel>
+</div>

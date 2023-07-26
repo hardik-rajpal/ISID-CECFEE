@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { memberSpec } from 'src/data/bompage';
+import { memberSpec } from 'src/data/people';
 @Component({
   selector: 'app-personbox',
   templateUrl: './personbox.component.html',
-  styleUrls: ['./personbox.component.css']
+  styleUrls: ['./personbox.component.scss']
 })
 export class PersonboxComponent {
   @Input() person!:memberSpec;

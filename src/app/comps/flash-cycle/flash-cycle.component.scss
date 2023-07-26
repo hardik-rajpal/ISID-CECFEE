@@ -1,0 +1,26 @@
+div>*{
+    color: white;
+    background-color: var(--primary);
+}
+.mycol{
+    justify-content: space-around;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 5px;
+}
+td,th{
+    border: 3px solid var(--light);
+    text-align: left;
+    padding: 8px;
+}
+
+/* .myrowgrid{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+.mycolgrid{
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+} */

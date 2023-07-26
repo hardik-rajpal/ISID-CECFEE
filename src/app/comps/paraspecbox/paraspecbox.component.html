@@ -3,24 +3,24 @@
         <p  *ngIf="!(para!.image)" [innerHTML]="para!.text|safe:'html'"></p>
         <div *ngIf="para!.image">
             <div class="desktop">
-                <div [class]="para!.reverse?'rrow':'row'">
+                <div [class]="para!.reverse?'rrow':'myrow'">
                     <img class="article-img-desktop" *ngIf="para!.image" src="{{para!.image}}"/>
                     <p [innerHTML]="para!.text|safe:'html'"></p>
                 </div>
             </div>
             <div class="mobile">
-                <div class="col">
+                <div class="mycol">
                     <img class="article-img-mobile" *ngIf="para!.image" src="{{para!.image}}"/>
                     <p [innerHTML]="para!.text|safe:'html'"></p>
                 </div>
             </div>
         </div>
     </div>
-    <div *ngIf="!para!.text" class="col">
-        <div class="desktop col">
+    <div *ngIf="!para!.text" class="mycol">
+        <div class="desktop mycol">
             <img class="desktop standalone-img" *ngIf="para!.image" src="{{para!.image}}"/>
         </div>
-        <div class="mobile col">
+        <div class="mobile mycol">
             <img class="mobile standalone-img" *ngIf="para!.image" src="{{para!.image}}"/>
         </div>
     </div>

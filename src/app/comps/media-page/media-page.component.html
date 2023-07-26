@@ -1,0 +1,17 @@
+<div>
+    <p class="heading" [innerHTML]="data.newsTitle"></p>
+    <!-- todo display news events, link to all news events -->
+    <p class="heading" [innerHTML]="data.tweetsTitle"></p>
+    <div class="desktop">
+        <div class="tweets myrow">
+            <blockquote class="twitter-tweet" *ngFor="let tweetLink of data.tweetLinks">
+                <a [href]="tweetLink"></a></blockquote>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="tweets mycol">
+            <blockquote class="twitter-tweet" *ngFor="let tweetLink of data.tweetLinks">
+                <a [href]="tweetLink"></a></blockquote>
+        </div>
+    </div>
+</div>

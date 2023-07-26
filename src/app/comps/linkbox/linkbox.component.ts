@@ -4,7 +4,7 @@ import { linkSpec } from 'src/data/people';
 @Component({
   selector: 'app-linkbox',
   templateUrl: './linkbox.component.html',
-  styleUrls: ['./linkbox.component.css']
+  styleUrls: ['./linkbox.component.scss']
 })
 export class LinkboxComponent implements OnInit {
   @Input() link!:linkSpec;

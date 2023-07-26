@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,6 +41,11 @@ import { FlashCycleComponent } from './comps/flash-cycle/flash-cycle.component';
 import { SmallArticleBoxComponent } from './comps/small-article-box/small-article-box.component';
 import { LargeArticleBoxComponent } from './comps/large-article-box/large-article-box.component';
 import { AllNewsPageComponent } from './comps/all-news-page/all-news-page.component';
+import { PersontagComponent } from './comps/persontag/persontag.component';
+import { ModalboxComponent } from './comps/modalbox/modalbox.component';
+import { MediaPageComponent } from './comps/media-page/media-page.component';
+import { UpdatesCarouselComponent } from './comps/updates-carousel/updates-carousel.component';
+import { VideoboxComponent } from './comps/videobox/videobox.component';
 
 @NgModule({
   declarations: [
@@ -79,12 +85,18 @@ import { AllNewsPageComponent } from './comps/all-news-page/all-news-page.compon
     FlashCycleComponent,
     SmallArticleBoxComponent,
     LargeArticleBoxComponent,
-    AllNewsPageComponent
+    AllNewsPageComponent,
+    PersontagComponent,
+    ModalboxComponent,
+    MediaPageComponent,
+    UpdatesCarouselComponent,
+    VideoboxComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MdbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,8 @@
 <div class="main shadow">
     <p *ngIf="!(infotile.image)" [innerHTML]="infotile.text|safe:'html'"></p>
-    <div *ngIf="infotile.image" class="holder col">
-        <img class="article-img-mobile" *ngIf="infotile.image" src="{{infotile.image}}" />
-        <p [innerHTML]="infotile.text|safe:'html'"></p>
+    <div *ngIf="infotile.image" class="holder mycol">
+        <app-paraspecbox [para]="{text:infotile.text,image:infotile.image}"></app-paraspecbox>
     </div>
-    <div *ngIf="infotile.videoLink!==undefined" class="row watch">
-        <a [href]="infotile.videoLink" target="_blank">
-            <i class="fa-brands fa-youtube"></i>
-            Watch here
-        </a>
-    </div>
+
+    <app-videobox *ngIf="infotile.videoLink" [link]="infotile.videoLink"></app-videobox>
 </div>

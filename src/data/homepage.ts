@@ -20,34 +20,30 @@ export interface homepageSpec{
         title:string;
         paras:paraSpec[]
     };
+    updates:{
+        title:string;
+        infotiles:infoTileSpec[]
+    };
     articles:{
         title:string;
         articles:article[];
     };
-    publications:{
-        title:string;
-        publications:publication[];
-    };
-    news:{
-        title:string;
-        paras:paraSpec[];
-    };
-    events:{
-        title:string;
-        infotiles:infoTileSpec[];
-    }
-    others:{
-        title:string;
-        paras:paraSpec[];
-    }
-    contact:{
-        title:string;
-        phone:string;
-        fax:string;
-        address:string;
-        email:string;
-        links:linkSpec[];
-    }
+    // publications:{
+    //     title:string;
+    //     publications:publication[];
+    // };
+    // news:{
+    //     title:string;
+    //     paras:paraSpec[];
+    // };
+    // events:{
+    //     title:string;
+    //     infotiles:infoTileSpec[];
+    // }
+    // others:{
+    //     title:string;
+    //     paras:paraSpec[];
+    // }
 }
 export const HomePageRoutes:routeSpec[] = [
     {
@@ -63,6 +59,10 @@ export const HomePageRoutes:routeSpec[] = [
 ]
 export const homepageData:homepageSpec = {
     title:`Home`,
+    updates:{
+        title:`Updates`,
+        infotiles:getHomepageNews()
+    },
     aboutus:{
             title:`About CECFEE`,
             paras:[
@@ -94,96 +94,75 @@ export const homepageData:homepageSpec = {
             title:`Articles`,
             articles:getHomepageArticles()
         },
-    publications:{
-        title:`Publications`,
-        publications:[
-        {
-            title:`Labor force participation of rural women and the household’s nutrition: Panel data evidence from SAT India`,
-            link:`https://www.sciencedirect.com/science/article/pii/S0306919221000968`,
-            authors:[
-                `Nikita Sangwan`,
-                `Shalander Kumar`
-            ],
-            description:`In a recent publication, CECFEE researcher Nikita Sangwan and Shalander Kumar (ICRISAT) discuss improved nutritional intake in households with working women Their paper has been published in the Food Policy journal.`,
-            categories:[]
-        },
-        {
-            title:`There is no economic case for new coal plants in India`,
-            link:`https://doi.org/10.1016/j.wdp.2021.100373`,
-            authors:[
-                `Prof E Somanathan`,
-                `Dr Shoibal Chakravarty`
-            ],
-            description:`In a recent publication, CECFEE researchers Prof E Somanathan and Dr Shoibal Chakravarty discuss how there is no need or rationale for new coal plants in India. Their paper has been published in the journal World Development Perspectives. There is also a <a href="https://drive.google.com/file/d/1rtACTLv33RAy1MlbtBAphP5316Rj12IG/view?usp=sharing">press release about it.</a>`,
-            categories:[]
-        }
-        ]
-    },
-    news:{
-        title:`Updates`,
-        paras:[
-        {
-            text:`Professor E. Somanathan in conversation with the Editorial Board, Department of Economics, Miranda House College on Environment, Policy, and Future as part of their educational initiative. Read the interview <a href="https://ecotalker.wordpress.com/2020/01/16/in-conversation-with-dr-e-somanathan-environment-policy-and-future/">here</a>.`
-        },
-        {
-            text:`Dr. Kanika Mahajan features as the first guest in the IEA website which details her research on wage inequality in India, the effects of agricultural mechanization on women, what motivated her to get into economics, and the obstacles that economists like her based in developing countries face:
-            <a href="http://www.iea-world.org/featured-economists/kanika-mahajan/">
-            Featured Economist August 2021
-            </a>.`
-        },
-        {
-            text:`
-            Research conducted by Professor E. Somanathan and Professor Rohini Somanathan in collaboration with Professors Anant Sudarshan and Meenu Tewari gets featured in several newspapers: <a href="https://indianexpress.com/article/india/global-warming-may-decline-output-of-manufacturing-sector-in-india-study-7246931/">
-            Indian Express
-            </a>,
-            <a href="https://www.hindustantimes.com/india-news/heat-stress-in-india-can-reduce-industrial-output-study-101616743348655.html">
-            Hindustan Times
-            </a>,
-            <a href="https://timesofindia.indiatimes.com/city/nagpur/hotter-days-reduce-output-by-factory-workers-increase-absenteeism/articleshow/81694459.cms">
-            Times of India
-            </a>. Their work is titled "The Impact of Temperature on Productivity and Labor Supply: Evidence from Indian Manufacturing."`
-        },
-        ]
-    },
-    events:
-        {
-            title:`News`,
-            infotiles:getHomepageNews()
-        },
-    others:{
-            title:`Others`,
-            paras:[
-            {
-                text:`Professor E. Somanathan writes a report on 
-                <a href="https://uchicago.app.box.com/s/a1x3pz3483gbyid07154kh0boj2ak68i">
-                Environment Brief
-                </a>`
-            },
-            {
-                text:`Professor E. Somanathan (along with many others) write a report on <a href="https://uchicago.box.com/s/f47rz9hwbw9z7lu41f7hnunwxsj58xhp">An Economic Strategy for India</a>
-                `
-            }
+    // publications:{
+    //     title:`Publications`,
+    //     publications:[
+    //     {
+    //         title:`Labor force participation of rural women and the household’s nutrition: Panel data evidence from SAT India`,
+    //         link:`https://www.sciencedirect.com/science/article/pii/S0306919221000968`,
+    //         authors:[
+    //             `Nikita Sangwan`,
+    //             `Shalander Kumar`
+    //         ],
+    //         description:`In a recent publication, CECFEE researcher Nikita Sangwan and Shalander Kumar (ICRISAT) discuss improved nutritional intake in households with working women Their paper has been published in the Food Policy journal.`,
+    //         categories:[]
+    //     },
+    //     {
+    //         title:`There is no economic case for new coal plants in India`,
+    //         link:`https://doi.org/10.1016/j.wdp.2021.100373`,
+    //         authors:[
+    //             `Prof E Somanathan`,
+    //             `Dr Shoibal Chakravarty`
+    //         ],
+    //         description:`In a recent publication, CECFEE researchers Prof E Somanathan and Dr Shoibal Chakravarty discuss how there is no need or rationale for new coal plants in India. Their paper has been published in the journal World Development Perspectives. There is also a <a href="https://drive.google.com/file/d/1rtACTLv33RAy1MlbtBAphP5316Rj12IG/view?usp=sharing">press release about it.</a>`,
+    //         categories:[]
+    //     }
+    //     ]
+    // },
+    // news:{
+    //     title:`Updates`,
+    //     paras:[
+    //     {
+    //         text:`Professor E. Somanathan in conversation with the Editorial Board, Department of Economics, Miranda House College on Environment, Policy, and Future as part of their educational initiative. Read the interview <a href="https://ecotalker.wordpress.com/2020/01/16/in-conversation-with-dr-e-somanathan-environment-policy-and-future/">here</a>.`
+    //     },
+    //     {
+    //         text:`Dr. Kanika Mahajan features as the first guest in the IEA website which details her research on wage inequality in India, the effects of agricultural mechanization on women, what motivated her to get into economics, and the obstacles that economists like her based in developing countries face:
+    //         <a href="http://www.iea-world.org/featured-economists/kanika-mahajan/">
+    //         Featured Economist August 2021
+    //         </a>.`
+    //     },
+    //     {
+    //         text:`
+    //         Research conducted by Professor E. Somanathan and Professor Rohini Somanathan in collaboration with Professors Anant Sudarshan and Meenu Tewari gets featured in several newspapers: <a href="https://indianexpress.com/article/india/global-warming-may-decline-output-of-manufacturing-sector-in-india-study-7246931/">
+    //         Indian Express
+    //         </a>,
+    //         <a href="https://www.hindustantimes.com/india-news/heat-stress-in-india-can-reduce-industrial-output-study-101616743348655.html">
+    //         Hindustan Times
+    //         </a>,
+    //         <a href="https://timesofindia.indiatimes.com/city/nagpur/hotter-days-reduce-output-by-factory-workers-increase-absenteeism/articleshow/81694459.cms">
+    //         Times of India
+    //         </a>. Their work is titled "The Impact of Temperature on Productivity and Labor Supply: Evidence from Indian Manufacturing."`
+    //     },
+    //     ]
+    // },
+    // events:
+    //     {
+    //         title:`News`,
+    //         infotiles:getHomepageNews()
+    //     },
+    // others:{
+    //         title:`Others`,
+    //         paras:[
+    //         {
+    //             text:`Professor E. Somanathan writes a report on 
+    //             <a href="https://uchicago.app.box.com/s/a1x3pz3483gbyid07154kh0boj2ak68i">
+    //             Environment Brief
+    //             </a>`
+    //         },
+    //         {
+    //             text:`Professor E. Somanathan (along with many others) write a report on <a href="https://uchicago.box.com/s/f47rz9hwbw9z7lu41f7hnunwxsj58xhp">An Economic Strategy for India</a>
+    //             `
+    //         }
             
-            ]},
-    contact:{
-        title:`Centre for research on the Economics of Climate, Food, Energy and Environment (CECFEE)
-        <br>
-        Economics and Planning Unit, Indian Statistical Institute`,
-        phone:`+91-11-4149 3942`,
-        fax:`+91-11-4149 3981`,
-        address:`7, S. J. S. Sansanwal Marg, New Delhi 110 016, India`,
-        email:`cecfee [at] isid.ac.in`,
-        links:[
-            {
-                label:'Facebook',
-                target:`https://www.facebook.com/cecfee/`,
-                type:'facebook'
-            },
-            {
-                label:`Twitter`,
-                target:`https://twitter.com/cecfee`,
-                type:'twitter'
-            }
-        ]
-    }
+    //         ]},
 }

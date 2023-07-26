@@ -1,4 +1,27 @@
-<div>
+<div class="mycol main">
     <hr class="thick">
+    <div class="contactlinks myrow">
+        <div class="mycol contact">
+            <p class="heading">Contact</p>
+            <span [innerHTML]="data.contact.title"></span>
+            <span class="contact">
+                <i class="fa fa-phone"></i>
+                {{data.contact.phone}}
+            </span>
+            <span class="contact">
+                <i class="fa fa-fax"></i>
+                {{data.contact.fax}}
+            </span>
+            <span class="contact">
+                <i class="fa fa-envelope"></i>
+                {{data.contact.email}}
+            </span>
+        </div>
+        <div class="mycol">
+            <p class="heading">Quick links</p>
+            <app-linkbox *ngFor="let link of data.contact.links" [link]="link"></app-linkbox>
+        </div>
+    </div>
+    <hr class="thin">
     <div [innerHTML]="data.text"></div>
 </div>

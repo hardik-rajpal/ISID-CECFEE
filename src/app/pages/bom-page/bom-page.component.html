@@ -2,7 +2,8 @@
     <p class="title">{{data.title}}</p>
     <p [innerHTML]="data.description"></p>
     <div class="grid">
-        <app-personbox class="desktop" *ngFor="let member of data.members" [person]="member"></app-personbox>
-        <app-studentbox class="mobile" *ngFor="let member of data.members" [person]="member"></app-studentbox>
+        <!-- <app-personbox class="desktop" *ngFor="let member of data.members" [person]="member"></app-personbox>
+        <app-studentbox class="mobile" *ngFor="let member of data.members" [person]="member"></app-studentbox> -->
+        <app-persontag *ngFor="let member of data.members" [person]="member"></app-persontag>
     </div>
 </div>

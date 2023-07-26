@@ -1,0 +1,73 @@
+.activediv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.grid{
+    display: grid;
+}
+@media (min-width:600px){
+    .grid{
+        grid-template-columns: 45% 45%;
+    }
+}
+
+@media (min-width:1260px){
+    .grid{
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+/*modal styles*/
+.active>*{
+    padding: 5px;
+}
+.centercol{
+    align-items: center;
+}
+app-modalbox{
+    max-width: 600px;
+}
+.mainmodal{
+    border: 3px solid var(--primary);
+}
+.desktop>.mainmodal{
+    display: grid;
+    grid-template-columns: 30% 60%;
+}
+.name{
+    padding: 5px;
+    color: white;
+    text-align: center;
+    background-color: var(--primary);
+    z-index: 1;
+    max-width: 90%;
+}
+
+img{
+    padding: 3px;
+    float: right;
+    background-color: white;
+    z-index: 1;
+}
+
+.body{
+    text-align: center;
+    margin-top: 5px;
+    border-top: 3px solid var(--primary);
+}
+.desktop.closebtn{
+    align-self: flex-end;
+}
+.closebtn{
+    background-color: rgb(184, 184, 184);
+    color: black;
+    padding: 5px;
+    margin-right: 10px;
+}
+.biolinks{
+    justify-content: space-around;
+}
+.name>a{
+    color: white;
+}

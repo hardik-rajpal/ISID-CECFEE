@@ -4,7 +4,7 @@ import { allArticles, article } from 'src/data/articles';
 @Component({
   selector: 'app-all-articles-page',
   templateUrl: './all-articles-page.component.html',
-  styleUrls: ['./all-articles-page.component.css']
+  styleUrls: ['./all-articles-page.component.scss']
 })
 export class AllArticlesPageComponent {
   articles:article[] = allArticles;

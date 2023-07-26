@@ -1,0 +1,23 @@
+div.watch{
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: var(--primary);
+    color: var(--light);
+}
+div.watch>*{
+    padding: 5px;
+}
+div.watch>a{
+    color: white;
+}
+div.watch>a:hover{
+    color: var(--light);
+}
+
+div.ytlink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

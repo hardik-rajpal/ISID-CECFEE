@@ -5,7 +5,7 @@ import { angloJoinWords } from 'src/data/rtl.utils';
 @Component({
   selector: 'app-large-article-box',
   templateUrl: './large-article-box.component.html',
-  styleUrls: ['./large-article-box.component.css']
+  styleUrls: ['./large-article-box.component.scss']
 })
 export class LargeArticleBoxComponent {
   @Input() article!:article;

@@ -5,7 +5,7 @@ import { angloJoinWords } from 'src/data/rtl.utils';
 @Component({
   selector: 'app-small-article-box',
   templateUrl: './small-article-box.component.html',
-  styleUrls: ['./small-article-box.component.css']
+  styleUrls: ['./small-article-box.component.scss']
 })
 export class SmallArticleBoxComponent implements OnInit{
   @Input() article!:article;

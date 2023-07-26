@@ -1,42 +1,7 @@
 <div>
     <p class="title">{{data.title}}</p>
-
+    <p class="heading">{{data.updates.title}}</p>
+    <app-updates-carousel [updates]="data.updates.infotiles"></app-updates-carousel>
     <app-sectionbox [section]="data.aboutus"></app-sectionbox>
-    <p class="heading">{{data.articles.title}}</p>
-    <app-flash-cycle [articles]="data.articles.articles"></app-flash-cycle>
-    <a [routerLink]="['home/allarticles']" target="_blank">
-        See all articles...
-    </a>
-    <app-sectionbox [section]="data.publications"></app-sectionbox>
-    <a [routerLink]="['research']" target="_blank">
-        See all publications...
-    </a>
-    <app-sectionbox [section]="data.news" [linesBetweenParas]="true">
-    </app-sectionbox>
-    <!-- Twitter timeline embeds not working now. No clean way of embedding tweets.
-    Check publish.twitter.com later -->
-    <!-- <a class="twitter-timeline" href="https://twitter.com/elonmusk?ref_src=twsrc%5Etfw">Tweets by cecfee</a>  -->
-    <app-sectionbox [section]="data.events">
-    </app-sectionbox>
-    <a [routerLink]="['home/mentions']" target="_blank">
-        See all news stories...
-    </a>
-    <app-sectionbox [section]="data.others" [linesBetweenParas]="true"></app-sectionbox>
-    <div>
-        <p class="heading">Contact</p>
-        <span [innerHTML]="data.contact.title"></span><br>
-        <span class="contact">
-            <i class="fa fa-phone"></i>
-            {{data.contact.phone}}
-        </span><br>
-        <span class="contact">
-            <i class="fa fa-fax"></i>
-            {{data.contact.fax}}
-        </span><br>
-        <span class="contact">
-            <i class="fa fa-envelope"></i>
-            {{data.contact.email}}
-        </span><br>
-        <app-linkbox *ngFor="let link of data.contact.links" [link]="link"></app-linkbox>
-    </div>
+    <app-sectionbox [section]="data.articles" [titleLink]="'home/allarticles'"></app-sectionbox>
 </div>

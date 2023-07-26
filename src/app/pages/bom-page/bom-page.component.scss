@@ -1,0 +1,17 @@
+app-personbox{
+    min-width: 80%;
+}
+.grid{
+    display: grid;
+}
+@media (min-width:600px){
+    .grid{
+        grid-template-columns: 45% 45%;
+    }
+}
+
+@media (min-width:1260px){
+    .grid{
+        grid-template-columns: 33% 33% 33%;
+    }
+}
