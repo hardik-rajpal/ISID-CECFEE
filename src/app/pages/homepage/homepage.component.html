@@ -1,14 +1,7 @@
 <div>
     <p class="title">{{data.title}}</p>
     <p class="heading">{{data.updates.title}}</p>
-    
+    <app-updates-carousel [updates]="data.updates.infotiles"></app-updates-carousel>
     <app-sectionbox [section]="data.aboutus"></app-sectionbox>
     <app-sectionbox [section]="data.articles" [titleLink]="'home/allarticles'"></app-sectionbox>
-    
-    <!-- <app-sectionbox [section]="data.events">
-    </app-sectionbox> -->
-    <!-- <a [routerLink]="['home/mentions']" target="_blank">
-        See all news stories...
-    </a> -->
-    <!-- <app-sectionbox [section]="data.others" [linesBetweenParas]="true"></app-sectionbox> --> 
 </div>

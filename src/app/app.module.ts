@@ -43,6 +43,7 @@ import { AllNewsPageComponent } from './comps/all-news-page/all-news-page.compon
 import { PersontagComponent } from './comps/persontag/persontag.component';
 import { ModalboxComponent } from './comps/modalbox/modalbox.component';
 import { MediaPageComponent } from './comps/media-page/media-page.component';
+import { UpdatesCarouselComponent } from './comps/updates-carousel/updates-carousel.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { MediaPageComponent } from './comps/media-page/media-page.component';
     AllNewsPageComponent,
     PersontagComponent,
     ModalboxComponent,
-    MediaPageComponent
+    MediaPageComponent,
+    UpdatesCarouselComponent
   ],
   imports: [
     BrowserModule,
