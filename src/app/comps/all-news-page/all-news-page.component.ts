@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { allNews } from 'src/data/events/news';
+import { allNews, getMediaPageNews } from 'src/data/events/news';
 import { infoTileSpec } from 'src/data/rtl.utils';
 
 @Component({
@@ -8,7 +8,9 @@ import { infoTileSpec } from 'src/data/rtl.utils';
   styleUrls: ['./all-news-page.component.scss']
 })
 export class AllNewsPageComponent {
-  news:infoTileSpec[] = allNews;
+  //TODO
+  // news:infoTileSpec[] = allNews;
+  news:infoTileSpec[]= getMediaPageNews();
   query:string = '';
   articleQueryMatch(lowerCaseQuery:string,mention:infoTileSpec):boolean{
     let videoString = '';

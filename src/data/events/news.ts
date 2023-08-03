@@ -7,7 +7,7 @@ export function getHomepageNews():infoTileSpec[]{
     ]
 }
 export function getMediaPageNews():infoTileSpec[]{
-    return getHomepageNews().slice(0,3);
+    return allNews.slice(0,8);
 }
 export const allNews:infoTileSpec[] = [
     {
