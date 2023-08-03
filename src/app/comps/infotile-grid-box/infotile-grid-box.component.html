@@ -1,0 +1,9 @@
+<div class="main bordered">
+    <div *ngIf="!infotile.image" [innerHTML]="infotile.text"></div>
+    <div *ngIf="infotile.image && landscapeImage" class="landscape mycol centercol">
+        <img [src]="infotile.image" class="main">
+        <div [innerHTML]="infotile.text"></div>
+    </div>
+    <app-paraspecbox *ngIf="infotile.image && (!landscapeImage)" [para]="infotile"></app-paraspecbox>
+    <app-videobox *ngIf="infotile.videoLink" [link]="infotile.videoLink"></app-videobox>
+</div>

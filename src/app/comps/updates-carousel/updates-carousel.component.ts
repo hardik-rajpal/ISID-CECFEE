@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { updatesSpec } from 'src/data/homepage';
 import { infoTileSpec } from 'src/data/rtl.utils';
 
 @Component({
@@ -7,5 +8,5 @@ import { infoTileSpec } from 'src/data/rtl.utils';
   styleUrls: ['./updates-carousel.component.scss']
 })
 export class UpdatesCarouselComponent {
-  @Input() updates!:infoTileSpec[];
+  @Input() updates!:updatesSpec;
 }

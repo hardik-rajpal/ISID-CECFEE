@@ -4,6 +4,6 @@
         <input [(ngModel)]="query" placeholder="🔍 Search for keywords..."/>
     </div>
     <div class="mentionsgrid">
-        <app-infotile *ngFor="let mention of getQueryResults()" [infotile]="mention"></app-infotile>
+        <app-infotile-grid-box *ngFor="let mention of getQueryResults()" [infotile]="mention"></app-infotile-grid-box>
     </div>
 </div>

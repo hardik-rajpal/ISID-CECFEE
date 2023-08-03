@@ -5,6 +5,7 @@ import { publication } from "./research";
 import { infoTileSpec, paraSpec, routeSpec } from "./rtl.utils";
 import { getHomepageNews } from "./events/news";
 import { AllNewsPageComponent } from "src/app/comps/all-news-page/all-news-page.component";
+import { EventSpec } from "./events/events";
 
 export interface sectionSpec {
     title: string;
@@ -14,16 +15,19 @@ export interface sectionSpec {
     infotiles?: infoTileSpec[];
 }
 
+export interface updatesSpec {
+    title: string;
+    infotiles: infoTileSpec[];
+    events: EventSpec[];
+}
+
 export interface homepageSpec{
     title:string;
     aboutus:{
         title:string;
         paras:paraSpec[]
     };
-    updates:{
-        title:string;
-        infotiles:infoTileSpec[]
-    };
+    updates:updatesSpec;
     articles:{
         title:string;
         articles:article[];
@@ -50,18 +54,63 @@ export const HomePageRoutes:routeSpec[] = [
         label:'All articles',
         component:AllArticlesPageComponent,
         route:'home/allarticles'
-    },
-    {
-        label:'All News Stories',
-        component:AllNewsPageComponent,
-        route:'home/news'
     }
 ]
 export const homepageData:homepageSpec = {
     title:`Home`,
     updates:{
         title:`Updates`,
-        infotiles:getHomepageNews()
+        infotiles:getHomepageNews(),
+        events:[
+            {
+                title: `6th Annual CECFEE Research & Policy Workshop`,
+                dateTime: `November 10 – 12 2022`,
+                venue: `Dharamshala`,
+                description: [
+                    {
+                        text: `The Center for research on the Economics of Climate, 
+                        Food, Energy and Environment (CECFEE) of the Indian 
+                        Statistical Institute, New Delhi organized the 6th Annual 
+                        CECFEE Research and Policy Workshop in collaboration with the 
+                        Environment for Development (EfD) Initiative of University of 
+                        Gothenburg , New Delhi from 10th to 12th November 2022 in 
+                        Dharamshala, Himachal Pradesh, India.
+                        <br>
+                        You can find the conference pictures
+                        <a href="https://www.dropbox.com/scl/fo/vsmk64bmt72i6tfm6bcbc/h?dl=0">
+                        here.
+                        </a>`
+                    }
+                ],
+            },
+            {
+                title: `Women in Economics workshop`,
+                dateTime: `11-13 March, 2021`,
+                venue: `Virtual`,
+                description: [
+                    {
+                        text: `ISI, Delhi with the support of IWWAGE will be 
+                        organising the 
+                        <a href="https://iwwage.isid.ac.in/?events=women-in-economics-call-for-papers">
+                        third annual workshop on “Women in Economics”
+                        </a>
+                        from 11th to 13th March, 2021. The overall objective of the 
+                        upcoming workshop is to contribute towards capacity-building 
+                        among young women economists. The jury comprises Siwan 
+                        Anderson (University of British Columbia), Ashwini Deshpande 
+                        (Ashoka University), and Rohini Pande (Yale University). 
+                        Professor Anderson will also deliver the keynote address at 
+                        the workshop. The selected papers will be presented in 
+                        thematic sessions of the workshop, with up to one hour 
+                        allocated to each paper, including discussant comments and Q&
+                        A. There will be breakout sessions, providing further 
+                        opportunities for detailed feedback on the research, as well 
+                        as professional networking. Up to two best papers, adjudged 
+                        by a workshop committee, will receive awards.`
+                    }
+                ],
+            },
+        ]
     },
     aboutus:{
             title:`About CECFEE`,

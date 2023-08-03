@@ -157,6 +157,11 @@ hr.thin{
 .shadow{
     box-shadow: 3px 3px 5px 5px grey;
 }
+.bordered{
+    border: var(--primary) 2px solid;
+    padding: 10px;
+    margin: 20px;
+}
 .titlebar{
     display: flex;
     flex-direction: row;

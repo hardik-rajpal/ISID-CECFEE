@@ -46,6 +46,7 @@ import { ModalboxComponent } from './comps/modalbox/modalbox.component';
 import { MediaPageComponent } from './comps/media-page/media-page.component';
 import { UpdatesCarouselComponent } from './comps/updates-carousel/updates-carousel.component';
 import { VideoboxComponent } from './comps/videobox/videobox.component';
+import { InfotileGridBoxComponent } from './comps/infotile-grid-box/infotile-grid-box.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import { VideoboxComponent } from './comps/videobox/videobox.component';
     ModalboxComponent,
     MediaPageComponent,
     UpdatesCarouselComponent,
-    VideoboxComponent
+    VideoboxComponent,
+    InfotileGridBoxComponent
   ],
   imports: [
     BrowserModule,
