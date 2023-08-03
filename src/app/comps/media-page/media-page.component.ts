@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { mediaData } from 'src/data/media';
+import { mediaData, mediaPageSpec } from 'src/data/media';
 
 @Component({
   selector: 'app-media-page',
@@ -7,5 +7,6 @@ import { mediaData } from 'src/data/media';
   styleUrls: ['./media-page.component.scss']
 })
 export class MediaPageComponent {
-  data = mediaData;
+  data:mediaPageSpec = mediaData;
+
 }

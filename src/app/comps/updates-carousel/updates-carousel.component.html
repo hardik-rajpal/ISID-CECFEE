@@ -1,9 +1,14 @@
 <div class="main">
-  <mdb-carousel [interval]="3500" [wrap]="true" [animation]="'slide'">
-    <mdb-carousel-item *ngFor="let update of updates">
+  <mdb-carousel [interval]="2500" [wrap]="true" [animation]="'slide'">
+    <mdb-carousel-item *ngFor="let update of updates.infotiles">
       <div class="infotilewrapper">
         <app-infotile [infotile]="update"></app-infotile>
       </div>
-  </mdb-carousel-item>
+    </mdb-carousel-item>
+    <mdb-carousel-item *ngFor="let event of updates.events">
+      <div class="infotilewrapper">
+        <app-eventbox [event]="event" class="shadow bordered"></app-eventbox>
+      </div>
+    </mdb-carousel-item>
   </mdb-carousel>
 </div>

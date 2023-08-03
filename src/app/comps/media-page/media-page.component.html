@@ -1,6 +1,9 @@
 <div>
     <p class="heading" [innerHTML]="data.newsTitle"></p>
     <!-- todo display news events, link to all news events -->
+    <a [href]="data.allNewsRoute.route">
+        {{data.allNewsRoute.label}}
+    </a>
     <p class="heading" [innerHTML]="data.tweetsTitle"></p>
     <div class="desktop">
         <div class="tweets myrow">

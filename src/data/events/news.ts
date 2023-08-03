@@ -6,6 +6,9 @@ export function getHomepageNews():infoTileSpec[]{
         ...allNews.filter((mention)=>(mention.videoLink!==undefined)).slice(0,2)
     ]
 }
+export function getMediaPageNews():infoTileSpec[]{
+    return getHomepageNews().slice(0,3);
+}
 export const allNews:infoTileSpec[] = [
     {
         text:`Professor E. Somanathan was invited to the Pre-Budget consultation meeting with the Union Minister for Finance and Corporate Affairs in New Delhi on Friday, 14 June, 2019. Read the Press release <a href=" http://pib.nic.in/newsite/PrintRelease.aspx?relid=190468">here</a>. (Image from ANI.)`,

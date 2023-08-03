@@ -15,6 +15,7 @@ import { ForthcomingEventsPageComponent } from "src/app/comps/forthcoming-events
 import { AllArticlesPageComponent } from "src/app/comps/all-articles-page/all-articles-page.component";
 import { AllNewsPageComponent } from "src/app/comps/all-news-page/all-news-page.component";
 import { MediaPageComponent } from "src/app/comps/media-page/media-page.component";
+import { allNewsRoute } from "./media";
 
 export const NavBarRoutes: routeSpec[] = [
     {
@@ -76,8 +77,18 @@ export const NavBarRoutes: routeSpec[] = [
                 component:SeminarsPageComponent
             },
             {
-                label:'Workshops',
-                route:'events/workshops',
+                label:`Annual CECFEE Workshops`,
+                route:`events/annualCecfeeWorkshops`,
+                component:EventListPageComponent
+            },
+            {
+                label:`Annual EfD Meetings`,
+                route:`events/efdMeetings`,
+                component:EventListPageComponent
+            },
+            {
+                label:'Workshops and Conferences',
+                route:'events/workshopsAndConferences',
                 component:EventListPageComponent
             },
             {
@@ -98,13 +109,15 @@ export const NavBarRoutes: routeSpec[] = [
         component:CareersPageComponent
     }
 ]
-
+export const miscRoutes:routeSpec[] = [
+    allNewsRoute
+]
 export function getAllRoutes():Routes{
     const routes:Routes = NavBarRoutes.map((routespec,index,[])=>{
         return parseRouteSpec(routespec);
     }).filter((route,index,[])=>Object.keys(route).length!==0);    
     routes.push(...HomePageRoutes.map((routespec,index,[])=>parseRouteSpec(routespec)))
-    // routes.push(...objectToVals(miscRoutes).map((routespec,index,[])=>parseRouteSpec(routespec)))
+    routes.push(...(miscRoutes).map((routespec,index,[])=>parseRouteSpec(routespec)))
     // routes.push(...(otherRoutes).map((routespec,index,[])=>parseRouteSpec(routespec)))
     // routes.push(...(personRoutes).map((routespec,index,[])=>parseRouteSpec(routespec)))
     return routes;

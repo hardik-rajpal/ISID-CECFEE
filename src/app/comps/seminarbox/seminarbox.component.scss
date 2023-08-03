@@ -24,7 +24,7 @@ i.fa.fa-microphone{
     margin-top: 10px;
 }
 .abstract{
-    font-size: 0.8rem;
+    font-size: var(--abstractFontSize);
 }
 .details{
     overflow: auto;

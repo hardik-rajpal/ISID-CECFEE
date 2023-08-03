@@ -10,97 +10,8 @@ export const otherEventsData:eventListPageSpec = {
             description: [],
             contact: `cecfee[at]isid.ac.in`
         },
-        {
-            title: `17th Annual Conference on Economic Growth and Development`,
-            dateTime: `December 19-21, 2021`,
-            venue: `Indian Statistical Institute, New Delhi`,
-            description: [
-                {
-                    text: `The Economics and Planning Unit at the Indian 
-                    Statistical Institute, Delhi will organize its 17th Annual 
-                    Conference on Economic Growth and Development.`
-                }
-            ],
-            contact: `acegd.isi [at] gmail.com (Tridip Ray)`
-        },
-        {
-            title: `16th EfD Annual Meeting`,
-            dateTime: `September 22 – 26 2022`,
-            venue: `Uganda`,
-            description: [
-                {
-                    text: `Environment for Development (EfD) is a global network of environmental economics research centers solving the world’s most pressing environmental and development challenges. They contribute to effective management of the environment in the Global South through policy-relevant research, capacity development and policy engagement. This year the meeting was held in Kampala, Uganda after being hosted virtually for two years. This year’s keynote speakers are Dr Pam Jagger, Dr Michael Hanemann and Dr Gernot Wagner.`
-                }
-            ],
-        },
-        {
-            title: `16th Annual Conference on Economic Growth and Development`,
-            dateTime: `December 20-22, 2021`,
-            venue: `Indian Statistical Institute, New Delhi`,
-            description: [
-                {
-                    text: `The Economics and Planning Unit at the Indian Statistical Institute, Delhi organized its 16th Annual Conference on Economic Growth and Development. Due to covid restrictions, this conference was hosted virtually. The Conference provides a forum for dissemination of modern research in  economic growth and development.`
-                }
-            ],
-        },
-        {
-            title: `15th EfD Annual Meeting`,
-            dateTime: `November 15-19, 2021`,
-            venue: `Webinar`,
-            description: [
-                {
-                    text: `The EfD Annual Meeting is the largest annual conference 
-                    in the Global South on the application of environmental 
-                    economics to development. The EfD Annual Meeting this year 
-                    was held virtually due to the COVID-19 pandemic on November 
-                    15-19, 2021, at 14:00-17:00 CET (UTC +1).The program entailed 
-                    keynote speakers and parallel session presentations. The 
-                    parallel session presentations comprised of paper 
-                    presentations and EfD collaborative programs policy 
-                    discussions. Presentations covered several EfD thematic areas 
-                    such as agriculture, air quality, biodiversity, carbon 
-                    pricing, climate change, conservation, energy, experiments, 
-                    fisheries, forestry, gender, health, land, and policy design. 
-                    The last day of the conference was dedicated to the launching 
-                    of the project entitled “Inclusive Green Transitions for 
-                    Sustainable Development in the Global South”. This project is 
-                    awarded to EfD and funded by IDRC. The virtual meeting was 
-                    open to the public. However, participants had to register 
-                    before the conference.`
-                }
-            ],
-        },
-        {
-            title: `  14th EfD Annual Meeting`,
-            dateTime: `November, 2020 (TBA)`,
-            venue: `Webinar`,
-            description: [
-                {
-                    text: `Environment for Development (EfD) is a global network 
-                    of environmental economics research centers primarily based 
-                    in the Global South. The overall objective of EfD is to 
-                    support poverty alleviation and sustainable development by 
-                    building environmental economics’ capacity for policy-making 
-                    processes. EfD holds a conference each year hosted by one of 
-                    its centers in the Global South. The EfD Annual Meeting is 
-                    the largest annual conference in the Global South on the 
-                    application of environmental economics to development.`
-                }
-            ],
-        },
-        {
-            title: `15th Annual Conference on Economic Growth & Development`,
-            dateTime: `December 18 – 20 2019`,
-            venue: `ISI Delhi`,
-            description: [
-                {
-                    text: `The Economics and Planning Unit at the Indian 
-                    Statistical Institute, Delhi will organize its 15th Annual 
-                    Conference on Economic Growth and Development. We welcome you 
-                    to attend the meeting, and present your research.`
-                }
-            ],
-        },
+
+
         {
             title: `EPU Seminar by Kanishka Kacker (Indian Statistical Institute – Delhi)`,
             dateTime: `11:30 AM to 1 PM, June 21st, 2019`,
@@ -120,28 +31,7 @@ export const otherEventsData:eventListPageSpec = {
             venue: `Seminar Room 2`,
             description: [],
         },
-        {
-            title: `14th Annual Conference on Economic Growth and Development`,
-            dateTime: `December 19-21, 2018`,
-            venue: `ISI, Delhi`,
-            description: [
-                {
-                    text: `The Indian Statistical Institute, New Delhi, invites 
-                    researchers to submit papers for the 14th Annual Conference 
-                    on Economic Growth and Development. The Conference provides a 
-                    forum for dissemination of modern research in  economic 
-                    growth and development. Papers with an India focus are 
-                    especially welcome.
-                    <br>
-                    For more details on registration and submission of papers 
-                    click
-                    <a href="https://www.isid.ac.in/~epu/acegd2018/">
-                    here
-                    </a>
-                    `
-                }
-            ],
-        },
+
         {
             title: `CECFEE and CPR Policy Day Event on ‘Research for Policy Action on Air Pollution’`,
             dateTime: `11:30 am- 1:30 pm, 17 December 2018`,
@@ -162,18 +52,6 @@ export const otherEventsData:eventListPageSpec = {
                     <a href="http://www.isid.ac.in/~cecfee/wp-content/uploads/2017/01/Policy-day.pdf">
                     click here
                     </a>.`
-                }
-            ],
-        },
-        {
-            title: `EfD Annual meeting 2018`,
-            dateTime: `November 2 – 5, 2018`,
-            venue: `Hanoi, Vietnam`,
-            description: [
-                {
-                    text: `<a href="http://www.efdinitiative.org/news/events/efd-annual-meeting-2018">
-                    More Information on EfD Annual meeting 2018
-                    </a>`
                 }
             ],
         },

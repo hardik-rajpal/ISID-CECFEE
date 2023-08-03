@@ -52,8 +52,21 @@ export function getParaSpecStr(para:paraSpec){
     }
     return str
 }
+export function onload2promise<T>(obj:T):Promise<T>{
+    return new Promise((resolve, reject) => {
+        (obj as any).onload = () => resolve(obj);
+        (obj as any).onerror = reject;
+    });
+}
 export function objectToVals<T>(object:{[key:string]:T}):T[]{
     return Object.keys(object).map((key)=>object[key]);
+}
+export async function isLandscape(src:string){
+    const image = new Image();
+    let imagePromise = onload2promise(image);
+    image.src = src;
+    let loadedImage = await imagePromise;
+    return loadedImage.width > loadedImage.height
 }
 export function angloJoinWords(words:string[]):string{
     let lastWord:string = words[words.length-1];

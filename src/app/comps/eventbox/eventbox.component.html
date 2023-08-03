@@ -19,7 +19,7 @@
         <app-paraspecbox *ngFor="let para of event.description" [para]="para"></app-paraspecbox>
     </div>
     <app-collapsible [title]="'More Details'" *ngIf="event.moreDetails">
-        <app-paraspecbox *ngFor="let para of event.moreDetails" [para]="para"></app-paraspecbox>
+        <app-paraspecbox *ngFor="let para of event.moreDetails" [para]="para" class="moreDetails"></app-paraspecbox>
     </app-collapsible>
     <app-collapsible *ngIf="event.photoFolder" [title]="'More Photos'">
         <app-image-dump [folderPath]="event.photoFolder"></app-image-dump>
