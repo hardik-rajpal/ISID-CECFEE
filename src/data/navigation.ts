@@ -76,8 +76,18 @@ export const NavBarRoutes: routeSpec[] = [
                 component:SeminarsPageComponent
             },
             {
-                label:'Workshops',
-                route:'events/workshops',
+                label:`Annual CECFEE Workshops`,
+                route:`events/annualCecfeeWorkshops`,
+                component:EventListPageComponent
+            },
+            {
+                label:`Annual EfD Meetings`,
+                route:`events/efdMeetings`,
+                component:EventListPageComponent
+            },
+            {
+                label:'Workshops and Conferences',
+                route:'events/workshopsAndConferences',
                 component:EventListPageComponent
             },
             {

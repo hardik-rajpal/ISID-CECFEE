@@ -1,4 +1,6 @@
 import { paraSpec } from "../rtl.utils";
+import { annualCecfeeWorkshops } from "./cecfeeannual";
+import { efdMeetings } from "./efdMeetings";
 import { otherEventsData } from "./others";
 import { upcomingEventsData } from "./upcoming";
 import { WorkshopData, eventListPageSpec } from "./workshops";
@@ -21,7 +23,9 @@ export interface eventsPageSpec {
     pastEvents: EventSpec[];
 }
 export const EventsData:{[key:string]:eventListPageSpec} = {
-    'upcoming':upcomingEventsData,
-    'workshops':WorkshopData,
+    // 'upcoming':upcomingEventsData,
+    'annualCecfeeWorkshops':annualCecfeeWorkshops,
+    'efdMeetings':efdMeetings,
+    'workshopsAndConferences':WorkshopData,
     'others':otherEventsData
 }

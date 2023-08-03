@@ -9,11 +9,13 @@
     --lightgray:#eee;
     --darkgray:#ccc;
     --mgvwidth:600px;
+    --abstractFontSize:0.8rem;
     letter-spacing: 0.5px;
     font-size: 19.5px;
     /* font-family: Arial, Helvetica, sans-serif; */
     /* font-family: "Source Sans Pro"; */
     font-family: "Red Hat Display";
+
     /* font-family: 'Manrope',sans-serif; */
     text-align: justify;
 }
@@ -51,8 +53,8 @@ a.button{
     font-size: 1.5rem;
     font-weight: bold;
 }
-.heading-colored{
-    font-size: 1.5rem;
+.heading-mycolored{
+    font-size: 1.33rem;
     font-weight: bold;
     color: var(--accent);
 }
