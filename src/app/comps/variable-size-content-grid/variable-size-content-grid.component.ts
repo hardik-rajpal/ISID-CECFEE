@@ -24,31 +24,6 @@ export class VariableSizeContentGridComponent {
     }
     return parts.join(' ')
   }
-  findMinimizedDifference(originalArray:number[][]):number[][] {
-    let minDifference = Infinity;
-    let resultIndices1:number[]=[], resultIndices2:number[] = [];
-    function findPartition(index:number, indices1:number[], indices2:number[]):void {
-      if (index === originalArray.length) {
-        const sum1 = indices1.reduce((sum, i) => sum + originalArray[i][0], 0);
-        const sum2 = indices2.reduce((sum, i) => sum + originalArray[i][0], 0);
-        const difference = Math.abs(sum1 - sum2);
-  
-        if (difference < minDifference) {
-          minDifference = difference;
-          resultIndices1 = indices1.slice();
-          resultIndices2 = indices2.slice();
-        }
-        return;
-      }
-  
-      findPartition(index + 1, indices1.concat(index), indices2);
-      findPartition(index + 1, indices1, indices2.concat(index));
-    }
-  
-    findPartition(0, [], []);
-  
-    return [resultIndices1, resultIndices2];
-  }  
   getIndexHash(heightInds:number[][]){
     let copy = [...heightInds]
     let orderKey = copy.sort().map((value)=>value[0].toString()).join(',');
@@ -71,24 +46,6 @@ export class VariableSizeContentGridComponent {
         ans.sort((a,b)=>a.total - b.total);
     }
     return ans.map((val)=>val.children);
-  }
-  getPrettyListOrder(heightInds:number[][],cache=true){
-    // WebAssembly.instantiateStreaming()
-    let orderKey = this.getIndexHash(heightInds);
-    const cachedOrder = localStorage.getItem(orderKey);
-    if(cachedOrder){
-      return JSON.parse(cachedOrder);
-    }
-    const indices = this.findMinimizedDifference(heightInds);
-    let res:number[][][] = [];
-    
-    for(let indexlist of indices){
-      res.push(indexlist.map((val,index,[])=>heightInds[val]));
-    }
-    if(cache){
-      localStorage.setItem(orderKey,JSON.stringify(res))
-    }
-    return res;
   }
   reorderItems(){
     if(this.orderSet){

@@ -1,4 +1,7 @@
 <div class="main bordered">
+    <p class="small-heading">
+        <strong [innerHTML]="infotile.title"></strong>
+    </p>
     <div *ngIf="!infotile.image" [innerHTML]="infotile.text"></div>
     <div *ngIf="infotile.image && landscapeImage" class="landscape mycol centercol">
         <img [src]="infotile.image" class="main">

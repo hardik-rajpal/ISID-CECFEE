@@ -6,6 +6,7 @@ export interface fileStructureSpec{
 }
 export interface infoTileSpec{
     text:string;
+    title:string;
     image?:string;
     videoLink?:string;
 }
