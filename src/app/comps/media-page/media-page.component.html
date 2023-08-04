@@ -1,6 +1,8 @@
 <div>
-    <p class="heading" [innerHTML]="data.newsTitle"></p>
-    <!-- todo display news events, link to all news events -->
+    <a class="heading" [innerHTML]="data.newsTitle" [href]="data.allNewsRoute.route"></a>
+    <app-variable-size-content-grid [cols]="3">
+        <app-infotile-grid-box *ngFor="let news of data.news" [infotile]="news"></app-infotile-grid-box>
+    </app-variable-size-content-grid>
     <a [href]="data.allNewsRoute.route">
         {{data.allNewsRoute.label}}
     </a>

@@ -54,6 +54,24 @@ export class VariableSizeContentGridComponent {
     let orderKey = copy.sort().map((value)=>value[0].toString()).join(',');
     return orderKey;
   }
+  getPrettyListOrder2(heightInds:number[][],cache=true){
+    let ans:{'children':number[][],'total':number}[] = [];
+    let copy = [...heightInds];
+    copy.sort((a,b)=>b[0]-a[0]);
+    let index = 0, j=0;
+    for(let i=0;i<this.cols;i++){
+      ans.push({children:[],total:0});
+    }
+    let lastHeightPlus = 1,currHeightPlus=0;
+    while(j<copy.length){
+        ans[index].children.push(copy[j]);
+        currHeightPlus+=copy[j][0];
+        ans[index].total+=copy[j][0];
+        j+=1;
+        ans.sort((a,b)=>a.total - b.total);
+    }
+    return ans.map((val)=>val.children);
+  }
   getPrettyListOrder(heightInds:number[][],cache=true){
     // WebAssembly.instantiateStreaming()
     let orderKey = this.getIndexHash(heightInds);
@@ -97,7 +115,7 @@ export class VariableSizeContentGridComponent {
       this.orderSet = true;
       return;
     }
-    let reorderedHeights = this.getPrettyListOrder(heights);
+    let reorderedHeights = this.getPrettyListOrder2(heights);
     console.log(((new Date()).valueOf() - start.valueOf())/1000)
     console.log(reorderedHeights);
     const oldLength = this.mainDiv.nativeElement.children.length;

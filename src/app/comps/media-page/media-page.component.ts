@@ -8,5 +8,4 @@ import { mediaData, mediaPageSpec } from 'src/data/media';
 })
 export class MediaPageComponent {
   data:mediaPageSpec = mediaData;
-
 }
