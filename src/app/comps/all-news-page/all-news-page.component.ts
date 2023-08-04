@@ -8,9 +8,7 @@ import { infoTileSpec } from 'src/data/rtl.utils';
   styleUrls: ['./all-news-page.component.scss']
 })
 export class AllNewsPageComponent {
-  //TODO
-  // news:infoTileSpec[] = allNews;
-  news:infoTileSpec[]= getMediaPageNews();
+  news:infoTileSpec[] = allNews;
   query:string = '';
   articleQueryMatch(lowerCaseQuery:string,mention:infoTileSpec):boolean{
     let videoString = '';

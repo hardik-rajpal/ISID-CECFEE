@@ -3,7 +3,10 @@
         <p class="title">All News Stories</p>
         <input [(ngModel)]="query" placeholder="🔍 Search for keywords..."/>
     </div>
-    <app-variable-size-content-grid [cols]="2">
+    <app-variable-size-content-grid [cols]="2" class="desktop">
+        <app-infotile-grid-box *ngFor="let mention of getQueryResults()" [infotile]="mention"></app-infotile-grid-box>
+    </app-variable-size-content-grid>
+    <app-variable-size-content-grid [cols]="1" class="mobile">
         <app-infotile-grid-box *ngFor="let mention of getQueryResults()" [infotile]="mention"></app-infotile-grid-box>
     </app-variable-size-content-grid>
 </div>

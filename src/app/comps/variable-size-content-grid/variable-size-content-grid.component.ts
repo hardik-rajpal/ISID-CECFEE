@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-variable-size-content-grid',
@@ -8,8 +8,13 @@ import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/cor
 export class VariableSizeContentGridComponent {
   @Input() cols:number=1;
   @ViewChild('mainDiv') mainDiv!:ElementRef<HTMLDivElement>; 
-  constructor(private renderer:Renderer2){
+  orderSet:boolean = false;
+  viewInitDone:boolean = false;
+  constructor(private renderer:Renderer2){}
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+    console.log(event.target.innerWidth);
   }
   getGridTemplateString(ncols:number){
     const percentageString = Math.floor(100/ncols).toString() + '%'
@@ -19,11 +24,10 @@ export class VariableSizeContentGridComponent {
     }
     return parts.join(' ')
   }
-  findMinimizedDifference(originalArray:number[][]) {
+  findMinimizedDifference(originalArray:number[][]):number[][] {
     let minDifference = Infinity;
-    let resultIndices1, resultIndices2;
-  
-    function findPartition(index:number, indices1:number[], indices2:number[]) {
+    let resultIndices1:number[]=[], resultIndices2:number[] = [];
+    function findPartition(index:number, indices1:number[], indices2:number[]):void {
       if (index === originalArray.length) {
         const sum1 = indices1.reduce((sum, i) => sum + originalArray[i][0], 0);
         const sum2 = indices2.reduce((sum, i) => sum + originalArray[i][0], 0);
@@ -45,12 +49,34 @@ export class VariableSizeContentGridComponent {
   
     return [resultIndices1, resultIndices2];
   }  
-  getPrettyList(heightInds:number[][]){
-    const [l1,l2] = this.findMinimizedDifference(heightInds);
-    //TODO  
-    return heightInds;
+  getIndexHash(heightInds:number[][]){
+    let copy = [...heightInds]
+    let orderKey = copy.sort().map((value)=>value[0].toString()).join(',');
+    return orderKey;
+  }
+  getPrettyListOrder(heightInds:number[][],cache=true){
+    // WebAssembly.instantiateStreaming()
+    let orderKey = this.getIndexHash(heightInds);
+    const cachedOrder = localStorage.getItem(orderKey);
+    if(cachedOrder){
+      return JSON.parse(cachedOrder);
+    }
+    const indices = this.findMinimizedDifference(heightInds);
+    let res:number[][][] = [];
+    
+    for(let indexlist of indices){
+      res.push(indexlist.map((val,index,[])=>heightInds[val]));
+    }
+    if(cache){
+      localStorage.setItem(orderKey,JSON.stringify(res))
+    }
+    return res;
   }
   reorderItems(){
+    if(this.orderSet){
+      console.log('order already set, returning.')
+      return;
+    }
     let newDiv = this.renderer.createElement('div');
     const gridTemplateString = this.getGridTemplateString(this.cols);
     this.renderer.setStyle(newDiv,'display','grid')
@@ -66,28 +92,54 @@ export class VariableSizeContentGridComponent {
     }
     console.log(children)
     console.log(heights)
-    let reorderedHeights = this.getPrettyList(heights);
+    let start = new Date();
+    if(this.cols===1){
+      this.orderSet = true;
+      return;
+    }
+    let reorderedHeights = this.getPrettyListOrder(heights);
+    console.log(((new Date()).valueOf() - start.valueOf())/1000)
     console.log(reorderedHeights);
     const oldLength = this.mainDiv.nativeElement.children.length;
+    let newDivs = [];
     for(let i=0;i<reorderedHeights.length;i++){
-      this.renderer.appendChild(newDiv,(this.mainDiv.nativeElement.childNodes.item(reorderedHeights[i][1])).cloneNode(true));
+      let tmpNewDiv = this.renderer.createElement('div');
+      this.renderer.setStyle(tmpNewDiv,'display','flex');
+      this.renderer.setStyle(tmpNewDiv,'flexDirection','column');
+      for(let j=0;j<reorderedHeights[i].length;j++){
+        let child = this.mainDiv.nativeElement.childNodes.item(reorderedHeights[i][j][1]).cloneNode(true);
+        this.renderer.appendChild(tmpNewDiv,child);
+      }
+      newDivs.push(tmpNewDiv);
     }
+    // this.renderer.appendChild();
     let divParent = this.mainDiv.nativeElement.parentNode;
+    for(let contentDiv of newDivs){
+      this.renderer.appendChild(newDiv,contentDiv);
+    }
     if(divParent!==null){
       this.renderer.appendChild(divParent,newDiv);
       divParent.removeChild(this.mainDiv.nativeElement);
+      this.orderSet = true;
+      console.log('order set')
     }
-
     else{
       console.log('orphan div lol')
     }
   }
   ngAfterViewInit(){
+    console.log('after view init')
     const gridTemplateString = this.getGridTemplateString(this.cols);
     this.renderer.setStyle(this.mainDiv.nativeElement,'display','grid')
-    this.renderer.setStyle(this.mainDiv.nativeElement,'gridTemplateColumns',gridTemplateString);
-    setTimeout(() => {
-      this.reorderItems();
-    }, 3000);
+    this.renderer.setStyle(this.mainDiv.nativeElement,'gridTemplateColumns',gridTemplateString); 
+    this.viewInitDone = true;
+    if(this.orderSet===false){
+      setTimeout(() => {
+        if(this.orderSet===false){
+          console.log('reordering items')
+          this.reorderItems();
+        }
+      }, 1000);  
+    }
   }
 }
