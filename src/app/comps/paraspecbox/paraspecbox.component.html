@@ -1,3 +1,4 @@
+<!-- TODO: CSS containers to fix image renders. -->
 <div class="main">
     <div *ngIf="para!.text">
         <p  *ngIf="!(para!.image)" [innerHTML]="para!.text|safe:'html'"></p>

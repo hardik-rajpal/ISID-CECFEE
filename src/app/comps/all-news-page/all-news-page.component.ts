@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { allNews } from 'src/data/events/news';
+import { allNews, getMediaPageNews } from 'src/data/events/news';
 import { infoTileSpec } from 'src/data/rtl.utils';
 
 @Component({

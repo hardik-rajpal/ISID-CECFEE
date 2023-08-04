@@ -53,6 +53,11 @@ a.button{
     font-size: 1.5rem;
     font-weight: bold;
 }
+.small-heading{
+    font-size: 1rem;
+    font-weight: bolder;
+    text-align: left;
+}
 .heading-mycolored{
     font-size: 1.33rem;
     font-weight: bold;
@@ -159,8 +164,8 @@ hr.thin{
 }
 .bordered{
     border: var(--primary) 2px solid;
-    padding: 10px;
-    margin: 20px;
+    padding: 5px;
+    margin: 10px;
 }
 .titlebar{
     display: flex;
