@@ -6,6 +6,7 @@ export interface mediaPageSpec{
     newsTitle:string;
     news:infoTileSpec[];
     allNewsRoute:routeSpec;
+    tweetsWaitingMessage:string;
     tweetsTitle:string;
     tweetLinks:string[]
 }
@@ -19,6 +20,7 @@ export const mediaData:mediaPageSpec = {
     news:getMediaPageNews(),
     allNewsRoute:allNewsRoute,
     tweetsTitle:`CECFEE on twitter`,
+    tweetsWaitingMessage:`Fetching tweets...`,
     tweetLinks:[
         `https://twitter.com/cecfee/status/1681536847321653248`,
         `https://twitter.com/cecfee/status/1679786884883709952`,
