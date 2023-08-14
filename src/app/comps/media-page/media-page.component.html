@@ -11,8 +11,9 @@
         {{data.allNewsRoute.label}}
     </a>
     <p class="heading" [innerHTML]="data.tweetsTitle"></p>
-    <div *ngIf="waitingForTweets && (!fetchFailed)">
-        {{data.tweetsWaitingMessage}}
+    <div class="mycol centercol" *ngIf="waitingForTweets && (!fetchFailed)">
+        <app-circular-progress-indicator></app-circular-progress-indicator>
+        <div [innerHTML]="data.tweetsWaitingMessage"></div>
     </div>
     <div *ngIf="waitingForTweets && (fetchFailed)" [innerHTML]="data.tweetsfetchFailedMessage">
     </div>
@@ -24,7 +25,7 @@
         </div>
     </div>
     <div class="mobile">
-        <div class="tweets centercol" #tweetsMyCol>
+        <div class="mycol centercol" #tweetsMyCol>
             <blockquote class="twitter-tweet" *ngFor="let tweetLink of data.tweetLinks">
                 <a [href]="tweetLink"></a></blockquote>
         </div>

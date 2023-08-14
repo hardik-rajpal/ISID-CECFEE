@@ -48,6 +48,7 @@ import { UpdatesCarouselComponent } from './comps/updates-carousel/updates-carou
 import { VideoboxComponent } from './comps/videobox/videobox.component';
 import { InfotileGridBoxComponent } from './comps/infotile-grid-box/infotile-grid-box.component';
 import { VariableSizeContentGridComponent } from './comps/variable-size-content-grid/variable-size-content-grid.component';
+import { CircularProgressIndicatorComponent } from './comps/circular-progress-indicator/circular-progress-indicator.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,8 @@ import { VariableSizeContentGridComponent } from './comps/variable-size-content-
     UpdatesCarouselComponent,
     VideoboxComponent,
     InfotileGridBoxComponent,
-    VariableSizeContentGridComponent
+    VariableSizeContentGridComponent,
+    CircularProgressIndicatorComponent
   ],
   imports: [
     BrowserModule,

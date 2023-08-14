@@ -13,7 +13,7 @@ export class MediaPageComponent {
   @ViewChild('tweetsMyRow') tweetsMyRow!:ElementRef<HTMLDivElement>;
   @ViewChild('tweetsMyCol') tweetsMyCol!:ElementRef<HTMLDivElement>;
   ngOnInit(){
-    this.tweetsTimeout = 4000*this.data.tweetLinks.length;
+    this.tweetsTimeout = 4000*(this.data.tweetLinks.length+1);
   }
   setWaitingForTweets():void{
     let colH =0,rowH = 0;
@@ -23,7 +23,7 @@ export class MediaPageComponent {
     if(this.tweetsMyRow){
       rowH = this.tweetsMyRow.nativeElement.clientHeight;
     }
-    let tweetsAreHere = Math.max(rowH,colH)>100;
+    let tweetsAreHere = Math.max(rowH,colH)>200;
     // console.log(Math.max(rowH,colH),tweetsAreHere)
     this.waitingForTweets = !tweetsAreHere;
     return;
@@ -53,6 +53,7 @@ export class MediaPageComponent {
   }
   ngAfterViewInit(){
     if(this.tweetsMyCol){
+      // console.log('waiting for element')
       this.waitForElement(this.tweetsTimeout).then(()=>{
         this.waitingForTweets = false;//redundant.
       }).catch(()=>{
