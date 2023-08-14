@@ -57,6 +57,8 @@ a.button{
     font-size: 1rem;
     font-weight: bolder;
     text-align: left;
+    margin: 0;
+    margin-bottom: 5px;
 }
 .heading-mycolored{
     font-size: 1.33rem;
@@ -163,9 +165,12 @@ hr.thin{
     box-shadow: 3px 3px 5px 5px grey;
 }
 .bordered{
-    border: var(--primary) 2px solid;
-    padding: 5px;
+    border: var(--darkgray) 2px solid;
+    padding: 10px;
+    padding-top: 5px;
     margin: 10px;
+    border-radius: 10px;
+
 }
 .titlebar{
     display: flex;
@@ -200,3 +205,4 @@ input{
 .twitter-tweet.twitter-tweet-rendered{
     margin: 10px;
 }
+
