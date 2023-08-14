@@ -7,14 +7,20 @@ import { Component, ElementRef, HostListener, Input, Renderer2, ViewChild } from
 })
 export class VariableSizeContentGridComponent {
   @Input() cols:number=1;
+  mainStyle:string = '';
   @ViewChild('mainDiv') mainDiv!:ElementRef<HTMLDivElement>; 
   orderSet:boolean = false;
   viewInitDone:boolean = false;
   constructor(private renderer:Renderer2){}
-
+  ngOnInit(){
+    this.mainStyle = `column-count:${this.cols}`
+  }
+  ngOnChanges(){
+    this.mainStyle = `column-count:${this.cols}`
+  }
   @HostListener('window:resize', ['$event'])
   onResize(event:any) {
-    console.log(event.target.innerWidth);
+    // console.log(event.target.innerWidth);
   }
   getGridTemplateString(ncols:number){
     const percentageString = Math.floor(100/ncols).toString() + '%'
@@ -49,7 +55,7 @@ export class VariableSizeContentGridComponent {
   }
   reorderItems(){
     if(this.orderSet){
-      console.log('order already set, returning.')
+      // console.log('order already set, returning.')
       return;
     }
     let newDiv = this.renderer.createElement('div');
@@ -65,16 +71,16 @@ export class VariableSizeContentGridComponent {
         heights.push([(child).children.item(0)!.clientHeight,i]);
       }
     }
-    console.log(children)
-    console.log(heights)
+    // console.log(children)
+    // console.log(heights)
     let start = new Date();
     if(this.cols===1){
       this.orderSet = true;
       return;
     }
     let reorderedHeights = this.getPrettyListOrder2(heights);
-    console.log(((new Date()).valueOf() - start.valueOf())/1000)
-    console.log(reorderedHeights);
+    // console.log(((new Date()).valueOf() - start.valueOf())/1000)
+    // console.log(reorderedHeights);
     const oldLength = this.mainDiv.nativeElement.children.length;
     let newDivs = [];
     for(let i=0;i<reorderedHeights.length;i++){
@@ -96,25 +102,25 @@ export class VariableSizeContentGridComponent {
       this.renderer.appendChild(divParent,newDiv);
       divParent.removeChild(this.mainDiv.nativeElement);
       this.orderSet = true;
-      console.log('order set')
+      // console.log('order set')
     }
     else{
-      console.log('orphan div lol')
+      // console.log('orphan div lol')
     }
   }
   ngAfterViewInit(){
-    console.log('after view init')
-    const gridTemplateString = this.getGridTemplateString(this.cols);
-    this.renderer.setStyle(this.mainDiv.nativeElement,'display','grid')
-    this.renderer.setStyle(this.mainDiv.nativeElement,'gridTemplateColumns',gridTemplateString); 
-    this.viewInitDone = true;
-    if(this.orderSet===false){
-      setTimeout(() => {
-        if(this.orderSet===false){
-          console.log('reordering items')
-          this.reorderItems();
-        }
-      }, 1000);  
-    }
+    // console.log('after view init')
+    // const gridTemplateString = this.getGridTemplateString(this.cols);
+    // this.renderer.setStyle(this.mainDiv.nativeElement,'display','grid')
+    // this.renderer.setStyle(this.mainDiv.nativeElement,'gridTemplateColumns',gridTemplateString); 
+    // this.viewInitDone = true;
+    // if(this.orderSet===false){
+    //   setTimeout(() => {
+    //     if(this.orderSet===false){
+    //       // console.log('reordering items')
+    //       this.reorderItems();
+    //     }
+    //   }, 1000);  
+    // }
   }
 }

@@ -7,6 +7,7 @@ export interface mediaPageSpec{
     news:infoTileSpec[];
     allNewsRoute:routeSpec;
     tweetsWaitingMessage:string;
+    tweetsfetchFailedMessage:string;
     tweetsTitle:string;
     tweetLinks:string[]
 }
@@ -21,9 +22,13 @@ export const mediaData:mediaPageSpec = {
     allNewsRoute:allNewsRoute,
     tweetsTitle:`CECFEE on twitter`,
     tweetsWaitingMessage:`Fetching tweets...`,
+    tweetsfetchFailedMessage:`Unable to fetch tweets right now. You can also checkout
+    <a href="https://twitter.com/cecfee">
+    @cecfee on x.com.
+    </a>`,
     tweetLinks:[
         `https://twitter.com/cecfee/status/1681536847321653248`,
         `https://twitter.com/cecfee/status/1679786884883709952`,
-        `https://twitter.com/cecfee/status/1678092641236586497`
+        `https://twitter.com/cecfee/status/1678092641236586497`,
     ]
 }
