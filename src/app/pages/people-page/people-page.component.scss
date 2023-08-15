@@ -28,9 +28,6 @@
 app-modalbox{
     max-width: 600px;
 }
-.mainmodal{
-    border: 3px solid var(--primary);
-}
 .desktop>.mainmodal{
     display: grid;
     grid-template-columns: 30% 60%;

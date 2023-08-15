@@ -7,8 +7,8 @@
     </div>
 </div>
 <app-modalbox #biomodal>
-    <div class="mainmodal active col centermycol" *ngIf="activeIndex!==-1">
-        <img class="person-img" [src]="data.people[activeIndex].image" />
+    <div class="mainmodal active mycol centercol bordered" *ngIf="activeIndex!==-1">
+        <img class="person-img" [src]="data.people[activeIndex].image"/>
         <div *ngIf="!hasWebpage(data.people[activeIndex])" class="name fs-larger"
             [innerHTML]="data.people[activeIndex].name"></div>
         <div *ngIf="hasWebpage(data.people[activeIndex])" class="name fs-larger">
