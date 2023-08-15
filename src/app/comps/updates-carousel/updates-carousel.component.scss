@@ -39,6 +39,7 @@ div.slidetile{
     width: 30px;
     height: 5px;
     background-color: var(--darkgray);
+    margin: 3px;
 }
 div.slidetile.active{
     background-color: var(--primary);
