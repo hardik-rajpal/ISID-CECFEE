@@ -6,7 +6,6 @@ div.main{
     overflow: hidden;
 }
 div.infotilewrapper{
-    min-height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,9 +13,9 @@ div.infotilewrapper{
 }
 
 @media(min-width:900px){
-    div.infotilewrapper{
-        min-height: 500px;
-    }
+    // div.infotilewrapper{
+    //     min-height: 500px;
+    // }
 }
 i{
     font-size: 50px;
@@ -39,6 +38,7 @@ div.slidetile{
     width: 30px;
     height: 5px;
     background-color: var(--darkgray);
+    margin: 3px;
 }
 div.slidetile.active{
     background-color: var(--primary);

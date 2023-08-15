@@ -1,14 +1,14 @@
 <div class="main mycol centercol">
   <div class="myrow btns">
     <i class="fa fa-angle-left pointable" (click)="backward()" (mouseover)="pause()" (mouseout)="play()"></i>
-    <mdb-carousel [interval]="2500" [wrap]="true" [animation]="'slide'" #carousel>
+    <mdb-carousel [interval]="interval" [wrap]="true" [animation]="'slide'" #carousel>
       <mdb-carousel-item *ngFor="let update of updates.infotiles">
-        <div class="infotilewrapper">
+        <div class="infotilewrapper" [style]="infotilewrapperStyle">
           <app-infotile [infotile]="update"></app-infotile>
         </div>
       </mdb-carousel-item>
       <mdb-carousel-item *ngFor="let event of updates.events">
-        <div class="infotilewrapper">
+        <div class="infotilewrapper" [style]="infotilewrapperStyle">
           <app-eventbox [event]="event"></app-eventbox>
         </div>
       </mdb-carousel-item>
