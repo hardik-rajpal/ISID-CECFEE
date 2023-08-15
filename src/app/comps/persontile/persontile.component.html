@@ -1,16 +1,16 @@
 <div class="desktop">
-    <div class="main col centermycol pointable" *ngIf="!active">
+    <div class="main mycol centercol pointable" *ngIf="!active">
         <img class="person-img" [src]="person.image"/>
         <div class="name fs-larger" [innerHTML]="person.name"></div>
         <div class="body" [innerHTML]="person.description"></div>
     </div>
     <div class="main active myrow" *ngIf="active">
-        <div class="col centermycol">
+        <div class="mycol centercol">
             <img class="person-img" [src]="person.image"/>
             <div class="name fs-larger" [innerHTML]="person.name"></div>
             <div class="body" [innerHTML]="person.description"></div>
         </div>
-        <div class="col centermycol biolinks">
+        <div class="mycol centercol biolinks">
             <div class="closebtn pointable" (click)="this.inactive.emit()">
                 Close <i class="fa fa-times"></i>
             </div>
@@ -24,12 +24,12 @@
 </div>
 
 <div  class="mobile">
-    <div class="main col centermycol pointable" *ngIf="!active">
+    <div class="main mycol centercol pointable" *ngIf="!active">
         <img class="person-img" [src]="person.image"/>
         <div class="name fs-larger" [innerHTML]="person.name"></div>
         <div class="body" [innerHTML]="person.description"></div>
     </div>
-    <div class="main active col centermycol" *ngIf="active">
+    <div class="main active mycol centercol" *ngIf="active">
             <img class="person-img" [src]="person.image"/>
             <div class="name fs-larger" [innerHTML]="person.name"></div>
             <div class="body" [innerHTML]="person.description"></div>
