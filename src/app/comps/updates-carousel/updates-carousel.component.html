@@ -1,6 +1,8 @@
 <div class="main mycol centercol">
   <div class="myrow btns">
-    <i class="fa fa-angle-left pointable" (click)="backward()" (mouseover)="pause()" (mouseout)="play()"></i>
+    <div class="desktop">
+      <i class="fa fa-angle-left pointable" (click)="backward()" (mouseover)="pause()" (mouseout)="play()"></i>
+    </div>
     <mdb-carousel [interval]="2500" [wrap]="true" [animation]="'slide'" #carousel>
       <mdb-carousel-item *ngFor="let update of updates.infotiles">
         <div class="infotilewrapper">
@@ -13,7 +15,9 @@
         </div>
       </mdb-carousel-item>
     </mdb-carousel>
-    <i class="fa fa-angle-right pointable" (click)="forward()" (mouseover)="pause()" (mouseout)="play()"></i>
+    <div class="desktop">
+      <i class="fa fa-angle-right pointable" (click)="forward()" (mouseover)="pause()" (mouseout)="play()"></i>
+    </div>
   </div>
   <div class="myrow" (mouseout)="play()" (mouseover)="pause()">
     <div *ngFor="let index of slideNumbers" [class]="'pointable slidetile' + ((index==getActiveSlide())?' active':'')" (click)="setSlide(index)">
