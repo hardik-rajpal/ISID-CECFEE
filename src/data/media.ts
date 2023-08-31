@@ -27,6 +27,7 @@ export const mediaData:mediaPageSpec = {
     @cecfee on x.com.
     </a>`,
     tweetLinks:[
+        `https://twitter.com/cecfee/status/1696187401096548806`,
         `https://twitter.com/cecfee/status/1681536847321653248`,
         `https://twitter.com/cecfee/status/1679786884883709952`,
         `https://twitter.com/cecfee/status/1678092641236586497`,

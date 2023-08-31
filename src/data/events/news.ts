@@ -11,7 +11,12 @@ export function getMediaPageNews():infoTileSpec[]{
 }
 export const allNews:infoTileSpec[] = [
     {
-        text: `Professor E. Somanathan was invited to the Pre-Budget consultation meeting with the Union Minister for Finance and Corporate Affairs in New Delhi on Friday, 14 June, 2019. Read the Press release <a href=\" http://pib.nic.in/newsite/PrintRelease.aspx?relid=190468\">here</a>. (Image from ANI.)`,
+        text:`Congratulations to Digvijay Singh Negi, former ISI PhD student and our member,for receiving the BRICS Economic Research Annual Citation 2023 for his 2018 dissertation under Prof. Bharat Ramaswami! A remarkable achievement, and the Rs. 15 lakh cash award is well-deserved! 🎉`,
+        image:`assets/news/brics2023.jpg`,
+        title:`BRICS Award 2023 for Digvijay Singh Negi`
+    },
+    {
+        text: `Professor E. Somanathan was invited to the Pre-Budget consultation meeting with the Union Minister for Finance and Corporate Affairs in New Delhi on Friday, 14 June, 2019. Read the Press release <a href= http://pib.nic.in/newsite/PrintRelease.aspx?relid=190468>here</a>. (Image from ANI.)`,
         image: `assets/home/esom-prebudget.jpg`,
         title: `Pre-Budget Consultation Meeting with Professor E. Somanathan`
     },
