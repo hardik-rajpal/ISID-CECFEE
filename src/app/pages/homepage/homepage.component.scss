@@ -1,0 +1,72 @@
+.read-more-button {
+    display: inline-block; /* Will grow as much as the text inside */
+    text-align: center;  /* Center text horizontally */
+    padding: 10px 20px;  /* Top and bottom padding */
+    background-color: var(--green);  /* Background color */
+    color: white;  /* Text color */
+    font-size: medium;
+    border: 1px solid var(--green);  /* Remove border */
+    border-radius: 4px;  /* Rounded corners */
+    cursor: pointer;  /* Pointer cursor on hover */
+    text-decoration: none;  /* Remove underline */
+    width: fit-content;  /* Auto width based on content */
+    margin: 0;  /* No margins */
+}
+
+.read-more-button:hover {
+    background-color: white;  /* Background color */
+    color: var(--green);  /* Text color */
+    border: 1px solid var(--black);  /* Remove border */
+}
+
+.key-sections {
+    background-color: #10451D; /* Dark background */
+    color: #B7EFC5; /* Light text */
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10px;
+}
+
+.key-sections .heading {
+    font-size: 1.5rem;
+    font-family: cursive;
+    color:white;
+}
+
+.heading {
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+}
+
+.key-sections-container {
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.section {
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.key-sections-container h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: white;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+p {
+    font-size: 0.8rem;
+    text-align: left;
+    color: white;
+
+}
+

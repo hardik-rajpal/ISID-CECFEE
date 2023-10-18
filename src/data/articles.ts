@@ -23,17 +23,9 @@ export interface article{
     image?:string;
 }
 export function getHomepageArticles(){
-    return allArticles.slice(0,4)
+    return allArticles.slice(0,6)
 }
 export const allArticles:article[] = [
-    {
-        title:`Escaping the economic dangers of Covid-19`,
-        authors:[`Professor E. Somanathan`],
-        description:`Professor E. Somathan discusses the Indian lockdown's economic depression, stressing the importance of avoiding future lockdowns. He proposes a strategy to control the disease without causing economic collapse, emphasizing testing, financial support, and accurate information for effective prevention.`,
-        link:`https://www.financialexpress.com/opinion/escaping-the-economic-dangers-of-covid-19/1958191/`,
-        journal:`Financial Express`,
-        image:`assets/home/articles/econcovid.png`
-    },
     {
         title:`Effects of COVID-19 on the Urban Poor`,
         authors:[
@@ -91,6 +83,7 @@ export const allArticles:article[] = [
         ],
         description:`Dr. Farzana Afridi and Kanika Mahajan of Indian Statistical Institute and Ashoka University respectively, share their views on the effect of marriages on women’s economic empowerment and participation in income generating activities.`,
         journal:`Livemint`,
+        image: `assets/home/articles/marriagepenalty.png`,
         link:`https://www.livemint.com/Opinion/V3DIsV4QctPf3qz31Y8rXK/The-marriage-penalty-on-women-in-India.html`
     },
     {
@@ -111,6 +104,14 @@ export const allArticles:article[] = [
         description:`Dr. Farzana Afridi writes about the clean fuel project in an article on ‘What does India need to do to clean up its air?’  for India in Transition, Center for the Advanced Study of India (CASI), University of Pennsylvania.`,
         journal:`India in Transition`,
         link:`https://casi.sas.upenn.edu/iit/farzanaafridi`
+    },
+    {
+        title:`Escaping the economic dangers of Covid-19`,
+        authors:[`Professor E. Somanathan`],
+        description:`Professor E. Somathan discusses the Indian lockdown's economic depression, stressing the importance of avoiding future lockdowns. He proposes a strategy to control the disease without causing economic collapse, emphasizing testing, financial support, and accurate information for effective prevention.`,
+        link:`https://www.financialexpress.com/opinion/escaping-the-economic-dangers-of-covid-19/1958191/`,
+        journal:`Financial Express`,
+        image:`assets/home/articles/econcovid.png`
     },
     {
         title:`Adapting to a changing climate in India`,
@@ -159,7 +160,8 @@ export const allArticles:article[] = [
         journal:`Hindustan Times`,
         authors:[`Professor E Somathan`],
         description:`Professor E. Somathan writes about cost-effective measures to rid India of air pollution.`,
-        link:`https://www.hindustantimes.com/ht-view/on-offer-cost-effective-measures-to-rid-india-of-air-pollution/story-aagUoam0ceNTK1TKHx3N6J.html`
+        link:`https://www.hindustantimes.com/ht-view/on-offer-cost-effective-measures-to-rid-india-of-air-pollution/story-aagUoam0ceNTK1TKHx3N6J.html`,
+        image: `assets/home/articles/aipollution.png`
     },
     {
         title:`The right alternative`,

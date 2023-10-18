@@ -1,14 +1,16 @@
 <div>
-    <p *ngIf="titleLink.length===0" class="heading">{{section.title}}</p>
+    <p *ngIf="titleLink.length===0" style="text-align: center;" class="heading">{{section.title}}</p>
     <a *ngIf="titleLink.length!==0" class="heading" [href]="titleLink">{{section.title}}</a>
-    <div *ngIf="section.paras">
-        <div *ngFor="let para of section.paras">
-            <app-paraspecbox [para]="para"></app-paraspecbox>
-            <hr *ngIf="linesBetweenParas" class="thin">
+    <div style="display: -webkit-box;">
+        <div *ngIf="section.paras">
+            <div *ngFor="let para of section.paras">
+                <app-paraspecbox [para]="para"></app-paraspecbox>
+                <hr *ngIf="linesBetweenParas" class="thin">
+            </div>
         </div>
     </div>
     <div *ngIf="section.articles" class="articlesgrid">
-        <app-articlebox *ngFor="let article of section.articles" [article]="article"></app-articlebox>
+        <app-articlebox *ngFor="let article of section.articles" [article]="article"></app-articlebox>       
     </div>
     <div *ngIf="section.publications">
         <app-publication-box *ngFor="let paper of section.publications" [paper]="paper">

@@ -4,17 +4,17 @@
       <i class="fa fa-angle-left pointable" (click)="backward()" (mouseover)="pause()" (mouseout)="play()"></i>
     </div>
     <mdb-carousel [interval]="2500" [wrap]="true" [animation]="'slide'" #carousel>
-      <mdb-carousel-item *ngFor="let update of updates.infotiles">
-        <div class="infotilewrapper">
-          <app-infotile [infotile]="update"></app-infotile>
+      <mdb-carousel-item *ngFor="let group of groupedUpdates">
+        <div class="grid-layout">
+          <ng-container *ngFor="let item of group; let idx = index">
+            <div class="infotilewrapper" [class.large]="idx === 1" [class.small]="idx !== 1">
+              <app-infotile *ngIf="updates.infotiles.includes(item)" [infotile]="item"></app-infotile>
+              <!-- <app-eventbox *ngIf="updates.events.includes(item)" [event]="item"></app-eventbox> -->
+            </div>
+          </ng-container>
         </div>
       </mdb-carousel-item>
-      <mdb-carousel-item *ngFor="let event of updates.events">
-        <div class="infotilewrapper">
-          <app-eventbox [event]="event"></app-eventbox>
-        </div>
-      </mdb-carousel-item>
-    </mdb-carousel>
+    </mdb-carousel>    
     <div class="desktop">
       <i class="fa fa-angle-right pointable" (click)="forward()" (mouseover)="pause()" (mouseout)="play()"></i>
     </div>

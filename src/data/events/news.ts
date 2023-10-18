@@ -2,14 +2,19 @@ import { sectionSpec } from "../homepage";
 import { infoTileSpec } from "../rtl.utils";
 export function getHomepageNews():infoTileSpec[]{
     return [
-        ...allNews.filter((mention)=>(mention.image!==undefined)).slice(0,2),
-        ...allNews.filter((mention)=>(mention.videoLink!==undefined)).slice(0,2)
+        ...allNews.filter((mention)=>(mention.image!==undefined)).slice(0,6),
+        // ...allNews.filter((mention)=>(mention.videoLink!==undefined)).slice(0,2)
     ]
 }
 export function getMediaPageNews():infoTileSpec[]{
     return allNews.slice(0,8);
 }
 export const allNews:infoTileSpec[] = [
+    {
+        text:`Professor Rohini Somanathan gets elected to the 2024 Council of The Econometric Society.  A well-deserved achievement we're thrilled to share!" 🎉`,
+        image:`assets/news/rohini.jpeg`,
+        title:`Professor Rohini Somanathan Elected to the Council of Econometric Society`
+    },
     {
         text:`Congratulations to Digvijay Singh Negi, former ISI PhD student and our member,for receiving the BRICS Economic Research Annual Citation 2023 for his 2018 dissertation under Prof. Bharat Ramaswami! A remarkable achievement, and the Rs. 15 lakh cash award is well-deserved! 🎉`,
         image:`assets/news/brics2023.jpg`,
@@ -26,11 +31,6 @@ export const allNews:infoTileSpec[] = [
         title: `Dr. Farzana Afridi in Pre-Budget Meeting with PM`
     },
     {
-        text: `The civil society organization, Prachi Youth Organization, based in Kakatpur region of Odisha conferred the “Kamaladevi Smruti Samman” for year 2019 to Professor Saudamini Das. The award was given in recognition of her quality research, international fame and work as NABARD Chair Professor at the Institute of Economic Growth.`,
-        image: `assets/home/Award-saudamini.jpg`,
-        title: `Kamaladevi Smruti Samman Award for Professor Saudamini Das`
-    },
-    {
         text: `Professor E Somanathan has been appointed as a member of the newly formed Lancet COVID-19 Commission Task Force on Green Recovery. The Task Force will focus on how economic recovery plans can support the transition towards sustainable development and inclusive societies, with an emphasis on achieving the SDGs and Paris Agreement. As member of this task force, he will be working on the evaluation of national and regional recovery schemes (such as the EU Green Deal) against key metrics on priorities like job creation, upskilling and reskilling the workforce, promoting public investment in sustainable industries, and supporting the digital economy.`,
         title: `Professor E. Somanathan in Lancet COVID-19 Commission Task Force`
     },
@@ -45,10 +45,6 @@ export const allNews:infoTileSpec[] = [
     {
         text: `Professor Farzana Afridi served as a panelist in a webinar on “Ensuring Ease of Living” organized by the Ministry of Petroleum and Natural Gas on October 6, 2021.\n        `,
         title: `Webinar: Ensuring Ease of Living with Prof. Farzana Afridi`
-    },
-    {
-        text: `Professor Rohini Somanathan gets elected as a fellow of The Econometric Society in the 2021 elections. She is also the first woman based in India to be elected for this fellowship.`,
-        title: `Professor Rohini Somanathan Elected Fellow of Econometric Society`
     },
     {
         text: `The third edition of <strong>Women in the Economy Workshop</strong>was hosted by ISI-D in association with IWWAGE, under the aegis of Professor Farzana Afridi. The workshop took place on 11th to 13th March and witnessed the participation of over 200 people. Research on themes like health, workplace, and jobs were discussed at the workshop. For more details about the workshop, click <a href=\"https://efdinitiative.org/news/many-participated-women-economy-workshop\">here</a>.`,
@@ -75,6 +71,11 @@ export const allNews:infoTileSpec[] = [
         text: `CECFEE Member Professor Rohini Somanathan delivered the Keynote at the EfD annual Meeting, 2018 held at Hanoi, Vietnam on “Gender-bias and Gendered Outcomes: Some Pitfalls of Inference”.`,
         image: `assets/home/Rohini-efd.jpg`,
         title: `Keynote by Prof. Rohini Somanathan at EfD Annual Meeting`
+    },
+    {
+        text: `The civil society organization, Prachi Youth Organization, based in Kakatpur region of Odisha conferred the “Kamaladevi Smruti Samman” for year 2019 to Professor Saudamini Das. The award was given in recognition of her quality research, international fame and work as NABARD Chair Professor at the Institute of Economic Growth.`,
+        image: `assets/home/Award-saudamini.jpg`,
+        title: `Kamaladevi Smruti Samman Award for Professor Saudamini Das`
     },
     {
         text: `CECFEE Programme Director Professor E Somanathan spoke on “What are the political incentives to implement MBA to Environmenal Regulation in Asia at the EfD Annual Meeting, 2018 held at Hanoi, Vietnam.`,

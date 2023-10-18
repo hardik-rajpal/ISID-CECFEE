@@ -1,21 +1,22 @@
-<div class="myrow main shadow bordered">
-    <div class="imagediv">
+<div class="myrow main">
+    <div class="myrow imagediv">
         <img *ngIf="article.image" [src]="article.image" class="article-img">
     </div>
     <div class="mycol details">
-        <a [href]="article.link">
+        <a [href]="article.link" class="icon-text">
             <i class="fa fa-external-link"></i>
             {{article.title}}
         </a>
-        <div class="mycol">
-            <div class="myrow">
-                <i class="fa fa-newspaper"></i>
-                {{article.journal}}
-            </div>
-            <div class="myrow">
-                <i class="fa fa-group"></i>
-                {{getAuthorString()}}
-            </div>
+        <div class="icon-text" style="font-size: 15px; padding: 0px">
+            <i class="fa fa-group"></i>
+            {{getAuthorString()}}
+        </div>
+        <div class="icon-text" style="font-size: 15px;padding: 0px">
+            <i class="fa fa-newspaper"></i>
+            {{article.journal}}
         </div>
     </div>
+    <button type="button" class="read-more-button" routerLink="home/allarticles">
+        Read More
+    </button> 
 </div>

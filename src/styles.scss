@@ -8,6 +8,8 @@
     --light2:#b4d1f5;
     --lightgray:#eee;
     --darkgray:#ccc;
+    --green:#009144;
+    --black: #000000;
     --mgvwidth:600px;
     --abstractFontSize:0.8rem;
     letter-spacing: 0.5px;
@@ -32,7 +34,7 @@ html,body{
 }
 a{
     text-decoration: none;
-    color: var(--accent);
+    color: var(--black);
 }
 img.logo{
     max-height: 100px;
@@ -67,9 +69,9 @@ a.button{
     margin-bottom: 5px;
 }
 .heading-mycolored{
-    font-size: 1.33rem;
     font-weight: bold;
-    color: var(--accent);
+    color: var(--black);
+    text-decoration: underline;
 }
 .mycol{
     display: flex;
@@ -167,9 +169,6 @@ hr.thin{
     }
 }
 
-.shadow{
-    box-shadow: 3px 3px 5px 5px grey;
-}
 .bordered{
     border: var(--darkgray) 2px solid;
     padding: 10px;
@@ -187,16 +186,25 @@ hr.thin{
 input{
     width: 50%;
 }
+
 .articlesgrid{
     display: grid;
     grid-template-columns: 100%;
     align-items: center;
+    justify-content: center;
+    grid-row-gap: 10px;  // Add space between rows
+    grid-column-gap: 30px;  // Add space between columns
+    margin: 10px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
-@media (min-width:1410px) {
+
+@media (min-width:700px) {
     .articlesgrid{
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 30% 30% 30%;
     }
 }
+
 
 .mentionsgrid{
     display: grid;

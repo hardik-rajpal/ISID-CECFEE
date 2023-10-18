@@ -4,12 +4,23 @@ div.main{
     padding: 10px;
     padding-bottom: 30px;
 }
+
+.desktop {
+    width: 80%;
+    margin: auto;
+}
+
+.mobile {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
 span.contact>*{
     padding: 5px;
 }
 .contactlinks{
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .contactlinks.myrow > div.contact{
-    max-width: 70%;
+    max-width: 60%;
 }

@@ -1,46 +1,83 @@
 @import "mdb-angular-ui-kit/assets/scss/mdb.scss";
-div.main{
-    // position: relative;
-    margin: 10px;
-    // display: inline-block;
-    overflow: hidden;
-}
-div.infotilewrapper{
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+div.main {
+  padding: 10px;
+  padding-top: 5px;
+  margin: 10px;
+  border-radius: 10px;
 }
 
-@media(min-width:900px){
-    div.infotilewrapper{
-        min-height: 500px;
-    }
-}
-i{
-    font-size: 50px;
-    color: var(--primary);
-    // background-color: white;
-    opacity: 0.3;
-}
-i:hover{
-    opacity: 0.8;
-}
-.mycol{
-    align-items: center;
+div.infotilewrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  transition: all 0.3s;
+  border-radius: 5px;
 }
 
-div.myrow.btns{
-    align-items: center;
-    justify-content: center;
+@media(min-width: 900px) {
+  div.infotilewrapper {
+    min-height: 500px;
+  }
 }
-div.slidetile{
-    width: 30px;
-    height: 5px;
-    background-color: var(--darkgray);
-    margin: 3px;
+
+i {
+  font-size: 50px;
+  color: var(--primary);
+  opacity: 0.3;
 }
-div.slidetile.active{
-    background-color: var(--primary);
+
+i:hover {
+  opacity: 0.8;
+}
+
+.mycol {
+  align-items: center;
+}
+
+div.myrow.btns {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  color: black;
+}
+
+.desktop {
+  padding: 0 15px;
+}
+
+div.slidetile {
+  width: 30px;
+  height: 5px;
+  background-color: var(--darkgray);
+  margin: 3px;
+}
+div.slidetile.active {
+  background-color: var(--primary);
+}
+
+.grid-layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.large {
+  flex: 1;  // Allow the middle item to take up more space
+  margin: 0 10px;  // Some spacing between items
+  background-color: #10451D; /* Dark background */
+  color: #fff; /* Light text */
+  border: 1px solid #10451D;
+
+  &:hover { // scaling on hover
+    transform: scale(1.1);
+  }
+}
+
+.small {
+  flex: 1;  // Allow the side items to take up less space
+  border: 1px solid #10451D;
 }

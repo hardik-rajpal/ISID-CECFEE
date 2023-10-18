@@ -22,10 +22,7 @@ export const headerData:headerSpec = {
 }
 export const footerData:footerSpec = {
     text:`Copyright © 2023 Centre for Research on the Economics of Climate, Food, Energy and Environment.
-    <br>
-    Website design and implementation by
-    <a href="https://www.linkedin.com/in/hardik-rajpal-135874159/" target="_blank">
-        Hardik Rajpal</a>.`,
+    <br>`,
         contact:{
             title:`Centre for research on the Economics of Climate, Food, Energy and Environment (CECFEE)
             <br>

@@ -1,7 +1,59 @@
 <div>
-    <p class="title">{{data.title}}</p>
     <p class="heading">{{data.updates.title}}</p>
     <app-updates-carousel [updates]="data.updates"></app-updates-carousel>
     <app-sectionbox [section]="data.aboutus"></app-sectionbox>
-    <app-sectionbox [section]="data.articles" [titleLink]="'home/allarticles'"></app-sectionbox>
+    <div class="key-sections">
+        <p class="heading">Key Sections</p>
+        <div class="key-sections-container">
+            <div class="section">
+                <a href="/research/publications"> <!-- Add the correct link here -->
+                    <h2>Research</h2>
+                    <p>Discover our research areas, publications, and ongoing projects.</p>
+                </a>
+            </div>
+            <div class="section">
+                <a href="/media"> <!-- Add the correct link here -->
+                    <h2>News</h2>
+                    <p>Stay updated with events, workshops, and latest news from the Centre.</p>
+                </a>
+            </div>
+            <div class="section">
+                <a href="/home"> <!-- Add the correct link here -->
+                    <h2>About Us</h2>
+                    <p>Learn about our history, team, and achievements.</p>
+                </a>
+            </div>
+            <div class="section">
+                <a href="/research/articles"> <!-- Add the correct link here -->
+                    <h2>Resources</h2>
+                    <p>Access reports, publications, and academic resources.</p>
+                </a>
+            </div>
+            <div class="section">
+                <a href="https://twitter.com/cecfee"> <!-- Add the correct link here -->
+                    <h2>Contact Us</h2>
+                    <p>Get in touch with our team for inquiries and collaboration.</p>
+                </a>
+            </div>
+            <div class="section">
+                <a href="/events/seminars"> <!-- Add the correct link here -->
+                    <h2>Events</h2>
+                    <p>Stay updated with events, workshops, and latest seminars from the Centre.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <app-sectionbox [section]="data.articles"></app-sectionbox>
 </div>
+
+<!-- Structure  
+    - Header
+        - Updates
+        - Logo 
+        - Menu
+    - Body
+        - About
+        - Updates
+        - Articles 
+!-->

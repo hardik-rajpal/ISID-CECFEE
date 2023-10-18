@@ -1,11 +1,11 @@
-<div class="main shadow bordered">
+<div class="main">
     <p class="small-heading">
         <strong [innerHTML]="infotile.title"></strong>
     </p>
-    <p *ngIf="!(infotile.image)" [innerHTML]="infotile.text|safe:'html'"></p>
     <div *ngIf="infotile.image" class="holder mycol">
         <app-paraspecbox [para]="{text:infotile.text,image:infotile.image}"></app-paraspecbox>
     </div>
-
     <app-videobox *ngIf="infotile.videoLink" [link]="infotile.videoLink"></app-videobox>
+    <p *ngIf="!(infotile.image)" [innerHTML]="infotile.text|safe:'html'"></p>
+
 </div>

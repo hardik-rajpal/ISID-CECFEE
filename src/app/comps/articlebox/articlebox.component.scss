@@ -1,25 +1,73 @@
 .main{
-    // margin: 10px;
-    // padding: 5px;
+    height: 380px;  
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    justify-content: center;
+    border-radius: 0px;
+    box-shadow: 0;
+    margin-bottom: 10px; // Add space at the bottom of each card
+    margin-top: 10px;    // Add space at the top of each card
+    box-sizing: border-box;
+    align-items: center;
 }
-.main>*{
-    padding: 5px;
+.main > * {
+    // padding: 20px; /* Increased padding for better spacing */
+    box-sizing: border-box;
 }
+
 .mycol.details{
-    justify-content: space-between;
-    width: 80%;
+    flex-direction: column; 
+    align-items: flex-start;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    // text-align: start;
+    box-sizing: border-box;
 }
-.myrow>*{
-    padding: 5px;
-}
+
 .imagediv{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 250px;
     overflow: hidden;
+    width: 100%;
 }
+
 .article-img{
-    /* width: 150px; */
-    height: 150px;
+    width: 100%;
+    max-height: 200px;
+}
+
+.fa{
+    padding: 10px;
+    color: var(--green); /* Changing color to match typical hyperlink blue */
+}
+
+.icon-text {
+    display: flex;
+    color: #000;
+    align-items: baseline;  /* Align to the start of the flex container */
+    text-align: start;
+    padding: 5px;
+}
+
+.read-more-button {
+    display: inline-block; /* Will grow as much as the text inside */
+    text-align: center;  /* Center text horizontally */
+    padding: 10px 20px;  /* Top and bottom padding */
+    background-color: var(--green);  /* Background color */
+    color: white;  /* Text color */
+    font-size: small;
+    border: 1px solid var(--green);  /* Remove border */
+    border-radius: 4px;  /* Rounded corners */
+    cursor: pointer;  /* Pointer cursor on hover */
+    text-decoration: none;  /* Remove underline */
+    width: fit-content;  /* Auto width based on content */
+    margin: 10px;  /* No margins */
+}
+
+.read-more-button:hover {
+    background-color: white;  /* Background color */
+    color: var(--green);  /* Text color */
+    border: 1px solid var(--black);  /* Remove border */
 }

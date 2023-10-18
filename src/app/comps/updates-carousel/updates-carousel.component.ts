@@ -11,7 +11,9 @@ import { infoTileSpec } from 'src/data/rtl.utils';
 export class UpdatesCarouselComponent {
   @Input() updates!:updatesSpec;
   @ViewChild('carousel') carousel!:MdbCarouselComponent;
+  groupedUpdates: any[] = [];
   slideNumbers:number[] = []
+
   forward(){
     this.carousel.next()
   }
@@ -31,8 +33,13 @@ export class UpdatesCarouselComponent {
     return 0;
   }
   ngOnInit(){
-    let numSlides = this.updates.events.length + this.updates.infotiles.length;
-    for(let i=0;i<numSlides;i++){
+    const allItems = [...this.updates.infotiles];
+    for (let i = 0; i < allItems.length; i += 3) {
+      this.groupedUpdates.push(allItems.slice(i, i + 3));
+    }
+
+    let numSlides = this.groupedUpdates.length;
+    for (let i = 0; i < numSlides; i++) {
       this.slideNumbers.push(i);
     }
   }

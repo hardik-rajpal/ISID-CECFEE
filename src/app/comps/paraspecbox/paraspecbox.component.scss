@@ -1,3 +1,7 @@
+.main{
+    margin-left: 10%;
+    margin-right: 10%;
+}
 
 .mycol{
     align-items: center;
@@ -30,8 +34,9 @@
 }
 
 .desktop.standalone-img{
-    max-width: 80%;
-    max-height: 700px;
+    width: fit-content;
+    height: 470px;
+    // max-height: 700px;
 }
 .mobile.standalone-img{
     max-height: 400px;
